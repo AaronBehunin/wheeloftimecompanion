@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Book1layout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="0dp">
+
+            <RelativeLayout
+                android:id="@+id/book1chapP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chapP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P. Dragonmount"
+                    android:textSize="30dp"
+
+                    />
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chapP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                                        />
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. An Empty Road"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. Strangers"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. The Peddler"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4. The Gleeman"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5. Winternight"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6. The Westwood"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7. Out of the Woods"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8. A Place for Safety"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9. Tellings of the\nWheel"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+                android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10. Leavetaking"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11. The Road to Taren Ferry"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12. Across the Taren"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13. Choices"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14. The Stag and the Lion"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15. Strangers and Friends"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16. The Wisdom"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17. Watchers and Hunters"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18. The Caemlyn Road"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19. Shadow's Waiting"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20. Dust on the Wind"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21. Listen to the Wind "
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22. A Path Chosen"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23. Wolfbrother"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24. Flight Down the Arinelle"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25. The Traveling\nPeople"
+                    android:textSize="30dp"
+                    />
+
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26. Whitebridge"
+                    android:textSize="25dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27. Shelter From the Storm"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28. Footprint in Air"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="29. Eyes Without Pity"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30. Children of Shadow"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="31. Play for Your\nSupper"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="32. Four Kings in Shadow"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="33. The Dark Waits"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="34. The last Village"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="35. Caemlyn"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="36. Web of the Pattern"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap37"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="37. The Long Chase"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap38"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="38. Rescue"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap39"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="39. Weaving of the\nWeb"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap40"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40. The Web Tightens"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap41"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="41. Old Friends and\nNew Threats"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap42"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42. Remembrance of Dreams"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap43"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="43. Decisions and Apparitions"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap44"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="44. The Dark Along the Ways"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap45"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45. What Follows in Shadow"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap46"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="46. Fal Dara"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+                android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap47"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="47. More Tales of the Wheel"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap48"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="48. The Blight"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap49"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="49. The Dark One Stirs"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap50"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50. Meetings at the Eye"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap51"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="51. Against the\nShadow"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap52"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="52. There is Neither Beginning nor End"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/book1chap53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+android:paddingRight="20dp"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/textbook1chap53"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="53. The Wheel Turns"
+                    android:textSize="30dp"/>
+
+                <CheckBox
+                    android:onClick="boxClick"
+                    android:id="@+id/checkbook1chap53"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
