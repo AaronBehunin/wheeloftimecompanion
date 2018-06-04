@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.text.style.ClickableSpan
 import android.view.View
+import com.example.u0450254.wheeloftimecompanion.Characters.Forsworn.Ishamael
+import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
 import com.example.u0450254.wheeloftimecompanion.Terminology.TheDarkOne
 
 /**
@@ -39,20 +41,27 @@ class Launchers(context: Context)
     val spanIshamael = object: ClickableSpan()
     {
         override fun onClick(widget: View?) {
+            var intent = Intent(context, Ishamael::class.java)
+            context.startActivity(intent)
+
 
         }
 
 
 
     }
+    val spanLewsTherin = object: ClickableSpan()
+    {
+        override fun onClick(widget: View?) {
+            var intent = Intent(context, LewsTherin::class.java)
+            context.startActivity(intent)
+        }
+    }
 
     val spanDragonmount = object: ClickableSpan()
     {
         override fun onClick(widget: View?) {
-
         }
-
-
     }
 
     val spanTarValon = object: ClickableSpan()

@@ -1,3 +1,6 @@
+/**
+ * Created by u0450254 on 6/1/2018.
+ */
 package com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters
 
 import android.app.Activity
@@ -15,7 +18,7 @@ import com.example.u0450254.wheeloftimecompanion.R
 /**
  * Created by u0450254 on 5/18/2018.
  */
-class Rand : Activity() {
+class Perrin : Activity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,24 +53,24 @@ class Rand : Activity() {
 
         var thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
-        thisTitle.text = "Rand al'Thor"
+        thisTitle.text = "Perrin Aybara"
         thisAffil.text = " Affiliation: Andor-The Two Rivers"
 
 
         thisAge.text = " Age: 20"
 
         thisGender.text = " Gender: Male"
-        thisHeight.text = " Height: 6'5"
-        thisWeight.text = " Weight: 235 pounds"
-        thisHair.text = " Hair Color: Red"
-        thisEye.text = " Eye Color: Gray"
+        thisHeight.text = " Height: 6'3"
+        thisWeight.text = " Weight: 240 pounds"
+        thisHair.text = " Hair Color: Brown"
+        thisEye.text = " Eye Color: Brown"
         thisRank.text = " Rank: Civilian"
 
-        thisPortrat.setImageResource(R.drawable.randeotw)
+        thisPortrat.setImageResource(R.drawable.perrin)
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Rand al'Thor is the main protagonist of the series.")
+        var string1 = SpannableString("A young blacksmith from Edmond's Field")
 
         thisInfo.setTextColor(Color.WHITE)
 

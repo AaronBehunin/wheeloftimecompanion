@@ -9,9 +9,12 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import android.widget.TextView
-import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.LewsTherin
+import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
 import java.io.File
+import android.view.LayoutInflater
+import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Rand
+import com.example.u0450254.wheeloftimecompanion.Characters.Forsworn.Ishamael
+
 
 /**
  * Created by u0450254 on 5/22/2018.
@@ -412,168 +415,36 @@ class Book1: AppCompatActivity() {
             }
 
             chapPView.setOnClickListener() {
-                setContentView(R.layout.chap1_p)
+                setContentView(R.layout.chapter)
+
+                val inflater = LayoutInflater.from(this)
+                val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
+
+                var chapview = findViewById<LinearLayout>(R.id.chapterlayout)
+
+                var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.lewsView)
+                var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ishamaelView)
+
+                inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+
+                chapview.addView(view1)
+                chapview.addView(view2)
             }
             chap1View.setOnClickListener() {
-                setContentView(R.layout.chap1_1)
+                setContentView(R.layout.chapter)
+
+                val inflater = LayoutInflater.from(this)
+                val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
+
+                var chapview = findViewById<LinearLayout>(R.id.chapterlayout)
+
+                var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.randView)
+
+                inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+
+                chapview.addView(view1)
             }
-            chap2View.setOnClickListener() {
-                setContentView(R.layout.chap1_2)
-            }
-            chap3View.setOnClickListener() {
-                setContentView(R.layout.chap1_3)
-            }
-            chap4View.setOnClickListener() {
-                setContentView(R.layout.chap1_4)
-            }
-            chap5View.setOnClickListener() {
-                setContentView(R.layout.chap1_5)
-            }
-            chap6View.setOnClickListener() {
-                setContentView(R.layout.chap1_6)
-            }
-            chap7View.setOnClickListener() {
-                setContentView(R.layout.chap1_7)
-            }
-            chap8View.setOnClickListener() {
-                setContentView(R.layout.chap1_8)
-            }
-            chap9View.setOnClickListener() {
-                setContentView(R.layout.chap1_9)
-            }
-            chap10View.setOnClickListener() {
-                setContentView(R.layout.chap1_10)
-            }
-            chap11View.setOnClickListener() {
-                setContentView(R.layout.chap1_11)
-            }
-            chap12View.setOnClickListener() {
-                setContentView(R.layout.chap1_12)
-            }
-            chap13View.setOnClickListener() {
-                setContentView(R.layout.chap1_13)
-            }
-            chap14View.setOnClickListener() {
-                setContentView(R.layout.chap1_14)
-            }
-            chap15View.setOnClickListener() {
-                setContentView(R.layout.chap1_15)
-            }
-            chap16View.setOnClickListener() {
-                setContentView(R.layout.chap1_16)
-            }
-            chap17View.setOnClickListener() {
-                setContentView(R.layout.chap1_17)
-            }
-            chap18View.setOnClickListener() {
-                setContentView(R.layout.chap1_18)
-            }
-            chap19View.setOnClickListener() {
-                setContentView(R.layout.chap1_19)
-            }
-            chap20View.setOnClickListener() {
-                setContentView(R.layout.chap1_20)
-            }
-            chap21View.setOnClickListener() {
-                setContentView(R.layout.chap1_21)
-            }
-            chap22View.setOnClickListener() {
-                setContentView(R.layout.chap1_22)
-            }
-            chap23View.setOnClickListener() {
-                setContentView(R.layout.chap1_23)
-            }
-            chap24View.setOnClickListener() {
-                setContentView(R.layout.chap1_24)
-            }
-            chap25View.setOnClickListener() {
-                setContentView(R.layout.chap1_25)
-            }
-            chap26View.setOnClickListener() {
-                setContentView(R.layout.chap1_26)
-            }
-            chap27View.setOnClickListener() {
-                setContentView(R.layout.chap1_27)
-            }
-            chap28View.setOnClickListener() {
-                setContentView(R.layout.chap1_28)
-            }
-            chap29View.setOnClickListener() {
-                setContentView(R.layout.chap1_29)
-            }
-            chap30View.setOnClickListener() {
-                setContentView(R.layout.chap1_30)
-            }
-            chap31View.setOnClickListener() {
-                setContentView(R.layout.chap1_31)
-            }
-            chap32View.setOnClickListener() {
-                setContentView(R.layout.chap1_32)
-            }
-            chap33View.setOnClickListener() {
-                setContentView(R.layout.chap1_33)
-            }
-            chap34View.setOnClickListener() {
-                setContentView(R.layout.chap1_34)
-            }
-            chap35View.setOnClickListener() {
-                setContentView(R.layout.chap1_35)
-            }
-            chap36View.setOnClickListener() {
-                setContentView(R.layout.chap1_36)
-            }
-            chap37View.setOnClickListener() {
-                setContentView(R.layout.chap1_37)
-            }
-            chap38View.setOnClickListener() {
-                setContentView(R.layout.chap1_38)
-            }
-            chap39View.setOnClickListener() {
-                setContentView(R.layout.chap1_39)
-            }
-            chap40View.setOnClickListener() {
-                setContentView(R.layout.chap1_40)
-            }
-            chap41View.setOnClickListener() {
-                setContentView(R.layout.chap1_41)
-            }
-            chap42View.setOnClickListener() {
-                setContentView(R.layout.chap1_42)
-            }
-            chap43View.setOnClickListener() {
-                setContentView(R.layout.chap1_43)
-            }
-            chap44View.setOnClickListener() {
-                setContentView(R.layout.chap1_44)
-            }
-            chap45View.setOnClickListener() {
-                setContentView(R.layout.chap1_45)
-            }
-            chap46View.setOnClickListener() {
-                setContentView(R.layout.chap1_46)
-            }
-            chap47View.setOnClickListener() {
-                setContentView(R.layout.chap1_47)
-            }
-            chap48View.setOnClickListener() {
-                setContentView(R.layout.chap1_48)
-            }
-            chap49View.setOnClickListener() {
-                setContentView(R.layout.chap1_49)
-            }
-            chap50View.setOnClickListener() {
-                setContentView(R.layout.chap1_50)
-            }
-            chap51View.setOnClickListener() {
-                setContentView(R.layout.chap1_51)
-            }
-            chap52View.setOnClickListener() {
-                setContentView(R.layout.chap1_52)
-            }
-            chap53View.setOnClickListener() {
-                setContentView(R.layout.chap1_53)
-            }
-        }
+    }
 
     fun boxClick(boxview: View) {
         var check = findViewById<CheckBox>(boxview.id)
@@ -1902,6 +1773,16 @@ class Book1: AppCompatActivity() {
     fun launchLewsTherin(view: View)
     {
         var intent = Intent(view.context, LewsTherin::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchIshamael(view: View)
+    {
+        var intent = Intent(view.context, Ishamael::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchRand(view: View)
+    {
+        var intent = Intent(view.context, Rand::class.java)
         view.context.startActivity(intent)
     }
 }

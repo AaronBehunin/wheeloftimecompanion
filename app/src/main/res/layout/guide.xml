@@ -19,6 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
                 >
 
             <TextView
@@ -46,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="20dp"
                 android:clickable="true"
+                android:paddingVertical="10dp"
                 >
 
                 <TextView
@@ -75,7 +77,8 @@
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp">
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book2"
@@ -102,7 +105,8 @@
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp">
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book3"
@@ -130,7 +134,8 @@
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp">
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book4"
@@ -186,7 +191,8 @@
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp">
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book6"
@@ -213,7 +219,8 @@
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp">
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book7"
@@ -240,7 +247,8 @@
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp">
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book8"
@@ -267,7 +275,8 @@
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp">
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book9"
@@ -295,7 +304,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:paddingRight="20dp">
+                android:paddingRight="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book10"
@@ -323,7 +333,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:paddingRight="20dp">
+                android:paddingRight="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book11"
@@ -351,7 +362,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:paddingRight="20dp">
+                android:paddingRight="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book12"
@@ -379,7 +391,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:paddingRight="20dp">
+                android:paddingRight="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book13"
@@ -407,7 +420,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:paddingRight="20dp">
+                android:paddingRight="20dp"
+                android:paddingVertical="10dp">
 
                 <TextView
                     android:id="@+id/Book14"

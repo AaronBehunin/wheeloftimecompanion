@@ -1,3 +1,6 @@
+/**
+ * Created by u0450254 on 6/1/2018.
+ */
 package com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters
 
 import android.app.Activity
@@ -11,12 +14,10 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
 /**
- * Created by u0450254 on 5/18/2018.
+ * Created by u0450254 on 6/1/2018.
  */
-class Rand : Activity() {
-
+class Egwene : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +33,9 @@ class Rand : Activity() {
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
-
         val splits = inputString.split("-")
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
-
 
         var thisTitle = findViewById<TextView>(R.id.Title)
         var thisAge = findViewById<TextView>(R.id.Age)
@@ -50,24 +49,24 @@ class Rand : Activity() {
 
         var thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
-        thisTitle.text = "Rand al'Thor"
+        thisTitle.text = "Egwene al'Vere"
         thisAffil.text = " Affiliation: Andor-The Two Rivers"
 
 
-        thisAge.text = " Age: 20"
+        thisAge.text = " Age: 17"
 
-        thisGender.text = " Gender: Male"
-        thisHeight.text = " Height: 6'5"
-        thisWeight.text = " Weight: 235 pounds"
-        thisHair.text = " Hair Color: Red"
-        thisEye.text = " Eye Color: Gray"
+        thisGender.text = " Gender: Female"
+        thisHeight.text = " Height: 5'2"
+        thisWeight.text = " Weight: ?"
+        thisHair.text = " Hair Color: Brown"
+        thisEye.text = " Eye Color: Brown"
         thisRank.text = " Rank: Civilian"
 
-        thisPortrat.setImageResource(R.drawable.randeotw)
+        thisPortrat.setImageResource(R.drawable.egwene)
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Rand al'Thor is the main protagonist of the series.")
+        var string1 = SpannableString("Ewgene al'Vere is one of the main female protagonists of the series. She is a farmgirl from Edmonds Field and the mayors daughter")
 
         thisInfo.setTextColor(Color.WHITE)
 

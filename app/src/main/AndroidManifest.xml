@@ -12,18 +12,44 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Characters.Main_Characters.Rand">
         </activity>
-        <activity android:name=".Characters.Main_Characters.LewsTherin">
+        <activity android:name=".Characters.Main_Characters.Nynaeve">
+        </activity>
+        <activity android:name=".Characters.Main_Characters.Egwene">
+        </activity>
+        <activity android:name=".Characters.Main_Characters.Perrin">
+        </activity>
+        <activity android:name=".Characters.Legends.LewsTherin">
+        </activity>
+        <activity android:name=".Characters.Forsworn.Ishamael">
         </activity>
         <activity android:name=".Terminology.TheDarkOne">
         </activity>
+        <activity android:name=".Terminology.AgeofLegends">
+        </activity>
+        <activity android:name=".Organizations.Aiel">
+        </activity>
         <activity android:name=".Book1">
+        </activity>
+        <activity android:name=".MainCharacterActivity">
+        </activity>
+        <activity android:name=".TerminologyActivity">
+        </activity>
+        <activity android:name=".SupportCharacterActivity">
+        </activity>
+        <activity android:name=".EnemyCharacterActivity">
+        </activity>
+        <activity android:name=".OtherCharacterActivity">
+        </activity>
+        <activity android:name=".LegendCharacterActivity">
+        </activity>
+        <activity android:name=".OrganizationsActivity">
+        </activity>
+        <activity android:name=".Organizations.AesSedai">
         </activity>
     </application>
 </manifest>

@@ -11,12 +11,10 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
 /**
- * Created by u0450254 on 5/18/2018.
+ * Created by u0450254 on 6/1/2018.
  */
-class Rand : Activity() {
-
+class Nynaeve : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +30,9 @@ class Rand : Activity() {
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
-
         val splits = inputString.split("-")
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
-
 
         var thisTitle = findViewById<TextView>(R.id.Title)
         var thisAge = findViewById<TextView>(R.id.Age)
@@ -50,24 +46,24 @@ class Rand : Activity() {
 
         var thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
-        thisTitle.text = "Rand al'Thor"
+        thisTitle.text = "Nynaeve al'Meara"
         thisAffil.text = " Affiliation: Andor-The Two Rivers"
 
 
-        thisAge.text = " Age: 20"
+        thisAge.text = " Age: 25"
 
-        thisGender.text = " Gender: Male"
-        thisHeight.text = " Height: 6'5"
-        thisWeight.text = " Weight: 235 pounds"
-        thisHair.text = " Hair Color: Red"
-        thisEye.text = " Eye Color: Gray"
-        thisRank.text = " Rank: Civilian"
+        thisGender.text = " Gender: Female"
+        thisHeight.text = " Height: 5'4"
+        thisWeight.text = " Weight: ?"
+        thisHair.text = " Hair Color: Brown"
+        thisEye.text = " Eye Color: Brown"
+        thisRank.text = " Rank: Wisdom"
 
-        thisPortrat.setImageResource(R.drawable.randeotw)
+        thisPortrat.setImageResource(R.drawable.nynaeve)
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Rand al'Thor is the main protagonist of the series.")
+        var string1 = SpannableString("Nynaeve al'Meara is one of the main female protagonists of the series. She is the Wisdom of Emond's Field.")
 
         thisInfo.setTextColor(Color.WHITE)
 

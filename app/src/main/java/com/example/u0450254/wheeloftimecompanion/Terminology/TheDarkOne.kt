@@ -17,7 +17,6 @@ import com.example.u0450254.wheeloftimecompanion.R
  */
 class TheDarkOne: Activity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.terminology)
@@ -45,9 +44,5 @@ class TheDarkOne: Activity() {
                 "beyond the concept of sex or gender, and can be more accurately referred to as \"it\". However, as with the Creator, people tend to simply use male pronouns to refer to the Dark One."
 
         terminfo.setTextColor(Color.WHITE)
-
-
     }
-
-
 }
