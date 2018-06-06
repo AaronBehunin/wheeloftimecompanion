@@ -5,7 +5,6 @@ package com.example.u0450254.wheeloftimecompanion
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
@@ -14,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Organizations.AesSedai
 import com.example.u0450254.wheeloftimecompanion.Terminology.AgeofLegends
+import com.example.u0450254.wheeloftimecompanion.Terminology.TheDarkOne
 
 /**
  * Created by u0450254 on 5/30/2018.
@@ -23,20 +23,39 @@ class TerminologyActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ageoflegendsView)
+        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.amyrlinSeatView)
+        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.baalzamonView)
+        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
 
         inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
+        charview.addView(view2)
+        charview.addView(view3)
+        charview.addView(view4)
     }
     fun launchAgeofLegends(view: View)
     {
         var intent = Intent(view.context, AgeofLegends::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTheDarkOne(view: View)
+    {
+        var intent = Intent(view.context, TheDarkOne::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchAesSedai1(view: View)
+    {
+        var intent = Intent(view.context, AesSedai::class.java)
+        intent.putExtra("Jump", 500)
         view.context.startActivity(intent)
     }
 }

@@ -15,41 +15,105 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Characters.Main_Characters.Rand">
+
+        <activity android:name=".GuideActivity"
+            android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".Characters.Main_Characters.Nynaeve">
+
+
+        <activity android:name=".CharacterActivity"
+            android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".Characters.Main_Characters.Egwene">
+        <activity android:name=".MainCharacterActivity"
+            android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".Characters.Main_Characters.Perrin">
+        <activity android:name=".SupportCharacterActivity"
+            android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".Characters.Legends.LewsTherin">
+        <activity android:name=".EnemyCharacterActivity"
+            android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".Characters.Forsworn.Ishamael">
+        <activity android:name=".LegendCharacterActivity"
+            android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".Terminology.TheDarkOne">
+        <activity android:name=".OtherCharacterActivity"
+            android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".Terminology.AgeofLegends">
+
+
+        <activity android:name=".LocationActivity"
+            android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".Organizations.Aiel">
+        <activity android:name=".Locations.NationActivity"
+            android:parentActivityName=".LocationActivity">
         </activity>
-        <activity android:name=".Book1">
+        <activity android:name=".Locations.LandmarksActivity"
+            android:parentActivityName=".LocationActivity">
         </activity>
-        <activity android:name=".MainCharacterActivity">
+
+
+
+        <activity android:name=".Books.Book1Activity"
+            android:parentActivityName=".GuideActivity">
         </activity>
-        <activity android:name=".TerminologyActivity">
+        <activity android:name=".Books.Book1.ActivityP"
+            android:parentActivityName=".Books.Book1Activity">
         </activity>
-        <activity android:name=".SupportCharacterActivity">
+        <activity android:name=".Books.Book1.Activity1"
+            android:parentActivityName=".Books.Book1Activity">
         </activity>
-        <activity android:name=".EnemyCharacterActivity">
+
+
+
+        <activity android:name=".Characters.Main_Characters.Rand"
+            android:parentActivityName=".MainCharacterActivity">
         </activity>
-        <activity android:name=".OtherCharacterActivity">
+        <activity android:name=".Characters.Main_Characters.Nynaeve"
+            android:parentActivityName=".MainCharacterActivity">
         </activity>
-        <activity android:name=".LegendCharacterActivity">
+        <activity android:name=".Characters.Main_Characters.Egwene"
+            android:parentActivityName=".MainCharacterActivity">
         </activity>
-        <activity android:name=".OrganizationsActivity">
+        <activity android:name=".Characters.Main_Characters.Perrin"
+            android:parentActivityName=".MainCharacterActivity">
         </activity>
-        <activity android:name=".Organizations.AesSedai">
+        <activity android:name=".Characters.Legends.LewsTherin"
+            android:parentActivityName=".LegendCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Forsworn.Ishamael"
+            android:parentActivityName=".EnemyCharacterActivity">
+        </activity>
+
+
+
+        <activity android:name=".Locations.Nations.Andor"
+            android:parentActivityName=".Locations.NationActivity">
+        </activity>
+        <activity android:name=".Locations.Landmarks.AielWaste"
+            android:parentActivityName=".Locations.NationActivity">
+        </activity>
+
+
+        <activity android:name=".TerminologyActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".Terminology.AgeofLegends"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.TheDarkOne"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+
+
+
+        <activity android:name=".OrganizationsActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".Organizations.AesSedai"
+            android:parentActivityName=".OrganizationsActivity">
+        </activity>
+        <activity android:name=".Organizations.Aiel"
+            android:parentActivityName=".OrganizationsActivity">
         </activity>
     </application>
 </manifest>

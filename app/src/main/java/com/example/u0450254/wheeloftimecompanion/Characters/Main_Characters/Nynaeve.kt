@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
 import android.widget.ImageView
@@ -14,11 +15,13 @@ import com.example.u0450254.wheeloftimecompanion.R
 /**
  * Created by u0450254 on 6/1/2018.
  */
-class Nynaeve : Activity() {
+class Nynaeve : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.character)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val filename = "Progress"
         val fileContents = "1-1"

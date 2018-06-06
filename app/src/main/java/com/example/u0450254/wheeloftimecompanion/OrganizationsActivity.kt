@@ -23,6 +23,8 @@ class OrganizationsActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
@@ -39,6 +41,7 @@ class OrganizationsActivity: AppCompatActivity() {
     fun launchAesSedai(view: View)
     {
         var intent = Intent(view.context, AesSedai::class.java)
+        intent.putExtra("Jump", 0)
         view.context.startActivity(intent)
     }
     fun launchAiel(view: View)

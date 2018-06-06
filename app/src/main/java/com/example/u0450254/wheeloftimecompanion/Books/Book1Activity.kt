@@ -1,4 +1,4 @@
-package com.example.u0450254.wheeloftimecompanion
+package com.example.u0450254.wheeloftimecompanion.Books
 
 import android.content.Context
 import android.content.Intent
@@ -12,21 +12,27 @@ import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
 import java.io.File
 import android.view.LayoutInflater
+import com.example.u0450254.wheeloftimecompanion.Books.Book1.Activity1
+import com.example.u0450254.wheeloftimecompanion.Books.Book1.ActivityP
 import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Rand
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsworn.Ishamael
+import com.example.u0450254.wheeloftimecompanion.Progress
+import com.example.u0450254.wheeloftimecompanion.R
 
 
 /**
  * Created by u0450254 on 5/22/2018.
  */
-class Book1: AppCompatActivity() {
+class Book1Activity: AppCompatActivity() {
 
-    var progress = Progress(-1,-1)
+    var progress = Progress(-1, -1)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.book1)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         var file = File("/data/data/com.example.u0450254.wheeloftimecompanion/files/Progress")
 
@@ -414,38 +420,7 @@ class Book1: AppCompatActivity() {
                 rel.visibility = View.VISIBLE
             }
 
-            chapPView.setOnClickListener() {
-                setContentView(R.layout.chapter)
-
-                val inflater = LayoutInflater.from(this)
-                val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
-
-                var chapview = findViewById<LinearLayout>(R.id.chapterlayout)
-
-                var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.lewsView)
-                var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ishamaelView)
-
-                inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
-
-                chapview.addView(view1)
-                chapview.addView(view2)
-            }
-            chap1View.setOnClickListener() {
-                setContentView(R.layout.chapter)
-
-                val inflater = LayoutInflater.from(this)
-                val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
-
-                var chapview = findViewById<LinearLayout>(R.id.chapterlayout)
-
-                var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.randView)
-
-                inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
-
-                chapview.addView(view1)
-            }
     }
-
     fun boxClick(boxview: View) {
         var check = findViewById<CheckBox>(boxview.id)
 
@@ -1770,19 +1745,12 @@ class Book1: AppCompatActivity() {
         guideView.postInvalidate()
     }
 
-    fun launchLewsTherin(view: View)
-    {
-        var intent = Intent(view.context, LewsTherin::class.java)
+    fun launchP(view: View){
+        var intent = Intent(view.context, ActivityP::class.java)
         view.context.startActivity(intent)
     }
-    fun launchIshamael(view: View)
-    {
-        var intent = Intent(view.context, Ishamael::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchRand(view: View)
-    {
-        var intent = Intent(view.context, Rand::class.java)
+    fun launch1(view: View){
+        var intent = Intent(view.context, Activity1::class.java)
         view.context.startActivity(intent)
     }
 }

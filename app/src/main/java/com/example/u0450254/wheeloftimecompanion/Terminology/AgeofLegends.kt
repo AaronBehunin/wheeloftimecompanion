@@ -3,6 +3,7 @@ package com.example.u0450254.wheeloftimecompanion.Terminology
 import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -12,11 +13,13 @@ import com.example.u0450254.wheeloftimecompanion.R
  */
 
 
-class AgeofLegends: Activity() {
+class AgeofLegends: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.terminology)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         var progressFile = openFileInput("Progress")
 

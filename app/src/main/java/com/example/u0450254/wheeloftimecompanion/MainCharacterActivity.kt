@@ -25,6 +25,8 @@ class MainCharacterActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 

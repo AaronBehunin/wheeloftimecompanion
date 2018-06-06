@@ -226,5 +226,124 @@
             android:layout_centerVertical="true"
             />
     </RelativeLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:clickable="true"
+        android:onClick="launchTheDarkOne"
+        android:id="@+id/baalzamonView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ba'alzamon"
+            android:layout_centerVertical="true"
+            android:textSize="28dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/portalicon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:clickable="true"
+        android:onClick="launchTheDarkOne"
+        android:id="@+id/darkoneView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Dark One"
+            android:layout_centerVertical="true"
+            android:textSize="28dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/portalicon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:clickable="true"
+        android:onClick="launchAndor"
+        android:id="@+id/andorView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Andor"
+            android:layout_centerVertical="true"
+            android:textSize="28dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/treeicon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:clickable="true"
+        android:onClick="launchAielWaste"
+        android:id="@+id/aielWasteView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aiel Waste"
+            android:layout_centerVertical="true"
+            android:textSize="28dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/treeicon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:clickable="true"
+        android:onClick="launchAesSedai1"
+        android:id="@+id/amyrlinSeatView">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amyrlin Seat"
+            android:layout_centerVertical="true"
+            android:textSize="28dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/portalicon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
 
 </android.support.constraint.ConstraintLayout>

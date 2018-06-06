@@ -9,6 +9,7 @@ import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
 import android.widget.ImageView
@@ -20,11 +21,15 @@ import com.example.u0450254.wheeloftimecompanion.R
  * Created by u0450254 on 5/31/2018.
  */
 
-class Aiel: Activity() {
+class Aiel: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.organization)
+
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val filename = "Progress"
         val fileContents = "1-1"
         openFileOutput(filename, Context.MODE_PRIVATE).use {

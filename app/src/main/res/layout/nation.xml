@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="Aes Sedai"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/black"
+                android:background="#0080ff"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:id="@+id/Symbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/capital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Capital:"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/typeofgov"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type of Government:"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@android:color/white"/>
+                />
+
+                <TextView
+                    android:id="@+id/Head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Head of State:"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="right">
+            </LinearLayout>
+
+            <RelativeLayout
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/locinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,21 +1,17 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Legends
 
-import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
+import android.view.MenuItem
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
 import com.example.u0450254.wheeloftimecompanion.Launchers
 
-
-/**
- * Created by u0450254 on 5/23/2018.
- */
-class LewsTherin : Activity() {
-
+class LewsTherin : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +19,7 @@ class LewsTherin : Activity() {
 
         val launcher = Launchers(this)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         var progressFile = openFileInput("Progress")
 
