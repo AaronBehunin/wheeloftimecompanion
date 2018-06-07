@@ -31,8 +31,6 @@ class Andor: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         val filename = "Progress"
         val fileContents = "1-1"
         openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -53,7 +51,6 @@ class Andor: AppCompatActivity() {
         var thisCapital = findViewById<TextView>(R.id.capital)
         var thisGov = findViewById<TextView>(R.id.typeofgov)
         var thisHead = findViewById<TextView>(R.id.Head)
-        var thisAffil = findViewById<TextView>(R.id.Affiliation)
 
         var thisSymbol = findViewById<ImageView>(R.id.Symbol)
 

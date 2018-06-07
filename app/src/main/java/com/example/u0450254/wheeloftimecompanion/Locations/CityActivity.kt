@@ -1,6 +1,3 @@
-/**
- * Created by u0450254 on 5/30/2018.
- */
 package com.example.u0450254.wheeloftimecompanion.Locations
 
 import android.content.Intent
@@ -11,8 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import com.example.u0450254.wheeloftimecompanion.Locations.Cities.Baerlon
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.AielWaste
 import com.example.u0450254.wheeloftimecompanion.Locations.Nations.Andor
-import com.example.u0450254.wheeloftimecompanion.Locations.Nations.Arafel
 import com.example.u0450254.wheeloftimecompanion.Organizations.AesSedai
 import com.example.u0450254.wheeloftimecompanion.R
 
@@ -22,7 +20,7 @@ import com.example.u0450254.wheeloftimecompanion.Terminology.TheDarkOne
 /**
  * Created by u0450254 on 5/30/2018.
  */
-class NationActivity: AppCompatActivity() {
+class CityActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
@@ -34,23 +32,16 @@ class NationActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.andorView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.arafelView)
+        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.baerlonView)
 
         inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
-        charview.addView(view2)
     }
 
-    fun launchAndor(view: View)
+    fun launchBaerlon(view: View)
     {
-        var intent = Intent(view.context, Andor::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchArafel(view: View)
-    {
-        var intent = Intent(view.context, Arafel::class.java)
+        var intent = Intent(view.context, Baerlon::class.java)
         view.context.startActivity(intent)
     }
 

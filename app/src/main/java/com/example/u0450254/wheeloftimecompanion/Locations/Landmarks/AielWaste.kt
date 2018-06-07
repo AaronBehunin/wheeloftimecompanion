@@ -29,7 +29,7 @@ class AielWaste: AppCompatActivity() {
 
         thisTitle.text = "Aiel Waste"
 
-        val terminfo = findViewById<TextView>(R.id.terminfo)
+        val terminfo = findViewById<TextView>(R.id.Title)
         terminfo.text = "     The Aiel Waste is a desert region to the east of the Spine of the World. It is bordered on the east by an expansive and exotic land known as Shara. The Aiel waste is so inhospitable that only the hardy Aiel can survive for extended periods there.\n" +
                 "\n" +
                 "     The Aiel call the Waste the \"Three-fold Land,\" referring to the gifts the harsh land gives to the Aiel people. The gifts to the Aiel are: a shaping stone to make them, a testing ground to prove their worth, and a punishment for their sin. Aiel prophecy states that the Aiel will leave the Waste once the Stone of Tear falls.\n" +

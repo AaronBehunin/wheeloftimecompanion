@@ -439,6 +439,7 @@
                     android:layout_centerVertical="true"
                     android:onClick="boxClick"/>
             </RelativeLayout>
+
         </LinearLayout>
     </ScrollView>
 

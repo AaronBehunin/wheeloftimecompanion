@@ -13,6 +13,8 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Organizations.AesSedai
 import com.example.u0450254.wheeloftimecompanion.Terminology.AgeofLegends
+import com.example.u0450254.wheeloftimecompanion.Terminology.Angreal
+import com.example.u0450254.wheeloftimecompanion.Terminology.Chora
 import com.example.u0450254.wheeloftimecompanion.Terminology.TheDarkOne
 
 /**
@@ -32,8 +34,12 @@ class TerminologyActivity: AppCompatActivity() {
 
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ageoflegendsView)
         var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.amyrlinSeatView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.baalzamonView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
+        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.angrealView)
+        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.avendesoraView)
+        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.baalzamonView)
+        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.choraView)
+        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
+
 
         inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
 
@@ -41,6 +47,9 @@ class TerminologyActivity: AppCompatActivity() {
         charview.addView(view2)
         charview.addView(view3)
         charview.addView(view4)
+        charview.addView(view5)
+        charview.addView(view6)
+        charview.addView(view7)
     }
     fun launchAgeofLegends(view: View)
     {
@@ -55,7 +64,17 @@ class TerminologyActivity: AppCompatActivity() {
     fun launchAesSedai1(view: View)
     {
         var intent = Intent(view.context, AesSedai::class.java)
-        intent.putExtra("Jump", 500)
+        intent.putExtra("Jump", 6950)
+        view.context.startActivity(intent)
+    }
+    fun launchAngreal(view: View)
+    {
+        var intent = Intent(view.context, Angreal::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchChora(view: View)
+    {
+        var intent = Intent(view.context, Chora::class.java)
         view.context.startActivity(intent)
     }
 }

@@ -41,7 +41,7 @@ class TheDarkOne: AppCompatActivity() {
 
         thisTitle.text = "The Dark One"
 
-        val terminfo = findViewById<TextView>(R.id.terminfo)
+        val terminfo = findViewById<TextView>(R.id.termInfo)
         var string1  = SpannableString("     The Dark One is a primordial, sapient, cosmic force of evil in the universe. The Dark One's goal is to break the spirits and hearts of whatever sapient beings he can influence, and, if freed from his prison, eventually to remake Creation in his own image. His actions appear to indicate that he is also a force of chaos, destruction, and discord, as many of his underlings seem to place a great deal of emphasis on increasing the amount of chaos in the world at any opportunity. His existence is revealed to be an integral part of human free will, as his malign influence encourages humanity to make selfish choices. If destroyed, humans (and likely other sapient beings) would possibly become completely incapable of evil, violence, or selfishness in any respect." +
                 " He is said to have been imprisoned by the Creator at the beginning of time in a separate dimension outside of normal reality, " +
                 "and outside of the pattern, and has sought ever since to break free of his prison and destroy the wheel of time and remake the world " +

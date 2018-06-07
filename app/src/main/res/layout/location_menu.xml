@@ -59,6 +59,20 @@
                 android:layout_height="1dp"
                 android:background="@drawable/line"
                 />
+            <TextView
+                android:id="@+id/maps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maps"
+                android:textSize="26dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line"
+                />
             </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

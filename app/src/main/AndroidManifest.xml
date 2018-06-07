@@ -50,6 +50,9 @@
         <activity android:name=".Locations.LandmarksActivity"
             android:parentActivityName=".LocationActivity">
         </activity>
+        <activity android:name=".Locations.CityActivity"
+            android:parentActivityName=".LocationActivity">
+        </activity>
 
 
 
@@ -89,6 +92,12 @@
         <activity android:name=".Locations.Nations.Andor"
             android:parentActivityName=".Locations.NationActivity">
         </activity>
+        <activity android:name=".Locations.Nations.Arafel"
+            android:parentActivityName=".Locations.NationActivity">
+        </activity>
+        <activity android:name=".Locations.Cities.Baerlon"
+            android:parentActivityName=".Locations.CityActivity">
+        </activity>
         <activity android:name=".Locations.Landmarks.AielWaste"
             android:parentActivityName=".Locations.NationActivity">
         </activity>
@@ -100,10 +109,15 @@
         <activity android:name=".Terminology.AgeofLegends"
             android:parentActivityName=".TerminologyActivity">
         </activity>
+        <activity android:name=".Terminology.Angreal"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Chora"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
         <activity android:name=".Terminology.TheDarkOne"
             android:parentActivityName=".TerminologyActivity">
         </activity>
-
 
 
         <activity android:name=".OrganizationsActivity"

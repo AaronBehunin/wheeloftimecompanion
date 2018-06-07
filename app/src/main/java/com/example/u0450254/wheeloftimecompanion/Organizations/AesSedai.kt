@@ -23,7 +23,7 @@ class AesSedai: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.organization)
 
-        var jump:Int? = intent.getIntExtra("Jump", 0)
+        var jump:Int = intent.getIntExtra("Jump", 0)
 
 
         var scrollView = findViewById<ScrollView>(R.id.orgScroll)
@@ -32,9 +32,9 @@ class AesSedai: AppCompatActivity() {
 
         h.postDelayed(Runnable() {
 
-            scrollView.scrollTo(0, 1000);
+            scrollView.scrollTo(0, jump);
 
-        }, 1000); // 250 ms delay
+        }, 250); // 250 ms delay
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val filename = "Progress"
