@@ -24,19 +24,19 @@
         <activity android:name=".CharacterActivity"
             android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".MainCharacterActivity"
+        <activity android:name=".Characters.MainCharacterActivity"
             android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".SupportCharacterActivity"
+        <activity android:name=".Characters.SupportCharacterActivity"
             android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".EnemyCharacterActivity"
+        <activity android:name=".Characters.EnemyCharacterActivity"
             android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".LegendCharacterActivity"
+        <activity android:name=".Characters.LegendCharacterActivity"
             android:parentActivityName=".CharacterActivity">
         </activity>
-        <activity android:name=".OtherCharacterActivity"
+        <activity android:name=".Characters.OtherCharacterActivity"
             android:parentActivityName=".CharacterActivity">
         </activity>
 
@@ -69,37 +69,44 @@
 
 
         <activity android:name=".Characters.Main_Characters.Rand"
-            android:parentActivityName=".MainCharacterActivity">
+            android:parentActivityName=".Characters.MainCharacterActivity">
         </activity>
         <activity android:name=".Characters.Main_Characters.Nynaeve"
-            android:parentActivityName=".MainCharacterActivity">
+            android:parentActivityName=".Characters.MainCharacterActivity">
         </activity>
         <activity android:name=".Characters.Main_Characters.Egwene"
-            android:parentActivityName=".MainCharacterActivity">
+            android:parentActivityName=".Characters.MainCharacterActivity">
         </activity>
         <activity android:name=".Characters.Main_Characters.Perrin"
-            android:parentActivityName=".MainCharacterActivity">
+            android:parentActivityName=".Characters.MainCharacterActivity">
         </activity>
+        <activity android:name=".Characters.Main_Characters.Mat"
+            android:parentActivityName=".Characters.MainCharacterActivity">
+        </activity>
+
+
         <activity android:name=".Characters.Legends.LewsTherin"
-            android:parentActivityName=".LegendCharacterActivity">
+            android:parentActivityName=".Characters.LegendCharacterActivity">
         </activity>
         <activity android:name=".Characters.Forsworn.Ishamael"
-            android:parentActivityName=".EnemyCharacterActivity">
+            android:parentActivityName=".Characters.EnemyCharacterActivity">
         </activity>
 
 
-
-        <activity android:name=".Locations.Nations.Andor"
-            android:parentActivityName=".Locations.NationActivity">
+        <activity android:name=".Characters.Other.TamAlThor"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
-        <activity android:name=".Locations.Nations.Arafel"
-            android:parentActivityName=".Locations.NationActivity">
+        <activity android:name=".Characters.Other.WitCongar"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
-        <activity android:name=".Locations.Cities.Baerlon"
-            android:parentActivityName=".Locations.CityActivity">
+        <activity android:name=".Characters.Other.DaiseCongar"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
-        <activity android:name=".Locations.Landmarks.AielWaste"
-            android:parentActivityName=".Locations.NationActivity">
+        <activity android:name=".Characters.Other.BranAlVere"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Other.CennBuie"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
 
 
@@ -109,12 +116,6 @@
         <activity android:name=".Terminology.AgeofLegends"
             android:parentActivityName=".TerminologyActivity">
         </activity>
-        <activity android:name=".Terminology.Angreal"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Chora"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
         <activity android:name=".Terminology.TheDarkOne"
             android:parentActivityName=".TerminologyActivity">
         </activity>
@@ -122,12 +123,6 @@
 
         <activity android:name=".OrganizationsActivity"
             android:parentActivityName=".MainActivity">
-        </activity>
-        <activity android:name=".Organizations.AesSedai"
-            android:parentActivityName=".OrganizationsActivity">
-        </activity>
-        <activity android:name=".Organizations.Aiel"
-            android:parentActivityName=".OrganizationsActivity">
         </activity>
     </application>
 </manifest>

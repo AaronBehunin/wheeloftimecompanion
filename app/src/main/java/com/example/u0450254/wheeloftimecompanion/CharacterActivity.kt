@@ -1,14 +1,12 @@
 package com.example.u0450254.wheeloftimecompanion
 
-import android.content.Context
+
+// the current year is 998
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
-import android.view.View
 import android.widget.*
-import com.example.u0450254.wheeloftimecompanion.Books.Book1Activity
-import java.io.File
+import com.example.u0450254.wheeloftimecompanion.Characters.*
 
 class CharacterActivity : AppCompatActivity() {
 

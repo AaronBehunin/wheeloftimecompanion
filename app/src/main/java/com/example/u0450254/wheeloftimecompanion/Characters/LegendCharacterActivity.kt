@@ -1,21 +1,22 @@
-package com.example.u0450254.wheeloftimecompanion
+package com.example.u0450254.wheeloftimecompanion.Characters
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import android.widget.TextView
-import com.example.u0450254.wheeloftimecompanion.Characters.Forsworn.Ishamael
+import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
+import com.example.u0450254.wheeloftimecompanion.R
 
 /**
  * Created by u0450254 on 5/30/2018.
  */
-class EnemyCharacterActivity: AppCompatActivity() {
+class  LegendCharacterActivity: AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
@@ -27,15 +28,15 @@ class EnemyCharacterActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ishamaelView)
+        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.lewsView)
 
         inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
     }
-    fun launchIshamael(view: View)
+    fun launchLewsTherin(view: View)
     {
-        var intent = Intent(view.context, Ishamael::class.java)
+        var intent = Intent(view.context, LewsTherin::class.java)
         view.context.startActivity(intent)
     }
 }

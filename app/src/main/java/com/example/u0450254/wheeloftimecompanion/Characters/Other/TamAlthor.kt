@@ -1,6 +1,5 @@
-package com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters
+package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
@@ -13,11 +12,10 @@ import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 
-/**
+/*
  * Created by u0450254 on 5/18/2018.
  */
-class Rand : AppCompatActivity() {
-
+class TamAlThor : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +29,7 @@ class Rand : AppCompatActivity() {
             it.write(fileContents.toByteArray())
         }
 
-        var  progressFile = openFileInput("Progress")
+        val  progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -40,37 +38,35 @@ class Rand : AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
+        val thisTitle = findViewById<TextView>(R.id.Title)
+        val thisAge = findViewById<TextView>(R.id.Age)
+        val thisAffil = findViewById<TextView>(R.id.Affiliation)
+        val thisGender = findViewById<TextView>(R.id.Gender)
+        val thisHeight = findViewById<TextView>(R.id.Height)
+        val thisWeight = findViewById<TextView>(R.id.Weight)
+        val thisHair = findViewById<TextView>(R.id.HairColor)
+        val thisEye = findViewById<TextView>(R.id.EyeColor)
+        val thisRank = findViewById<TextView>(R.id.Rank)
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
-        var thisAge = findViewById<TextView>(R.id.Age)
-        var thisAffil = findViewById<TextView>(R.id.Affiliation)
-        var thisGender = findViewById<TextView>(R.id.Gender)
-        var thisHeight = findViewById<TextView>(R.id.Height)
-        var thisWeight = findViewById<TextView>(R.id.Weight)
-        var thisHair = findViewById<TextView>(R.id.HairColor)
-        var thisEye = findViewById<TextView>(R.id.EyeColor)
-        var thisRank = findViewById<TextView>(R.id.Rank)
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
-        var thisPortrat = findViewById<ImageView>(R.id.Portrat)
-
-        thisTitle.text = "Rand al'Thor"
+        thisTitle.text = "Tamlin al'Thor"
         thisAffil.text = " Affiliation: Andor-The Two Rivers"
 
-
-        thisAge.text = " Age: 20"
+        thisAge.text = " Age: ?"
 
         thisGender.text = " Gender: Male"
-        thisHeight.text = " Height: 6'5"
-        thisWeight.text = " Weight: 235 pounds"
-        thisHair.text = " Hair Color: Red"
-        thisEye.text = " Eye Color: Gray"
+        thisHeight.text = " Height: ?"
+        thisWeight.text = " Weight: ?"
+        thisHair.text = " Hair Color: Gray"
+        thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        thisPortrat.setImageResource(R.drawable.randeotw)
+        thisPortrat.setImageResource(R.drawable.tamalthor)
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Rand al'Thor is the main protagonist of the series.")
+        var string1 = SpannableString("Tamlin al'Thor is the father of Rand al'Thor. He lives on a farm in the Westwood near Emond's Field, where he raised Rand from a baby.")
 
         thisInfo.setTextColor(Color.WHITE)
 

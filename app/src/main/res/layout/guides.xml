@@ -28,9 +28,6 @@
             android:layout_centerVertical="true"
             />
     </RelativeLayout>
-
-
-
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -87,31 +84,6 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:clickable="true"
-        android:onClick="launchAesSedai"
-        android:id="@+id/aesSedaiView">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Aes Sedai"
-            android:layout_centerVertical="true"
-            android:textSize="28dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/aessedaiicon"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        android:clickable="true"
         android:onClick="launchAgeofLegends"
         android:id="@+id/ageoflegendsView">
 
@@ -119,30 +91,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Age of Legends"
-            android:layout_centerVertical="true"
-            android:textSize="28dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/portalicon"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            />
-    </RelativeLayout>
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        android:clickable="true"
-        android:onClick="launchAiel"
-        android:id="@+id/aielView">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Aiel"
             android:layout_centerVertical="true"
             android:textSize="28dp"/>
 
@@ -233,30 +181,6 @@
         android:paddingVertical="5dp"
         android:clickable="true"
         android:onClick="launchTheDarkOne"
-        android:id="@+id/baalzamonView">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ba'alzamon"
-            android:layout_centerVertical="true"
-            android:textSize="28dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/portalicon"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            />
-    </RelativeLayout>
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        android:clickable="true"
-        android:onClick="launchTheDarkOne"
         android:id="@+id/darkoneView">
 
         <TextView
@@ -280,20 +204,18 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:clickable="true"
-        android:onClick="launchAndor"
-        android:id="@+id/andorView">
-
+        android:onClick="launchTamAlThor"
+        android:id="@+id/TamAlThorView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Andor"
+            android:text="Tam al'Thor"
             android:layout_centerVertical="true"
             android:textSize="28dp"/>
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/treeicon"
+            android:src="@drawable/facesicon"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             />
@@ -304,20 +226,18 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:clickable="true"
-        android:onClick="launchAielWaste"
-        android:id="@+id/aielWasteView">
-
+        android:onClick="launchWitCongar"
+        android:id="@+id/WitCongarView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aiel Waste"
+            android:text="Wit Congar"
             android:layout_centerVertical="true"
             android:textSize="28dp"/>
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/treeicon"
+            android:src="@drawable/facesicon"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             />
@@ -328,18 +248,18 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:clickable="true"
-        android:onClick="launchAesSedai1"
-        android:id="@+id/amyrlinSeatView">
+        android:onClick="launchDaiseCongar"
+        android:id="@+id/DaiseCongarView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amyrlin Seat"
+            android:text="Daise Congar"
             android:layout_centerVertical="true"
             android:textSize="28dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/portalicon"
+            android:src="@drawable/facesicon"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             />
@@ -350,18 +270,18 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:clickable="true"
-        android:onClick="launchAngreal"
-        android:id="@+id/angrealView">
+        android:onClick="launchBranAlVere"
+        android:id="@+id/BranAlVereView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Angreal"
+            android:text="Brandelwyn al'Vere"
             android:layout_centerVertical="true"
             android:textSize="28dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/portalicon"
+            android:src="@drawable/facesicon"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             />
@@ -372,18 +292,18 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:clickable="true"
-        android:onClick="launchArafel"
-        android:id="@+id/arafelView">
+        android:onClick="launchCennBuie"
+        android:id="@+id/CennBuieView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Arafel"
+            android:text="Cenn Buie"
             android:layout_centerVertical="true"
             android:textSize="28dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/treeicon"
+            android:src="@drawable/facesicon"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             />
@@ -394,63 +314,18 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:clickable="true"
-        android:onClick="launchChora"
-        android:id="@+id/choraView">
+        android:onClick="launchMat"
+        android:id="@+id/matView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chora Tree"
+            android:text="Mat Cauthon"
             android:layout_centerVertical="true"
             android:textSize="28dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/portalicon"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            />
-    </RelativeLayout>
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        android:clickable="true"
-        android:onClick="launchChora"
-        android:id="@+id/avendesoraView">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Avendesora"
-            android:layout_centerVertical="true"
-            android:textSize="28dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/portalicon"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        android:clickable="true"
-        android:onClick="launchBaerlon"
-        android:id="@+id/baerlonView">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Baerlon"
-            android:layout_centerVertical="true"
-            android:textSize="28dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/treeicon"
+            android:src="@drawable/facesicon"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             />

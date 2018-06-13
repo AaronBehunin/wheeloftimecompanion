@@ -11,13 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Locations.Nations.Andor
-import com.example.u0450254.wheeloftimecompanion.Locations.Nations.Arafel
-import com.example.u0450254.wheeloftimecompanion.Organizations.AesSedai
 import com.example.u0450254.wheeloftimecompanion.R
-
-import com.example.u0450254.wheeloftimecompanion.Terminology.AgeofLegends
-import com.example.u0450254.wheeloftimecompanion.Terminology.TheDarkOne
 
 /**
  * Created by u0450254 on 5/30/2018.
@@ -34,24 +28,6 @@ class NationActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.andorView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.arafelView)
-
         inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
-
-        charview.addView(view1)
-        charview.addView(view2)
     }
-
-    fun launchAndor(view: View)
-    {
-        var intent = Intent(view.context, Andor::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchArafel(view: View)
-    {
-        var intent = Intent(view.context, Arafel::class.java)
-        view.context.startActivity(intent)
-    }
-
 }
