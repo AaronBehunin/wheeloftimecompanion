@@ -8,15 +8,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Characters.Other.TamAlThor
-import com.example.u0450254.wheeloftimecompanion.Locations.Cities.EmondsField
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.TwoRivers
+import com.example.u0450254.wheeloftimecompanion.Locations.Maps.TwoRiversMap
 import com.example.u0450254.wheeloftimecompanion.R
-import kotlinx.android.synthetic.main.guides.*
 
 /**
- * Created by u0450254 on 5/30/2018.
+ * Created by u0450254 on 6/14/2018.
  */
-class CityActivity: AppCompatActivity() {
+class MapActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
@@ -28,16 +27,14 @@ class CityActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EmondsFieldView)
+        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TwoRiversView)
 
         inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
-
         charview.addView(view1)
     }
 
-    fun launchEmondsField(view: View)
-    {
-        var intent = Intent(view.context, EmondsField::class.java)
+    fun launchTwoRivers(view: View) {
+        var intent = Intent(view.context, TwoRiversMap::class.java)
         view.context.startActivity(intent)
     }
 }

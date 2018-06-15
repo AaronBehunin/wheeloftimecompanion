@@ -51,9 +51,16 @@
             android:parentActivityName=".LocationActivity">
         </activity>
         <activity android:name=".Locations.CityActivity"
+        android:parentActivityName=".LocationActivity">
+    </activity>
+        <activity android:name=".Locations.MapActivity"
             android:parentActivityName=".LocationActivity">
         </activity>
 
+
+        <activity android:name=".OrganizationsActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
 
 
         <activity android:name=".Books.Book1Activity"
@@ -88,7 +95,7 @@
         <activity android:name=".Characters.Legends.LewsTherin"
             android:parentActivityName=".Characters.LegendCharacterActivity">
         </activity>
-        <activity android:name=".Characters.Forsworn.Ishamael"
+        <activity android:name=".Characters.Forsaken.Ishamael"
             android:parentActivityName=".Characters.EnemyCharacterActivity">
         </activity>
 
@@ -110,6 +117,32 @@
         </activity>
 
 
+
+        <activity android:name=".Locations.Cities.EmondsField"
+            android:parentActivityName=".Locations.CityActivity">
+        </activity>
+
+
+        <activity android:name=".Locations.Landmarks.TwoRivers"
+            android:parentActivityName=".Locations.LandmarksActivity">
+        </activity>
+
+
+
+        <activity android:name=".Locations.Maps.TwoRiversMap"
+            android:parentActivityName=".Locations.MapActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
+
+        <activity android:name=".Organizations.Forsaken"
+            android:parentActivityName=".OrganizationsActivity">
+        </activity>
+
+
+
+
+
         <activity android:name=".TerminologyActivity"
             android:parentActivityName=".MainActivity">
         </activity>
@@ -119,10 +152,11 @@
         <activity android:name=".Terminology.TheDarkOne"
             android:parentActivityName=".TerminologyActivity">
         </activity>
-
-
-        <activity android:name=".OrganizationsActivity"
-            android:parentActivityName=".MainActivity">
+        <activity android:name=".Terminology.TheCreator"
+            android:parentActivityName=".TerminologyActivity">
         </activity>
+
+
+
     </application>
 </manifest>

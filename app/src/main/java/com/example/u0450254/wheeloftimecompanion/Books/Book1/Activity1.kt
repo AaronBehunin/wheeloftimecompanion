@@ -8,19 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Characters.Forsworn.Ishamael
-import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
 import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Mat
 import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Rand
 import com.example.u0450254.wheeloftimecompanion.Characters.Other.*
-import com.example.u0450254.wheeloftimecompanion.Progress
+import com.example.u0450254.wheeloftimecompanion.Locations.Cities.EmondsField
 import com.example.u0450254.wheeloftimecompanion.R
-import kotlinx.android.synthetic.main.guides.*
 
-/**
+/*
  * Created by u0450254 on 6/5/2018.
  */
-
 
 
 class Activity1: AppCompatActivity() {
@@ -42,6 +38,7 @@ class Activity1: AppCompatActivity() {
         var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BranAlVereView)
         var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CennBuieView)
         var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.matView)
+        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EmondsFieldView)
 
         inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
 
@@ -52,6 +49,7 @@ class Activity1: AppCompatActivity() {
         chapview.addView(view5)
         chapview.addView(view6)
         chapview.addView(view7)
+        chapview.addView(view8)
     }
     fun launchRand(view: View)
     {
@@ -84,6 +82,11 @@ class Activity1: AppCompatActivity() {
     fun launchMat(view: View)
     {
         var intent = Intent(view.context, Mat::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchEmondsField(view: View)
+    {
+        var intent = Intent(view.context, EmondsField::class.java)
         view.context.startActivity(intent)
     }
 

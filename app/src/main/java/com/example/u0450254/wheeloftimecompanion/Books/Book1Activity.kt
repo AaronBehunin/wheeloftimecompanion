@@ -3,19 +3,14 @@ package com.example.u0450254.wheeloftimecompanion.Books
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
 import java.io.File
-import android.view.LayoutInflater
 import com.example.u0450254.wheeloftimecompanion.Books.Book1.Activity1
 import com.example.u0450254.wheeloftimecompanion.Books.Book1.ActivityP
-import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Rand
-import com.example.u0450254.wheeloftimecompanion.Characters.Forsworn.Ishamael
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 

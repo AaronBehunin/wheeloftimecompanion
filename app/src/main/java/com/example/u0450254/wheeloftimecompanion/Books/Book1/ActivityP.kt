@@ -8,9 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Characters.Forsworn.Ishamael
+import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Ishamael
 import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
-import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 /**

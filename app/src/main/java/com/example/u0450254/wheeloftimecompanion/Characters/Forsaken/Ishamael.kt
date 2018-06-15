@@ -1,15 +1,13 @@
-package com.example.u0450254.wheeloftimecompanion.Characters.Forsworn
+package com.example.u0450254.wheeloftimecompanion.Characters.Forsaken
 
 /**
  * Created by u0450254 on 5/29/2018.
  */
-import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
-import android.view.MenuItem
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
@@ -52,7 +50,7 @@ class Ishamael : AppCompatActivity() {
         var thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
         thisTitle.text = "Ishamael"
-        thisAffil.text = " Affiliation: Forsworn"
+        thisAffil.text = " Affiliation: Forsaken"
 
 
         thisAge.text = " Age: ?"

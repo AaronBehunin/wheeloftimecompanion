@@ -57,8 +57,6 @@ android:background="#000000">
                 android:textSize="20dp"
                 android:fontFamily="sans-serif"
                 android:textColor="@android:color/white"/>
-            />
-
             <TextView
                 android:id="@+id/Allignment"
                 android:layout_width="wrap_content"
@@ -67,7 +65,6 @@ android:background="#000000">
                 android:textSize="20dp"
                 android:fontFamily="sans-serif"
                 android:textColor="@android:color/white"/>
-            />
             <TextView
                 android:id="@+id/Affiliation"
                 android:layout_width="wrap_content"
@@ -76,9 +73,6 @@ android:background="#000000">
                 android:textSize="20dp"
                 android:fontFamily="sans-serif"
                 android:textColor="@android:color/white"/>
-            />
-
-            />
         </LinearLayout>
 
         <LinearLayout
