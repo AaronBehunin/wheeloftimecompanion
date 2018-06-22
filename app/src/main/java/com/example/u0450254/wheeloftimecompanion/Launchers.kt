@@ -36,8 +36,6 @@ class Launchers(context: Context)
         }
 
     }
-
-
     val spanIshamael = object: ClickableSpan()
     {
         override fun onClick(widget: View?) {

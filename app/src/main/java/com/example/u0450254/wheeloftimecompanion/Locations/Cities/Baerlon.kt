@@ -16,7 +16,7 @@ import com.example.u0450254.wheeloftimecompanion.R
 /*
  * Created by u0450254 on 5/18/2018.
  */
-class EmondsField : AppCompatActivity() {
+class Baerlon : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,11 +41,11 @@ class EmondsField : AppCompatActivity() {
 
         val thisTitle = findViewById<TextView>(R.id.Title)
 
-        thisTitle.text = "Emond's Field"
+        thisTitle.text = "Baerlon"
 
         var thisInfo = findViewById<TextView>(R.id.termInfo)
 
-        var string1 = SpannableString("     A small one-inn farming village in the two rivers.")
+        var string1 = SpannableString("     A city in Andor on the road from Caemlyn to the mines in the Mountains of Mist.")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

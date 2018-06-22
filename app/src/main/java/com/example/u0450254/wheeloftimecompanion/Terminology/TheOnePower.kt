@@ -13,7 +13,7 @@ import com.example.u0450254.wheeloftimecompanion.R
 /*
  * Created by u0450254 on 5/23/2018.
  */
-class TheCreator: AppCompatActivity() {
+class TheOnePower: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +31,10 @@ class TheCreator: AppCompatActivity() {
 
         var thisTitle = findViewById<TextView>(R.id.Title)
 
-        thisTitle.text = "The Creator"
+        thisTitle.text = "The One Power"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1  = SpannableString("     The Being who made the world and put in place the Wheel of Time")
+        var string1  = SpannableString("     The power drawn from the true source.  The vast majority of people are comepletely unable to channel, and even tinier number have the ability inborn.  Aes Sedai search for men with it in order to stop the terible things they inevitably do with the Power in their madness")
 
         terminfo.setTextColor(Color.WHITE)
 

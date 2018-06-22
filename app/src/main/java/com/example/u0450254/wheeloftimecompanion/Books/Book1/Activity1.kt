@@ -11,6 +11,7 @@ import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Mat
 import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Rand
 import com.example.u0450254.wheeloftimecompanion.Characters.Other.*
+import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.TamAlThor
 import com.example.u0450254.wheeloftimecompanion.Locations.Cities.EmondsField
 import com.example.u0450254.wheeloftimecompanion.R
 

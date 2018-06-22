@@ -8,9 +8,8 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import com.example.u0450254.wheeloftimecompanion.Books.Book1.*
 import java.io.File
-import com.example.u0450254.wheeloftimecompanion.Books.Book1.Activity1
-import com.example.u0450254.wheeloftimecompanion.Books.Book1.ActivityP
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
@@ -1746,6 +1745,18 @@ class Book1Activity: AppCompatActivity() {
     }
     fun launch1(view: View){
         var intent = Intent(view.context, Activity1::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch2(view: View){
+        var intent = Intent(view.context, Activity2::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch3(view: View){
+        var intent = Intent(view.context, Activity3::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch4(view: View){
+        var intent = Intent(view.context, Activity4::class.java)
         view.context.startActivity(intent)
     }
 }

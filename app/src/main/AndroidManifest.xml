@@ -63,6 +63,18 @@
         </activity>
 
 
+        <activity android:name=".TerminologyActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+
+        <activity android:name=".CreatureActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+
+
+
         <activity android:name=".Books.Book1Activity"
             android:parentActivityName=".GuideActivity">
         </activity>
@@ -70,6 +82,15 @@
             android:parentActivityName=".Books.Book1Activity">
         </activity>
         <activity android:name=".Books.Book1.Activity1"
+            android:parentActivityName=".Books.Book1Activity">
+        </activity>
+        <activity android:name=".Books.Book1.Activity2"
+            android:parentActivityName=".Books.Book1Activity">
+        </activity>
+        <activity android:name=".Books.Book1.Activity3"
+            android:parentActivityName=".Books.Book1Activity">
+        </activity>
+        <activity android:name=".Books.Book1.Activity4"
             android:parentActivityName=".Books.Book1Activity">
         </activity>
 
@@ -95,14 +116,33 @@
         <activity android:name=".Characters.Legends.LewsTherin"
             android:parentActivityName=".Characters.LegendCharacterActivity">
         </activity>
+
+
+
         <activity android:name=".Characters.Forsaken.Ishamael"
+            android:parentActivityName=".Characters.EnemyCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Forsaken.PadanFain"
             android:parentActivityName=".Characters.EnemyCharacterActivity">
         </activity>
 
 
-        <activity android:name=".Characters.Other.TamAlThor"
-            android:parentActivityName=".Characters.OtherCharacterActivity">
+        <activity android:name=".Characters.Supporting.TamAlThor"
+            android:parentActivityName=".Characters.SupportCharacterActivity">
         </activity>
+        <activity android:name=".Characters.Supporting.Lan"
+            android:parentActivityName=".Characters.SupportCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Supporting.Moiraine"
+            android:parentActivityName=".Characters.SupportCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Supporting.Thom"
+            android:parentActivityName=".Characters.SupportCharacterActivity">
+        </activity>
+
+
+
+
         <activity android:name=".Characters.Other.WitCongar"
             android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
@@ -115,10 +155,31 @@
         <activity android:name=".Characters.Other.CennBuie"
             android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
+        <activity android:name=".Characters.Other.HaralLuhhan"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Other.JonThane"
+        android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Other.MarinAlVere"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Other.EwinFinngar"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Other.RowanHurn"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Other.SamelCrawe"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
 
 
 
         <activity android:name=".Locations.Cities.EmondsField"
+            android:parentActivityName=".Locations.CityActivity">
+        </activity>
+        <activity android:name=".Locations.Cities.Baerlon"
             android:parentActivityName=".Locations.CityActivity">
         </activity>
 
@@ -126,6 +187,21 @@
         <activity android:name=".Locations.Landmarks.TwoRivers"
             android:parentActivityName=".Locations.LandmarksActivity">
         </activity>
+        <activity android:name=".Locations.Landmarks.DhallinForest"
+            android:parentActivityName=".Locations.LandmarksActivity">
+        </activity>
+
+
+        <activity android:name=".Locations.Nations.Ghealdan"
+            android:parentActivityName=".Locations.NationActivity">
+        </activity>
+        <activity android:name=".Locations.Nations.Illian"
+            android:parentActivityName=".Locations.NationActivity">
+        </activity>
+        <activity android:name=".Locations.Nations.TarValon"
+            android:parentActivityName=".Locations.NationActivity">
+        </activity>
+
 
 
 
@@ -138,14 +214,14 @@
         <activity android:name=".Organizations.Forsaken"
             android:parentActivityName=".OrganizationsActivity">
         </activity>
-
-
-
-
-
-        <activity android:name=".TerminologyActivity"
-            android:parentActivityName=".MainActivity">
+        <activity android:name=".Organizations.Warder"
+            android:parentActivityName=".TerminologyActivity">
         </activity>
+        <activity android:name=".Organizations.AesSedai"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+
+
         <activity android:name=".Terminology.AgeofLegends"
             android:parentActivityName=".TerminologyActivity">
         </activity>
@@ -154,6 +230,23 @@
         </activity>
         <activity android:name=".Terminology.TheCreator"
             android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.TheOnePower"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.TheBreakingoftheWorld"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Wisdom"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Gleeman"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+
+
+        <activity android:name=".Creatures.Trolloc"
+            android:parentActivityName=".CreatureActivity">
         </activity>
 
 

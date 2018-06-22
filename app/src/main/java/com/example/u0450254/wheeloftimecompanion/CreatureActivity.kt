@@ -1,4 +1,4 @@
-package com.example.u0450254.wheeloftimecompanion.Characters
+package com.example.u0450254.wheeloftimecompanion
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,14 +8,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Ishamael
-import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.PadanFain
-import com.example.u0450254.wheeloftimecompanion.R
+import com.example.u0450254.wheeloftimecompanion.Creatures.Trolloc
+import com.example.u0450254.wheeloftimecompanion.Terminology.AgeofLegends
+import com.example.u0450254.wheeloftimecompanion.Terminology.TheCreator
+import com.example.u0450254.wheeloftimecompanion.Terminology.TheDarkOne
+import com.example.u0450254.wheeloftimecompanion.Organizations.Warder
 
 /**
  * Created by u0450254 on 5/30/2018.
  */
-class EnemyCharacterActivity: AppCompatActivity() {
+class CreatureActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
@@ -27,22 +29,16 @@ class EnemyCharacterActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ishamaelView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
+        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
 
         inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
-        charview.addView(view2)
     }
-    fun launchIshamael(view: View)
+    fun launchTrolloc(view: View)
     {
-        var intent = Intent(view.context, Ishamael::class.java)
+        var intent = Intent(view.context, Trolloc::class.java)
         view.context.startActivity(intent)
     }
-    fun launchPadanFain(view: View)
-    {
-        var intent = Intent(view.context, PadanFain::class.java)
-        view.context.startActivity(intent)
-    }
+
 }

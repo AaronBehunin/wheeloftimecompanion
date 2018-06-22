@@ -1,4 +1,4 @@
-package com.example.u0450254.wheeloftimecompanion.Locations.Cities
+package com.example.u0450254.wheeloftimecompanion.Organizations
 
 import android.content.Context
 import android.graphics.Color
@@ -6,21 +6,19 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
 /*
  * Created by u0450254 on 5/18/2018.
  */
-class EmondsField : AppCompatActivity() {
+class AesSedai : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.organization)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -40,12 +38,26 @@ class EmondsField : AppCompatActivity() {
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
         val thisTitle = findViewById<TextView>(R.id.Title)
+        val thisType = findViewById<TextView>(R.id.type)
+        val thisSymbol = findViewById<ImageView>(R.id.Symbol)
+        val thisHead = findViewById<TextView>(R.id.Headquarters)
+        val thisAllign = findViewById<TextView>(R.id.Allignment)
+        val thisAffil = findViewById<TextView>(R.id.Affiliation)
 
-        thisTitle.text = "Emond's Field"
+        thisTitle.text = "Aes Sedai"
+        thisType.text = "Type: One Power Users"
+        thisHead.text = "Headquarters: TarValon"
+        thisAllign.text = "Allignemnt: Good"
+        thisAffil.text = "Affiliation: Independent"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        thisSymbol.setImageResource(R.drawable.aessedaisymbol)
 
-        var string1 = SpannableString("     A small one-inn farming village in the two rivers.")
+        var thisInfo = findViewById<TextView>(R.id.charinfo)
+
+
+
+        var string1 = SpannableString("     Wielders of the One Power.  Since the Time of Madness, all surviving Aes Sedai are women. " +
+                "Widely distrusted and feared, even hated, they are blamed by many for the Breaking of the World, and are generally thought to meddle in the affairs of other nations.")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

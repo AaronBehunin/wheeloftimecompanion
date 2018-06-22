@@ -13,7 +13,7 @@ import com.example.u0450254.wheeloftimecompanion.R
 /*
  * Created by u0450254 on 5/23/2018.
  */
-class TheCreator: AppCompatActivity() {
+class Wisdom: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +31,12 @@ class TheCreator: AppCompatActivity() {
 
         var thisTitle = findViewById<TextView>(R.id.Title)
 
-        thisTitle.text = "The Creator"
+        thisTitle.text = "Wisdom"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1  = SpannableString("     The Being who made the world and put in place the Wheel of Time")
+        var string1  = SpannableString("     In villages, a woman chosen by the Women's Circle to sit in the Circle for her knowledge of such things as healing and fortelling the weather, as well as for common good sense." +
+                " A position of great responiblility and authority, both actual and implied.  She is generally considered the equal of the mayor, and in some villages his superior." +
+                "Unlike the mayor, she is chosen for life, and it is very rare for a Wisdom to be removed from office before her death.")
 
         terminfo.setTextColor(Color.WHITE)
 

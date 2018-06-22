@@ -15,7 +15,7 @@ import com.example.u0450254.wheeloftimecompanion.R
 /*
  * Created by u0450254 on 5/18/2018.
  */
-class TamAlThor : AppCompatActivity() {
+class SamelCrawe : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,9 +48,7 @@ class TamAlThor : AppCompatActivity() {
         val thisEye = findViewById<TextView>(R.id.EyeColor)
         val thisRank = findViewById<TextView>(R.id.Rank)
 
-        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
-
-        thisTitle.text = "Tamlin al'Thor"
+        thisTitle.text = "Samel Crawe"
         thisAffil.text = " Affiliation: Andor-The Two Rivers"
 
         thisAge.text = " Age: ?"
@@ -58,16 +56,13 @@ class TamAlThor : AppCompatActivity() {
         thisGender.text = " Gender: Male"
         thisHeight.text = " Height: ?"
         thisWeight.text = " Weight: ?"
-        thisHair.text = " Hair Color: Gray"
+        thisHair.text = " Hair Color: ?"
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        thisPortrat.setImageResource(R.drawable.tamalthor)
-
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Tamlin al'Thor is the father of Rand al'Thor. He lives on a farm in the Westwood near Emond's Field, where he raised Rand from a baby.")
-
+        var string1 = SpannableString("A Village Councilman in Edmons Field.  He is described as \"horse-faced\" with a long nose. He is the father of Ban.")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
