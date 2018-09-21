@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -22,12 +24,6 @@ class EwinFinngar : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -62,11 +58,35 @@ class EwinFinngar : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("     A young man from Emonds Field.")
+        var string1 = SpannableString("\n     Ewin Finngar is a teenager from Emond's Field in the Two Rivers.\n\n")
+        var string1_1 = SpannableString("\n     Ewin Finngar is a teenager from Emond's Field in the Two Rivers. In his childhood he was a younger friend to Rand al'Thor and Matrim Cauthon; the later of whom would occasionally make Ewin the target of pranks and practical jokes.\n\n")
+
+        var string2 = SpannableString("Appearance\n\n")
+        string2.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string3 = SpannableString("     Ewin is a short, highly excitable pudgy-faced fourteen-year-old.\n\n")
+
+        var string4 = SpannableString("Activities\n\n")
+        string4.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string5 = SpannableString("     On the day before Bel Tine in 998 NE, Ewin became enamored with a mysterious female visitor to the village who arrived with a male companion. He rushed to the cellar of the Winespring Inn in order to gossip about these strangers to Mat and Rand. Ewin was later gifted a silver penny from the visitor and decided not to spend it.\n\n")
+        var string5_1 = SpannableString("     On the day before Bel Tine in 998 NE, Ewin became enamored with a mysterious female visitor to the village who arrived with a male companion. He rushed to the cellar of the Winespring Inn in order to gossip about these strangers to Mat and Rand. Ewin was later gifted a silver penny from the visitor and decided not to spend it. That same day when Padan Fain arrived in Emond's Field, Ewin interrupted Fain's storytelling about Logain Ablar and was nearly cuffed by Cenn Buie who wanted him to remain silent while elders were speaking.\n\n")
+
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>2))
+        {
+            thisInfo.text = TextUtils.concat(string1_1,string2,string3,string4,string5)
+
+        }
+        if (progress.book>1||(progress.book==1&&progress.chapter>3))
+        {
+            thisInfo.text = TextUtils.concat(string1_1,string2,string3,string4,string5_1)
+        }
     }
 }

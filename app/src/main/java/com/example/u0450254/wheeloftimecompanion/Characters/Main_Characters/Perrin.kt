@@ -9,7 +9,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -27,11 +29,6 @@ class Perrin : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         var  progressFile = openFileInput("Progress")
 
@@ -70,12 +67,41 @@ class Perrin : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("A young blacksmith from Edmond's Field")
+        var string1 = SpannableString("\n     Perrin Aybara is one of the main protagonists in the series.\n\n")
 
+        var string4 = SpannableString("Appearance and Personality\n\n")
+        string4.setSpan(RelativeSizeSpan(2f),0, 26,0)
+
+        var string5 = SpannableString("     He is stocky, strong, with thick, curly brown hair, and his eyes a deep, dark brown.\n\n")
+
+        var string6 = SpannableString("     Perrin has wide shoulders and strong arms gained from his hours working as a blacksmith's apprentice. He is tall, being only half a head shorter than Rand al'Thor.\n\n")
+
+        var string7 = SpannableString("     Perrin is typically very gentle and slow to anger. Due to his naturally great strength, he learned while he was still a young boy to restrain himself so as not to inadvertently harm others. This restraint extends to his mindset as well, and he typically says only what he thinks needs to be said and nothing more. He also takes great care before speaking, making sure his thoughts are well formed and complete before opening his mouth. This carefulness, combined with his bear-like stature, often gives others the impression that he is somewhat slow of wit.\n\n")
+
+        var string9 = SpannableString("Youth\n\n")
+        string9.setSpan(RelativeSizeSpan(1.5f),0, 5,0)
+
+        var string10 = SpannableString("     Perrin was trained to be a blacksmith before being forced to leave Emond's Field with Moiraine Damodred and his friends.\n\n")
+
+
+        var string53 = SpannableString("The Axe and the Hammer\n\n")
+        string53.setSpan(RelativeSizeSpan(1.5f),0, 22,0)
+
+        var string54 = SpannableString("     The night Perrin left the Two Rivers, he received his signature weapon: a moon-bladed hand axe Master Luhhan had crafted for a Merchant Guard who then would not pay for it.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>3))
+        {
+            thisInfo.text = TextUtils.concat(string1,string4,string5,string6,string7)
+        }
+        if (progress.book>1||(progress.book==1&&progress.chapter>10))
+        {
+            thisInfo.text = TextUtils.concat(thisInfo.text,string9,string10,string53,string54)
+        }
+
     }
 }

@@ -51,7 +51,7 @@ class TarValon : AppCompatActivity() {
         thisHead.text = "Ruler: Siuan Sanche"
         var thisInfo = findViewById<TextView>(R.id.locinfo)
 
-        var string1 = SpannableString("    A city on an island in the River Erinin.  The center of Aes Sedai power, and location of the Amyrlin Seat")
+        var string1 = SpannableString("\n     Tar Valon is a city located on an island on the River Erinin, within sight of Dragonmount. It is the center of Aes Sedai power and is also the second largest, most populous city in the Westlands.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

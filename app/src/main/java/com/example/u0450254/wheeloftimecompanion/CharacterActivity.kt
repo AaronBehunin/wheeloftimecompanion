@@ -21,11 +21,11 @@ class CharacterActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var mainChar = findViewById<TextView>(R.id.Mainchars)
-        var suppChar = findViewById<TextView>(R.id.SupportChars)
-        var enemyChar = findViewById<TextView>(R.id.Enemies)
-        var otherChar = findViewById<TextView>(R.id.OtherChars)
-        var legendChar = findViewById<TextView>(R.id.LegnedaryChars)
+        var mainChar = findViewById<LinearLayout>(R.id.Mainchars)
+        var suppChar = findViewById<LinearLayout>(R.id.SupportChars)
+        var enemyChar = findViewById<LinearLayout>(R.id.Enemies)
+        var otherChar = findViewById<LinearLayout>(R.id.OtherChars)
+        var legendChar = findViewById<LinearLayout>(R.id.LegendaryChars)
 
         mainChar.setOnClickListener() {
             var intent = Intent(this, MainCharacterActivity::class.java)

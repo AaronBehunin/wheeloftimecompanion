@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.TextUtils
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -47,16 +48,19 @@ class Ghealdan: AppCompatActivity() {
 
 
         val locinfo = findViewById<TextView>(R.id.locinfo)
-        var string1  = SpannableString("     Ghealdan is a relatively small country that lies along the feet of the Mountains of Mist to the north of Amadicia and northwest of Altara.")
+        var string1  = SpannableString("\n     Ghealdan is a relatively small country that lies along the feet of the Mountains of Mist to the north of Amadicia and northwest of Altara.\n\n")
 
 
-        var string2 = SpannableString("Ghealdan is currently under seige by a false dragon")
+        var string11 = SpannableString("History\n\n")
+        string11.setSpan(RelativeSizeSpan(2f), 0, 7, 0)
+
+        var string14 = SpannableString("     In late 997 NE, Ghealdan suffered severe losses when a false Dragon rose to power and rampaged across the country.\n\n")
 
         locinfo.text = string1
 
         if (progress.book>1 || (progress.book == 1 && progress.chapter>3))
         {
-            locinfo.text = TextUtils.concat(string1,string2)
+            locinfo.text = TextUtils.concat(string1,string11,string14)
         }
         locinfo.setTextColor(Color.WHITE)
     }

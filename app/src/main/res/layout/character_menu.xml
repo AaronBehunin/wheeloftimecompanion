@@ -15,28 +15,59 @@
             android:paddingLeft="0dp">
 
 
-            <TextView
-                android:id="@+id/Mainchars"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Main Characters"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:id="@+id/Mainchars">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="14dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/facesicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp"
+                    android:text="Main Characters"
+                    android:textSize="30sp" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@drawable/line"
                 />
 
-            <TextView
-                android:id="@+id/SupportChars"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Supporting Characters"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:id="@+id/SupportChars">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="14dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/stafficon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="10dp"
+                    android:text="Supporting Characters"
+
+                    android:textSize="30dp" />
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -44,41 +75,90 @@
                 android:background="@drawable/line"
                 />
 
-            <TextView
-                android:id="@+id/Enemies"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enemies"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:id="@+id/Enemies">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:adjustViewBounds="true"
+                    android:layout_marginLeft="-5sp"
+                    android:layout_marginRight="9dp"
+                    android:maxHeight="95dp"
+                    android:maxWidth="95dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ravensicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp"
+                    android:text="Enemies"
+
+                    android:textSize="30dp" />
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@drawable/line"
                 />
-            <TextView
-                android:id="@+id/LegnedaryChars"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Legendary Characters"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:id="@+id/LegendaryChars">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="90dp"
+                    android:maxWidth="90dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="9dp"
+                    android:src="@drawable/wheelicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp"
+                    android:text="Legendary Characters"
+
+                    android:textSize="30dp" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@drawable/line"
                 />
-            <TextView
-                android:id="@+id/OtherChars"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Other Characters"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:id="@+id/OtherChars">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:adjustViewBounds="true"
+                    android:layout_marginLeft="-11sp"
+                    android:maxHeight="110dp"
+                    android:maxWidth="110dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bullicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="10dp"
+                    android:text="Other Characters"
+
+                    android:textSize="30dp" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

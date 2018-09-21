@@ -8,8 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Locations.Cities.Baerlon
-import com.example.u0450254.wheeloftimecompanion.Locations.Cities.EmondsField
+import com.example.u0450254.wheeloftimecompanion.Locations.Cities.*
 import com.example.u0450254.wheeloftimecompanion.Locations.Nations.Illian
 import com.example.u0450254.wheeloftimecompanion.R
 
@@ -29,16 +28,36 @@ class CityActivity: AppCompatActivity() {
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BaerlonView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EmondsFieldView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.IllianView)
+        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CaemlynView)
+        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DevenRideView)
+        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EmondsFieldView)
+        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.IllianView)
+        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PaaranDisenView)
+        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarenFerryView)
+        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WatchHillView)
 
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+        inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
         charview.addView(view2)
         charview.addView(view3)
+        charview.addView(view4)
+        charview.addView(view5)
+        charview.addView(view6)
+        charview.addView(view7)
+        charview.addView(view8)
     }
 
+    fun launchBaerlon(view: View)
+    {
+        var intent = Intent(view.context, Baerlon::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchDevenRide(view: View)
+    {
+        var intent = Intent(view.context, DevenRide::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchEmondsField(view: View)
     {
         var intent = Intent(view.context, EmondsField::class.java)
@@ -49,9 +68,23 @@ class CityActivity: AppCompatActivity() {
         var intent = Intent(view.context, Illian::class.java)
         view.context.startActivity(intent)
     }
-    fun launchBaerlon(view: View)
+    fun launchPaaranDisen(view: View)
     {
-        var intent = Intent(view.context, Baerlon::class.java)
+        var intent = Intent(view.context, PaaranDisen::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTarenFerry(view: View)
+    {
+        var intent = Intent(view.context, TarenFerry::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWatchHill(view: View)
+    {
+        var intent = Intent(view.context, WatchHill::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchCaemlyn(view: View) {
+        var intent = Intent(view.context, Caemlyn::class.java)
         view.context.startActivity(intent)
     }
 }

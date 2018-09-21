@@ -6,7 +6,7 @@ import android.text.style.ClickableSpan
 import android.view.View
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Ishamael
 import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
-import com.example.u0450254.wheeloftimecompanion.Terminology.TheDarkOne
+import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDarkOne
 
 /**
  * Created by u0450254 on 5/23/2018.

@@ -9,7 +9,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -25,12 +27,6 @@ class Egwene : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         var  progressFile = openFileInput("Progress")
 
@@ -68,12 +64,48 @@ class Egwene : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Ewgene al'Vere is one of the main female protagonists of the series. She is a farmgirl from Edmonds Field and the mayors daughter")
+        var string1 = SpannableString("\n     Ewgene al'Vere is one of the main female protagonists of the series.\n\n")
+
+        var string2 = SpannableString("Appearance\n\n")
+        string2.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string3 = SpannableString("     She is described as beautiful, with large brown eyes, and long dark hair. She's very short, standing one span and two inches or about 5'2\".\n\n")
+        var string4 = SpannableString("Personality\n\n")
+        string4.setSpan(RelativeSizeSpan(2f),0,11,0)
+
+        var string6 = SpannableString("     Egwene frequently acts in a manner that comes off as arrogant. She also, like many other women in the series, believes men to be foolish or blunt. Because of this, she usually gets her way.\n\n")
+
+        var string16 = SpannableString("Family and Friends\n\n")
+        string16.setSpan(RelativeSizeSpan(2f),0,18,0)
+
+        var string17 = SpannableString("     Egwene is the youngest daughter of Marin al'Vere and Brandelwyn al'Vere, Mayor of Emond's Field.\n\n")
+
+        var string18 = SpannableString("     Egwene grew up in Emond's Field with Rand al'Thor, Matrim Cauthon, Perrin Aybara and Nynaeve al'Meara. Though friends with all of them, she was particularly close with Rand, whom it was assumed she would marry when they both came of age. She also wished to become apprentice Wisdom to Nynaeve.\n\n")
+
+        var string19 = SpannableString("Activities\n\n")
+        string19.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string20 = SpannableString("Adventure\n\n")
+        string20.setSpan(RelativeSizeSpan(1.5f),0,9,0)
+
+        var string21 = SpannableString("   Winternight changed all that. When Trollocs invaded the Two Rivers region, Rand, Mat and Perrin were spirited away by Moiraine Sedai for their own protection; Egwene went with them, seeking \"adventure\".")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>3))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string6,string16,string17, string18)
+        }
+        if (progress.book>1||(progress.book==1&&progress.chapter>10))
+        {
+            thisInfo.text = TextUtils.concat(thisInfo.text,string19,string20,string21)
+        }
+
+
+
     }
 }

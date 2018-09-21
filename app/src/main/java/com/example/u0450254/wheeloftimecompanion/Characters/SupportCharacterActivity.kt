@@ -34,13 +34,12 @@ class SupportCharacterActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.LanView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MoiraineView)
+        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MoiraineView)
+        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.LanView)
         var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ThomView)
         var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamAlThorView)
 
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+        inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
         charview.addView(view2)

@@ -551,4 +551,5 @@ class GuideActivity : AppCompatActivity() {
         view.context.startActivity(intent)
 
     }
+
 }

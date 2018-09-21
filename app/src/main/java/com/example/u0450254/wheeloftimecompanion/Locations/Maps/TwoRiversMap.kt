@@ -28,7 +28,9 @@ class TwoRiversMap : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
-       var mImageView = findViewById<MapView>(R.id.mapView) as ImageView
+       var mImageView = findViewById<MapView>(R.id.mapView)
+
+        mImageView.setMap(R.drawable.tworiversmap)
 
         mImageView.setImageResource(R.drawable.tworiversmap)
        var mScaleGestureDetector = ScaleGestureDetector(this, ScaleListener())

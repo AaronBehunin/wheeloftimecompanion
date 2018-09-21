@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val termView = findViewById<LinearLayout>(R.id.Terminology)
         val locationView = findViewById<LinearLayout>(R.id.Locations)
         val creatureView = findViewById<LinearLayout>(R.id.creatures)
+        val artView = findViewById<LinearLayout>(R.id.Artifacts)
 
         guideView.setOnClickListener() {
             var intent = Intent(this, GuideActivity::class.java)
@@ -52,6 +53,10 @@ class MainActivity : AppCompatActivity() {
         }
         creatureView.setOnClickListener() {
             var intent = Intent(this, CreatureActivity::class.java)
+            startActivity(intent)
+        }
+        artView.setOnClickListener() {
+            var intent = Intent(this, ArtifactsActivity::class.java)
             startActivity(intent)
         }
     }

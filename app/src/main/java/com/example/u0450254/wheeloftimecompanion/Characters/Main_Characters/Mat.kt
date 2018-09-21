@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -22,12 +24,6 @@ class Mat : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -66,11 +62,42 @@ class Mat : AppCompatActivity() {
 
         thisPortrat.setImageResource(R.drawable.mat)
 
-        var string1 = SpannableString("A Farmer from the two rivers and friend to Rand al'Thor.  He is a bit of a prankster")
+        var string1 = SpannableString("\n     Matrim Cauthon, usually simply called 'Mat', is one of the main characters of the series.\n\n")
+
+        var string2 = SpannableString("Appearance\n\n")
+        string2.setSpan(RelativeSizeSpan(2f),0 ,10,0)
+
+        var string3 = SpannableString("     He is as long-limbed as a stork, with a wiry body and brown eyes.\n\n")
+
+        var string5 = SpannableString("Personality\n\n")
+        string5.setSpan(RelativeSizeSpan(2f),0 ,11,0)
+
+
+        var string6 = SpannableString("     Mat is often described as lazy, roguish, immature, tactless, and brazen.\n\n")
         thisInfo.setTextColor(Color.WHITE)
+
+        var string10 = SpannableString("Activities\n\n")
+        string10.setSpan(RelativeSizeSpan(2f),0 ,10,0)
+
+        var string11 = SpannableString("Meeting Moiraine\n\n")
+        string11.setSpan(RelativeSizeSpan(1.5f),0 ,16,0)
+
+        var string12 = SpannableString("     Mat was something of a black sheep in Emond's Field. Though he, Rand al'Thor, and Perrin Aybara got into trouble quite a bit, Mat was generally the force behind it.\n\n")
+
+        var string13 = SpannableString("     A joker and a prankster.\n\n")
+        var string13_1 = SpannableString("     A joker and a prankster. He was led away on Winternight by Moiraine Damodred with his friends.\n\n")
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+        if(progress.book>1||(progress.book==1&&progress.chapter>1))
+        {
+            thisInfo.text= TextUtils.concat(string1,string2,string3,string5,string6,string10,string12,string13)
+        }
+        if(progress.book>1||(progress.book==1&&progress.chapter>10))
+        {
+            thisInfo.text= TextUtils.concat(string1,string2,string3,string5,string6,string10,string11,string12,string13_1)
+        }
     }
 }

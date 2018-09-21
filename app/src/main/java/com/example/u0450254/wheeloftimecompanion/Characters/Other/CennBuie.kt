@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -22,12 +24,6 @@ class CennBuie : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -62,11 +58,38 @@ class CennBuie : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("A grumpy old thatcher in Edmonds Field and a member of the Village Council. He is as gnarled and dark as an old rootwith a scratchy voice, beady eyes and thinning hair.  He sometimes uses a gnarled walking staff.  ")
+        var string1 = SpannableString("\n    Cenn Buie is a thatcher who lives in Emond's Field. He is known for griping about everything, and sometimes neglects his duties to complain. He sits on the Village Council.\n\n")
+
+        var string2 = SpannableString("Appearance\n\n")
+        string2.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string3 = SpannableString("     A dark, gnarled, beady-eyed man.\n\n")
+
+        var string4 = SpannableString("Activities\n\n")
+        string4.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string5 = SpannableString("     He is part of the Village council.\n\n")
+        var string5_2 = SpannableString("    He is part of the Village council, which is in session when Padan Fain arrives.\n\n")
+
+        var string6 = SpannableString("     After the Trollocs first attack Emond's Field, he confronts Moiraine Damodred with a crowd behind him, demanding she leave at once.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
-        thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+        thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
         thisInfo.text = string1
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5)
+        }
+        if (progress.book>1||(progress.book==1&&progress.chapter>3))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5_2)
+        }
+        if (progress.book>1||(progress.book==1&&progress.chapter>9))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5_2,string6)
+        }
+
     }
 }

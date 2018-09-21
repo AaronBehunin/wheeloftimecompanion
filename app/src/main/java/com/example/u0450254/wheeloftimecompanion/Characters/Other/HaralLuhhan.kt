@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -22,12 +24,6 @@ class HaralLuhhan : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -62,11 +58,45 @@ class HaralLuhhan : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("     The blacksmith in Edmonds Field and Member of the Village Council.  He is very big and is described as being made of tree trunks. His wife is Alsbet and Perrin is his Apprentice.")
+        var string1 = SpannableString("\n    Haral Luhhan is the Emond's Field blacksmith and also sits on the Village Council. Master Luhhan is married to Alsbet Luhhan.\n\n")
+
+        var string2 = SpannableString("Appearance\n\n")
+        string2.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string3 = SpannableString("     His arms are nearly as large as most men's legs and are roped with muscle.\n\n")
+        var string3_1 = SpannableString("     His arms are nearly as large as most men's legs and are roped with muscle. He is strong and brave, but pales at the sight of blood.\n\n")
+
+        var string4 = SpannableString("Activities\n\n")
+        string4.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string5 = SpannableString("     He is part of the Village council, which is in session when Padan Fain arrives.\n\n")
+
+        var string6 = SpannableString("     Perrin Aybara was apprenticed to Master Luhhan in his smithy since his youth.\n\n")
+
+        var string7 = SpannableString("     Haral crafted the Half-moon axe which Perrin carries through most of the series.\n\n")
+
+
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>2))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string6)
+        }
+        if (progress.book>1||(progress.book==1&&progress.chapter>3))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5,string6)
+        }
+        if (progress.book>1||(progress.book==1&&progress.chapter>4))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3_1,string4,string5,string6)
+        }
+        if (progress.book>1||(progress.book==1&&progress.chapter>10))
+        {
+            thisInfo.text = TextUtils.concat(thisInfo.text,string7)
+        }
     }
 }

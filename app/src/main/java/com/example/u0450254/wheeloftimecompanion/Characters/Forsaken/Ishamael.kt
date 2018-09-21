@@ -7,7 +7,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
@@ -63,21 +65,27 @@ class Ishamael : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Leader of the Forsworn and champion to The Dark One.   After The Dark Ones seals were placed and saidin was tainted, Ishamael arrived at Lews Therin's home and discovered to his surprise and delight that Lews Therin had murdered his entire family. After having a mostly one-sided conversation with the insane Lews Therin, Ishamael healed him so that he understood what he had done. This realization caused Lews Therin to commit suicide, leaving a furious Ishamael to wait for him to be reborn.")
+        var string1 = SpannableString("\n     Ishamael, previously known as Elan Morin Tedronai, is the most powerful of the Forsaken and their de facto leader during the War of Power.\n\n")
+
+        var string2 = SpannableString("History\n\n")
+        string2.setSpan(RelativeSizeSpan(2f),0,7,0)
+
+        var string3 = SpannableString("Age of Legends\n\n")
+        string3.setSpan(RelativeSizeSpan(1.5f),0,14,0)
+
+        var string8 = SpannableString("     After the seals were placed and saidin was tainted, Ishamael arrived at Lews Therin's home and discovered to his surprise and delight that Lews Therin had murdered his entire family. After having a mostly one-sided conversation with the insane Lews Therin, Ishamael Healed him so that he understood what he had done. This realization caused Lews Therin to commit suicide, leaving a furious Ishamael to wait for him to be reborn.\n\n")
+
 
         thisInfo.setTextColor(Color.WHITE)
-
-        string1.setSpan(launcher.spanTheDarkOne, 39, 51, 0)
-        string1.setSpan(launcher.spanSaiden, 97, 103, 0)
-        string1.setSpan(launcher.spanLewsTherin, 137, 150, 0)
-
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
 
+        thisInfo.text = string1
+
         if ((progress.book==1 && progress.chapter>0)||progress.book>1)
         {
-            thisInfo.text = string1
+            thisInfo.text = TextUtils.concat(string1, string2, string3,string8)
         }
     }
 }

@@ -8,8 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Aginor
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Ishamael
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.PadanFain
+import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 /**
@@ -20,6 +22,14 @@ class EnemyCharacterActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
 
+        var progressFile = openFileInput("Progress")
+
+        val inputString = progressFile.bufferedReader().use { it.readText() }
+
+        val splits = inputString.split("-")
+
+        val progress = Progress(splits[0].toInt(), splits[1].toInt())
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val inflater = LayoutInflater.from(this)
@@ -27,13 +37,19 @@ class EnemyCharacterActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ishamaelView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
+        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AginorView)
+        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ishamaelView)
+        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
 
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+        inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
         charview.addView(view2)
+
+        if (progress.book>1||(progress.book==1 &&progress.chapter >10))
+        {
+            charview.addView(view3)
+        }
     }
     fun launchIshamael(view: View)
     {
@@ -43,6 +59,11 @@ class EnemyCharacterActivity: AppCompatActivity() {
     fun launchPadanFain(view: View)
     {
         var intent = Intent(view.context, PadanFain::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchAginor(view: View)
+    {
+        var intent = Intent(view.context, Aginor::class.java)
         view.context.startActivity(intent)
     }
 }

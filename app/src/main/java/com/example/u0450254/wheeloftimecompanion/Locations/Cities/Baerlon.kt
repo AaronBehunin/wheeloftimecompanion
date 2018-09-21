@@ -24,12 +24,6 @@ class Baerlon : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
-
         val  progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
@@ -45,7 +39,8 @@ class Baerlon : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.termInfo)
 
-        var string1 = SpannableString("     A city in Andor on the road from Caemlyn to the mines in the Mountains of Mist.")
+        var string1 = SpannableString("\n     Baerlon is a town in Andor where the ores from the Mountains of Mist are transported for smelting.\n\n")
+
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

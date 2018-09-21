@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -22,12 +24,6 @@ class MarinAlVere : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -65,11 +61,26 @@ class MarinAlVere : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Wife of Bran al'Vere and with him ran The Winespring Inn. She has a motherly smile and kind eyes. She is known as the best cook in Emonds Field")
+        var string1 = SpannableString("\n     Marin al'Vere lives in Emond's Field with her husband Bran and their younger children. Mistress al'Vere is also the mother of Egwene al'Vere.\n\n")
+
+        var string2 = SpannableString("Appearance\n\n")
+        string2.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string3 = SpannableString("     Slender and motherly, with a thick gray braid, Marin is a handsome woman.\n\n")
+
+        var string4 = SpannableString("Activities\n\n")
+        string4.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string5 = SpannableString("     As the best cook in the village, she fills that role in helping Bran run the Winespring Inn.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>2))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5)
+        }
     }
 }

@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -21,12 +23,6 @@ class AesSedai : AppCompatActivity() {
         setContentView(R.layout.organization)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -46,7 +42,7 @@ class AesSedai : AppCompatActivity() {
 
         thisTitle.text = "Aes Sedai"
         thisType.text = "Type: One Power Users"
-        thisHead.text = "Headquarters: TarValon"
+        thisHead.text = "Headquarters: Tar Valon"
         thisAllign.text = "Allignemnt: Good"
         thisAffil.text = "Affiliation: Independent"
 
@@ -54,10 +50,9 @@ class AesSedai : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-
-
-        var string1 = SpannableString("     Wielders of the One Power.  Since the Time of Madness, all surviving Aes Sedai are women. " +
+        var string1 = SpannableString("\n     Wielders of the One Power.  Since the Time of Madness, all surviving Aes Sedai are women. " +
                 "Widely distrusted and feared, even hated, they are blamed by many for the Breaking of the World, and are generally thought to meddle in the affairs of other nations.")
+
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

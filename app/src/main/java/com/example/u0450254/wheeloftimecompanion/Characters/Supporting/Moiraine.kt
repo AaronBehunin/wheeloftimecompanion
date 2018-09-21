@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -22,12 +24,6 @@ class Moiraine : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -56,7 +52,7 @@ class Moiraine : AppCompatActivity() {
         thisAge.text = " Age: 42"
 
         thisGender.text = " Gender: Female"
-        thisHeight.text = " Height: Short"
+        thisHeight.text = " Height: 5'2\""
         thisWeight.text = " Weight: ?"
         thisHair.text = " Hair Color: Brown"
         thisEye.text = " Eye Color: Brown"
@@ -66,11 +62,41 @@ class Moiraine : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("     A Visitor to the Two Rivers.  Her origins are unknown, but her attire suggests nobility.")
-        thisInfo.setTextColor(Color.WHITE)
+        var string1 = SpannableString("\n     A Visitor to the Two Rivers.\n\n")
+        var string1_1 = SpannableString("\n     An Aes Sedai.\n\n")
 
+        var string4 = SpannableString("Appearance\n\n")
+        string4.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string5 = SpannableString("     When she arrives in Emond's Field she is described as having dark hair, hanging in ringlets. She looks the same age as Nynaeve, but with large, dark eyes that belong to a much older woman. This is the first mention of the ageless look. She is relatively short, standing at 5'2\", and has a melodious voice. She wears a sky-blue velvet cloak with vines and flowers along the edges in thick silver embroidery, a golden woven belt and a dark blue dress slashed with cream. She wears a Great Serpent ring on the second finger of her left hand.\n\n")
+
+        var string25 = SpannableString("Activities\n\n")
+        string25.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string33 = SpannableString("     She journeyed to the town of Emond's Field in the Two Rivers region of Andor.\n\n")
+        var string33_1 = SpannableString("     She journeyed to the town of Emond's Field in the Two Rivers region of Andor. On Winternight, Trollocs invaded the Two Rivers region.\n\n")
+        var string33_2 = SpannableString("     She journeyed to the town of Emond's Field in the Two Rivers region of Andor. On Winternight, Trollocs invaded the Two Rivers region. After the attack, she and Lan persuaded the three boys -- Rand al'Thor, Matrim Cauthon and Perrin Aybara -- plus Thomdril Merrilin, Egwene al'Vere to leave Emond's Field and head for the safety of the White Tower.\n\n")
+
+        thisInfo.setTextColor(Color.WHITE)
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
+
         thisInfo.text = string1
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>2))
+        {
+            thisInfo.text = TextUtils.concat(string1,string4,string5,string25,string33)
+        }
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>7))
+        {
+            thisRank.text = " Rank: Aes Sedai"
+            thisInfo.text = TextUtils.concat(string1_1,string4,string5,string25,string33,string33_1)
+        }
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>10))
+        {
+            thisInfo.text = TextUtils.concat(string1_1,string4,string5,string25,string33,string33_2)
+        }
     }
 }

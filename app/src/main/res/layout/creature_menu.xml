@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/locationView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="0dp">
+
+
+            <TextView
+                android:id="@+id/Monsters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monsters and Shadowspawn"
+                android:textSize="26dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line"
+                />
+
+            <TextView
+                android:id="@+id/NonHumanRaces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non-Human Races"
+                android:textSize="26dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line"
+                />
+
+            <TextView
+                android:id="@+id/NamedAnimals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Named Animals"
+                android:textSize="26dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/line"
+                />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

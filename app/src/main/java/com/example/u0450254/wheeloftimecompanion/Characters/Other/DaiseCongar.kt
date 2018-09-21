@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
@@ -22,12 +24,6 @@ class DaiseCongar : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -64,11 +60,34 @@ class DaiseCongar : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("Daise Congar is a Two Rivers resident. She is married to Wit Congar and is known to have a mean streak and a temper")
+        var string1 = SpannableString("\n     Daise Congar is a Two Rivers resident.\n\n")
+
+        var string2 = SpannableString("Appearance\n\n")
+        string2.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string3 = SpannableString("     Daise is a hard-faced, wide but muscular woman. She is twice as wide as her husband, Wit, and a head taller. She is as tall as most men and wider.\n\n")
+
+        var string4 = SpannableString("History\n\n")
+        string4.setSpan(RelativeSizeSpan(2f),0,7,0)
+
+        var string5 = SpannableString("     She is married to Wit Congar.\n\n")
+
+        var string6 = SpannableString("Activities\n\n")
+        string6.setSpan(RelativeSizeSpan(2f),0,10,0)
+
+        var string7 = SpannableString("     As Rand and Tam al'Thor make their way to the village, she appears at the doorway of her home and shouts at her husband for getting involved in Women's Circle business, namely criticizing how their Wisdom behaved.")
+
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5,string6,string7)
+        }
+
     }
 }

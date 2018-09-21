@@ -13,7 +13,7 @@ import com.example.u0450254.wheeloftimecompanion.R
 
 class MapView : AppCompatImageView {
 
-    constructor(context: Context): super(context)
+    constructor(context: Context, map:Int): super(context)
     constructor(context: Context, attrs: AttributeSet): super(context, attrs)
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr)
 
@@ -42,7 +42,11 @@ class MapView : AppCompatImageView {
 
     private var beginning = true
 
+    private var map = 0
 
+    fun setMap(newMap: Int){
+        map = newMap
+    }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
         when (event.action and MotionEvent.ACTION_MASK) {
@@ -92,7 +96,7 @@ class MapView : AppCompatImageView {
         canvas.save()
         canvas.scale(scaleFactor, scaleFactor)
 
-        var d = resources.getDrawable(R.drawable.tworiversmap, null)
+        var d = resources.getDrawable(map, null)
 
         var scaledWidth = d.intrinsicWidth * scaleFactor
         var scaledHeight = d.intrinsicHeight * scaleFactor
@@ -165,7 +169,7 @@ class MapView : AppCompatImageView {
 
         //canvas.drawCircle(500.0f, 500.0f, 20.0f, paint);
 
-        var B = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.tworiversmap);
+        var B = BitmapFactory.decodeResource(getContext().getResources(),  map);
         canvas.drawBitmap(B, 0f, 0f, null)
         canvas.restore()
     }
@@ -181,6 +185,4 @@ class MapView : AppCompatImageView {
             return true
         }
     }
-
-
 }

@@ -15,6 +15,8 @@ import com.example.u0450254.wheeloftimecompanion.R
  * Created by u0450254 on 5/31/2018.
  */
 
+//next reference: eye of the world 13
+
 
 class Illian: AppCompatActivity() {
 
@@ -47,7 +49,7 @@ class Illian: AppCompatActivity() {
 
 
         val locinfo = findViewById<TextView>(R.id.locinfo)
-        var string1  = SpannableString("     A great nation on the Sea of Storms, and its capital city.")
+        var string1  = SpannableString("\n     Illian is a country that lies in the far south of the Westlands, to the west of Tear whose capital city bears the same name.\n\n")
 
 
         locinfo.text = string1

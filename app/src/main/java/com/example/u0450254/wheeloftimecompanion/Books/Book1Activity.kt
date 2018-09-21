@@ -1738,25 +1738,48 @@ class Book1Activity: AppCompatActivity() {
         var guideView = findViewById<LinearLayout>(R.id.Book1layout)
         guideView.postInvalidate()
     }
-
     fun launchP(view: View){
-        var intent = Intent(view.context, ActivityP::class.java)
+        var intent = Intent(view.context, BookPageP::class.java)
         view.context.startActivity(intent)
     }
     fun launch1(view: View){
-        var intent = Intent(view.context, Activity1::class.java)
+        var intent = Intent(view.context, BookPage1::class.java)
         view.context.startActivity(intent)
     }
     fun launch2(view: View){
-        var intent = Intent(view.context, Activity2::class.java)
+        var intent = Intent(view.context, BookPage2::class.java)
         view.context.startActivity(intent)
     }
     fun launch3(view: View){
-        var intent = Intent(view.context, Activity3::class.java)
+        var intent = Intent(view.context, BookPage3::class.java)
         view.context.startActivity(intent)
     }
     fun launch4(view: View){
-        var intent = Intent(view.context, Activity4::class.java)
+        var intent = Intent(view.context, BookPage4::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch5(view: View){
+        var intent = Intent(view.context, Activity5::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch6(view: View){
+        var intent = Intent(view.context, Activity6::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch7(view: View){
+        var intent = Intent(view.context, Activity7::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch8(view: View){
+        var intent = Intent(view.context, Activity8::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch9(view: View){
+        var intent = Intent(view.context, Activity9::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launch10(view: View){
+        var intent = Intent(view.context, Activity10::class.java)
         view.context.startActivity(intent)
     }
 }

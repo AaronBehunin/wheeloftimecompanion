@@ -8,8 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.TwoRivers
-import com.example.u0450254.wheeloftimecompanion.Locations.Maps.TwoRiversMap
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.TheTwoRivers
+import com.example.u0450254.wheeloftimecompanion.Locations.Maps.WorldMap
 import com.example.u0450254.wheeloftimecompanion.R
 
 /**
@@ -27,14 +27,20 @@ class MapActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TwoRiversView)
+        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WorldMapView)
+        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheTwoRiversView)
 
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+        inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
         charview.addView(view1)
+        charview.addView(view2)
     }
 
-    fun launchTwoRivers(view: View) {
-        var intent = Intent(view.context, TwoRiversMap::class.java)
+    fun launchTheTwoRivers(view: View) {
+        var intent = Intent(view.context, TheTwoRivers::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWorldMap(view: View) {
+        var intent = Intent(view.context, WorldMap::class.java)
         view.context.startActivity(intent)
     }
 }

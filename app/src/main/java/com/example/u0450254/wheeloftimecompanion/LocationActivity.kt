@@ -3,17 +3,13 @@ package com.example.u0450254.wheeloftimecompanion
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
-import android.view.LayoutInflater
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Locations.CityActivity
 import com.example.u0450254.wheeloftimecompanion.Locations.LandmarksActivity
 import com.example.u0450254.wheeloftimecompanion.Locations.MapActivity
 import com.example.u0450254.wheeloftimecompanion.Locations.NationActivity
-import com.example.u0450254.wheeloftimecompanion.R
 
 class LocationActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,10 +18,10 @@ class LocationActivity: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var nationView = findViewById<TextView>(R.id.nations)
-        var cityView = findViewById<TextView>(R.id.townscities)
-        var landmarkView = findViewById<TextView>(R.id.landmarks)
-        var mapView = findViewById<TextView>(R.id.maps)
+        var nationView = findViewById<LinearLayout>(R.id.Nations)
+        var cityView = findViewById<LinearLayout>(R.id.TownsandCities)
+        var landmarkView = findViewById<LinearLayout>(R.id.Landmarks)
+        var mapView = findViewById<LinearLayout>(R.id.Maps)
 
 
         nationView.setOnClickListener() {

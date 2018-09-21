@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.widget.ImageView
 import android.widget.TextView
@@ -21,12 +22,6 @@ class Forsaken : AppCompatActivity() {
         setContentView(R.layout.organization)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val filename = "Progress"
-        val fileContents = "1-1"
-        openFileOutput(filename, Context.MODE_PRIVATE).use {
-            it.write(fileContents.toByteArray())
-        }
 
         val  progressFile = openFileInput("Progress")
 
@@ -55,12 +50,18 @@ class Forsaken : AppCompatActivity() {
 
         var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("     Name given to thirteen of the most powerful Aes Sedai ever known, who went over to the Dark One during the War of the Shadow in return for the promise of immortality.  According to both legend and fragmentary records, they were imprisoned along with the Dark One when his prison was resealed."+
-                "  Their names are still used to frighten children")
+        var string1 = SpannableString("\n    The Forsaken were channelers who served the side of the Shadow in the War of Power.\n\n")
+
+        var string2 = SpannableString("     Although during the War of Power there were dozens of Forsaken leading the armies of the Shadow, as time passed, the term \"Forsaken\" came to refer to only the thirteen most powerful among them, who were caught in the sealing and imprisoned with the Dark One. The horrific deeds of each were remembered long after their disappearance. In the Third Age, these thirteen were such infamous symbols of the Shadow that mothers would use stories of their exploits to frighten children.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
-        thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+        thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
         thisInfo.text = string1
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2)
+        }
     }
 }

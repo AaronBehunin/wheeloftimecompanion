@@ -2,46 +2,43 @@ package com.example.u0450254.wheeloftimecompanion.Locations
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Characters.Other.DaiseCongar
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.DhallinForest
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.TwoRivers
+import android.widget.TextView
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.ForestsActivity
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.MountainActivity
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.OceanActivity
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.RoadsandBuildings
 import com.example.u0450254.wheeloftimecompanion.R
 
-/**
- * Created by u0450254 on 5/30/2018.
- */
+
 class LandmarksActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.chapter)
+        setContentView(R.layout.landmark_menu_layout)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val inflater = LayoutInflater.from(this)
-        val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
+        var forestView = findViewById<LinearLayout>(R.id.Areas)
+        var mountainView = findViewById<LinearLayout>(R.id.Mountains)
+        var oceanView = findViewById<LinearLayout>(R.id.Rivers)
+        var roadView = findViewById<LinearLayout>(R.id.Roads)
 
-        var charview = findViewById<LinearLayout>(R.id.chapterlayout)
-
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TwoRiversView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DhallinForestView)
-
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
-
-        charview.addView(view1)
-        charview.addView(view2)
-    }
-    fun launchTwoRivers(view: View) {
-        var intent = Intent(view.context, TwoRivers::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchDhallinForest(view: View) {
-        var intent = Intent(view.context, DhallinForest::class.java)
-        view.context.startActivity(intent)
+        forestView.setOnClickListener() {
+            var intent = Intent(this, ForestsActivity::class.java)
+            startActivity(intent)
+        }
+        mountainView.setOnClickListener() {
+            var intent = Intent(this, MountainActivity::class.java)
+            startActivity(intent)
+        }
+        oceanView.setOnClickListener() {
+            var intent = Intent(this, OceanActivity::class.java)
+            startActivity(intent)
+        }
+        roadView.setOnClickListener() {
+            var intent = Intent(this, RoadsandBuildings::class.java)
+            startActivity(intent)
+        }
     }
 }

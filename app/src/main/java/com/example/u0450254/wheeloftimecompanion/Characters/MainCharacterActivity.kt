@@ -33,7 +33,7 @@ class MainCharacterActivity: AppCompatActivity() {
         var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.perrinView)
         var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.nynaeveView)
 
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+        inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
         charview.addView(view2)
