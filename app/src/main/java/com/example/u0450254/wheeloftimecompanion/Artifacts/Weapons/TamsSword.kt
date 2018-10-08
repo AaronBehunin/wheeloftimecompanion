@@ -38,7 +38,7 @@ class TamsSword: AppCompatActivity() {
         thisImage.setImageResource(R.drawable.tamsblade)
 
         val artinfo = findViewById<TextView>(R.id.artInfo)
-        var string1  = SpannableString("\n     A blade with a heron mark on it's blade, hilt, and scabbard. It's blade never seems to dull.  Its origins are unknown.\n\n")
+        var string1  = SpannableString("\n     Tamlin al'Thor's sword is the first sword Rand ever owned.\n\n")
         var string1_1 =  SpannableString("\n     Tamlin al'Thor's sword is the first sword Rand ever owned, given to him by Tam al'Thor on Winternight after the Trollocs attacked Emond's Field.\n\n")
 
 

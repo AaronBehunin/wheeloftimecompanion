@@ -1429,6 +1429,33 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/stafficon" />
                 </RelativeLayout>
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/OrenDautryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchOrenDautry"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Oren Dautry"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="110dp"
+                        android:maxWidth="110dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/bullicon" />
+                </RelativeLayout>
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/DevenRideView"
@@ -1700,6 +1727,33 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/bullicon" />
                 </RelativeLayout>
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/FalseDragonView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="launchDragon"
+                android:paddingEnd="23dp"
+                android:paddingStart="15dp"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="False Dragon"
+                    android:textSize="28sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/portalicon" />
+            </RelativeLayout>
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/JainFarstriderView"
                     android:layout_width="match_parent"
@@ -2196,6 +2250,33 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/ravensicon" />
                 </RelativeLayout>
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/LugardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchLugard"
+                    android:paddingEnd="23dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Lugard"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="95dp"
+                        android:maxWidth="95dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/stagicon" />
+                </RelativeLayout>
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/AlsbetLuhhanView"
@@ -2308,6 +2389,34 @@
                         android:maxWidth="94dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/lionicon" />
+                </RelativeLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/ManetherendrelleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchManetherendrelle"
+                    android:paddingEnd="23dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Manetherendrelle"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="80dp"
+                        android:maxWidth="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/fishicon"/>
                 </RelativeLayout>
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -2444,6 +2553,33 @@
                         android:maxWidth="112dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/snakeicon" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/NargView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchNarg"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Narg"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="95dp"
+                        android:maxWidth="95dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ravensicon" />
                 </RelativeLayout>
                 <RelativeLayout
                     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
@@ -3477,6 +3613,35 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/horseicon" />
                 </RelativeLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/HundredYearsWarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchHundredYearsWar"
+                    android:paddingEnd="9dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="War of the Hundred Years"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="108dp"
+                        android:maxWidth="108dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/sunriseicon" />
+                </RelativeLayout>
+
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/WarderView"
                     android:layout_width="match_parent"
@@ -3613,6 +3778,33 @@
                         android:maxWidth="80dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/portalicon" />
+                </RelativeLayout>
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/WhiteRiverView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchManetherendrelle"
+                    android:paddingEnd="23dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="White River"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="80dp"
+                        android:maxWidth="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/fishicon"/>
                 </RelativeLayout>
                 <RelativeLayout
                     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"

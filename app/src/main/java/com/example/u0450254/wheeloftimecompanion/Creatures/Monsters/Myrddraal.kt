@@ -70,6 +70,7 @@ class Myrddraal: AppCompatActivity() {
 
         if (progress.book>1||(progress.book==1&&progress.chapter>8))
         {
+            thisPicture.setImageResource(R.drawable.fade)
             terminfo.text = TextUtils.concat(string1_1,string2,string5,string6,string8,string10,string11,string13,string18,string19)
         }
 

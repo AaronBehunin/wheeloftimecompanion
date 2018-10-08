@@ -2,7 +2,6 @@ package com.example.u0450254.wheeloftimecompanion.Books.Book1
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
@@ -18,12 +17,6 @@ import com.example.u0450254.wheeloftimecompanion.Organizations.HundredCompanions
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.NineRods
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheCreator
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDarkOne
-
-/*
- * Created by u0450254 on 6/5/2018.
- */
-
-
 
 class ActivityPR : AppCompatActivity() {
 
@@ -64,15 +57,27 @@ class ActivityPR : AppCompatActivity() {
         chapview.addView(view11)
 
     }
-
+    fun launchIlyenaTherinMoerelle(view: View)
+    {
+        val intent = Intent(view.context, IlyenaTherinMoerelle::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchPaaranDisen(view: View)
+    {
+        var intent = Intent(view.context, PaaranDisen::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWorldSea(view: View) {
+        val intent = Intent(view.context, WorldSea::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchRingofTamyrlin(view: View){
+        var intent = Intent(view.context, RingofTamyrlin::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchAesSedaiLegends(view: View)
     {
         val intent = Intent(view.context, AesSedaiAgeofLegends::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTheCreator(view: View)
-    {
-        var intent = Intent(view.context, TheCreator::class.java)
         view.context.startActivity(intent)
     }
     fun launchHundredCompanions(view: View)
@@ -80,9 +85,9 @@ class ActivityPR : AppCompatActivity() {
         val intent = Intent(view.context, HundredCompanions::class.java)
         view.context.startActivity(intent)
     }
-    fun launchIlyenaTherinMoerelle(view: View)
+    fun launchTheCreator(view: View)
     {
-        val intent = Intent(view.context, IlyenaTherinMoerelle::class.java)
+        var intent = Intent(view.context, TheCreator::class.java)
         view.context.startActivity(intent)
     }
     fun launchTheDarkOne(view: View)
@@ -93,19 +98,6 @@ class ActivityPR : AppCompatActivity() {
     fun launchNineRods(view: View)
     {
         var intent = Intent(view.context, NineRods::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchPaaranDisen(view: View)
-    {
-        var intent = Intent(view.context, PaaranDisen::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchRingofTamyrlin(view: View){
-        var intent = Intent(view.context, RingofTamyrlin::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWorldSea(view: View) {
-        val intent = Intent(view.context, WorldSea::class.java)
         view.context.startActivity(intent)
     }
 }

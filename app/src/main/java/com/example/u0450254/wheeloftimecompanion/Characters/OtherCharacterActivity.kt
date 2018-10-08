@@ -57,13 +57,14 @@ class OtherCharacterActivity: AppCompatActivity() {
         var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HariCoplinView)
         var view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BandryCraweView)
         var view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SamelCraweView)
-        var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ElamDowtryView)
-        var view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
-        var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwinFinngarView)
-        var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.RowanHurnView)
-        var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AlsbetLuhhanView)
-        var view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HaralLuhhanView)
-        var view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JonThaneView)
+        var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OrenDautryView)
+        var view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ElamDowtryView)
+        var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
+        var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwinFinngarView)
+        var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.RowanHurnView)
+        var view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AlsbetLuhhanView)
+        var view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HaralLuhhanView)
+        var view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JonThaneView)
 
 
 
@@ -94,6 +95,7 @@ class OtherCharacterActivity: AppCompatActivity() {
         charview.addView(view23)
         charview.addView(view24)
         charview.addView(view25)
+        charview.addView(view26)
 
         if (progress.book==1 && progress.chapter<10)
         {
@@ -176,6 +178,10 @@ class OtherCharacterActivity: AppCompatActivity() {
     }
     fun launchSamelCrawe(view: View){
         var intent = Intent(view.context, SamelCrawe::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchOrenDautry(view: View){
+        var intent = Intent(view.context, OrenDautry::class.java)
         view.context.startActivity(intent)
     }
     fun launchElamDowtry(view: View){

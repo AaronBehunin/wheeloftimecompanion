@@ -2,7 +2,6 @@ package com.example.u0450254.wheeloftimecompanion.Books.Book1
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
@@ -12,23 +11,18 @@ import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.PadanFain
 import com.example.u0450254.wheeloftimecompanion.Characters.Legends.ArturHawkwing
 import com.example.u0450254.wheeloftimecompanion.Characters.Legends.GreenMan
 import com.example.u0450254.wheeloftimecompanion.Characters.Legends.JainFarstrider
-import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.*
 import com.example.u0450254.wheeloftimecompanion.Characters.Other.*
-import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Lan
-import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Moiraine
-import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.TamAlThor
-import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Thom
 import com.example.u0450254.wheeloftimecompanion.Creatures.Monsters.Trolloc
 import com.example.u0450254.wheeloftimecompanion.Creatures.Races.Ogier
-import com.example.u0450254.wheeloftimecompanion.Locations.Cities.Baerlon
-import com.example.u0450254.wheeloftimecompanion.Locations.Cities.Caemlyn
-import com.example.u0450254.wheeloftimecompanion.Locations.Cities.EmondsField
-import com.example.u0450254.wheeloftimecompanion.Locations.Cities.WatchHill
+import com.example.u0450254.wheeloftimecompanion.Locations.Cities.*
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.AielWaste
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.ForestofShadows
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.Waterwood
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.MountainsofMist
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Oceans.ArythOcean
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Oceans.Manetherendrelle
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Oceans.Mire
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Oceans.Tarendrelle
 import com.example.u0450254.wheeloftimecompanion.Locations.Nations.Ghealdan
 import com.example.u0450254.wheeloftimecompanion.Locations.Nations.TarValon
 import com.example.u0450254.wheeloftimecompanion.Organizations.AesSedai
@@ -36,6 +30,7 @@ import com.example.u0450254.wheeloftimecompanion.Organizations.Aiel
 import com.example.u0450254.wheeloftimecompanion.Organizations.Tuathaan
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
+import com.example.u0450254.wheeloftimecompanion.Terminology.Events.*
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDarkOne
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDragon
 
@@ -79,27 +74,39 @@ class Activity4R : AppCompatActivity() {
         var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BaerlonView)
         var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CaemlynView)
         var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DevenRideView)
-        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WatchHillView)
+        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.LugardView)
+        var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarenFerryView)
+        var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WatchHillView)
 
-        var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielWasteView)
-        var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WaterwoodView)
+        var view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielWasteView)
+        var view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ForestofShadowsView)
+        var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WaterwoodView)
 
-        var view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
+        var view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
 
-        var view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArythOceanView)
-        var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MireView)
+        var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArythOceanView)
+        var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MireView)
+        var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
+        var view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WhiteRiverView)
 
-        var view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiView)
-        var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielView)
-        var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TinkerView)
-        var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
+        var view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiView)
+        var view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielView)
+        var view27 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TinkerView)
+        var view28 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
 
-        var view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
-        var view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheDragonView)
+        var view29 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
+        var view30 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheDragonView)
 
-        var view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
+        var view31 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ageoflegendsView)
+        var view32 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelTineView)
+        var view33 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TimeofMadnessView)
+        var view34 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocWarsView)
+        var view35 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HundredYearsWarView)
+        var view36 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
 
-        var view27 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OgierView)
+        var view37 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
+
+        var view38 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OgierView)
 
 
         if (progress.book==1 && progress.chapter<10)
@@ -135,6 +142,17 @@ class Activity4R : AppCompatActivity() {
         chapview.addView(view25)
         chapview.addView(view26)
         chapview.addView(view27)
+        chapview.addView(view28)
+        chapview.addView(view29)
+        chapview.addView(view30)
+        chapview.addView(view31)
+        chapview.addView(view32)
+        chapview.addView(view33)
+        chapview.addView(view34)
+        chapview.addView(view35)
+        chapview.addView(view36)
+        chapview.addView(view37)
+        chapview.addView(view38)
     }
     fun launchEwalCoplin(view: View)
     {
@@ -248,6 +266,56 @@ class Activity4R : AppCompatActivity() {
     }
     fun launchCaemlyn(view: View) {
         var intent = Intent(view.context, Caemlyn::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchForestofShadows(view: View) {
+        var intent = Intent(view.context, ForestofShadows::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchManetherendrelle(view: View) {
+        var intent = Intent(view.context, Manetherendrelle::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTarenFerry(view: View)
+    {
+        var intent = Intent(view.context, TarenFerry::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTarendrelle(view: View) {
+        var intent = Intent(view.context, Tarendrelle::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchLugard(view: View) {
+        var intent = Intent(view.context, Lugard::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchAgeofLegends(view: View)
+    {
+        var intent = Intent(view.context, AgeofLegends::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTheBreakingoftheWorld(view: View)
+    {
+        var intent = Intent(view.context, TheBreakingoftheWorld::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTrollocWars(view: View) {
+        var intent = Intent(view.context, TrollocWars::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchHundredYearsWar(view: View)
+    {
+        var intent = Intent(view.context, HundredYearsWar::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWinternight(view: View)
+    {
+        var intent = Intent(view.context, Winternight::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchBelTine(view: View)
+    {
+        var intent = Intent(view.context, BelTine::class.java)
         view.context.startActivity(intent)
     }
 }

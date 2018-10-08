@@ -14,7 +14,6 @@ import com.example.u0450254.wheeloftimecompanion.Characters.Other.*
 import com.example.u0450254.wheeloftimecompanion.Locations.Cities.*
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.GreatBlight
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.SandHills
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.TheTwoRivers
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.Waterwood
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.MountainsofMist
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.ShayolGhul
@@ -37,11 +36,6 @@ import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheCreator
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDarkOne
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDragon
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.WheelofTime
-
-/*
- * Created by u0450254 on 6/5/2018.
- */
-
 
 class Activity1R: AppCompatActivity() {
 
@@ -68,17 +62,17 @@ class Activity1R: AppCompatActivity() {
         val view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarenFerryView)
         val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WatchHillView)
         val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SandHillsView)
-        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheTwoRiversView)
-        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WaterwoodView)
-        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreatBlightView)
-        val view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
-        val view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ShayolGhulView)
-        val view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringWaterView)
-        val view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.NorthRoadView)
-        val view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OldRoadView)
-        val view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WagonBridgeView)
-        val view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ForsakenView)
-        val view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
+        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WaterwoodView)
+        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreatBlightView)
+        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
+        val view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ShayolGhulView)
+        val view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringWaterView)
+        val view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.NorthRoadView)
+        val view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OldRoadView)
+        val view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WagonBridgeView)
+        val view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ForsakenView)
+        val view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
+        val view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WomensCircleView)
         val view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelTineView)
         val view27 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheBreakingoftheWorldView)
         val view28 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CreatorView)
@@ -90,7 +84,7 @@ class Activity1R: AppCompatActivity() {
         val view34 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.StonesView)
         val view35 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SundayView)
         val view36 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
-        val view37 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WomensCircleView)
+
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -130,8 +124,6 @@ class Activity1R: AppCompatActivity() {
         chapview.addView(view34)
         chapview.addView(view35)
         chapview.addView(view36)
-        chapview.addView(view37)
-
     }
     fun launchEwgene(view: View)
     {
@@ -148,26 +140,9 @@ class Activity1R: AppCompatActivity() {
         val intent = Intent(view.context, Nynaeve::class.java)
         view.context.startActivity(intent)
     }
-    fun launchDavAyellin(view: View){
-        val intent = Intent(view.context, DavAyellin::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchAbellCauthon(view: View){
-        var intent = Intent(view.context, AbellCauthon::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchJonThane(view: View){
-        val intent = Intent(view.context, JonThane::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTheDarkOne(view: View)
+    fun launchAginor(view: View)
     {
-        val intent = Intent(view.context, TheDarkOne::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTheCreator(view: View)
-    {
-        val intent = Intent(view.context, TheCreator::class.java)
+        val intent = Intent(view.context, Aginor::class.java)
         view.context.startActivity(intent)
     }
     fun launchIshamael(view: View)
@@ -175,14 +150,91 @@ class Activity1R: AppCompatActivity() {
         val intent = Intent(view.context, Ishamael::class.java)
         view.context.startActivity(intent)
     }
-    fun launchAginor(view: View)
-    {
-        val intent = Intent(view.context, Aginor::class.java)
+    fun launchDavAyellin(view: View){
+        val intent = Intent(view.context, DavAyellin::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchAbellCauthon(view: View){
+        val intent = Intent(view.context, AbellCauthon::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchElamDowtry(view: View){
+        val intent = Intent(view.context, ElamDowtry::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchJonThane(view: View){
+        val intent = Intent(view.context, JonThane::class.java)
         view.context.startActivity(intent)
     }
     fun launchBaerlon(view: View)
     {
         val intent = Intent(view.context, Baerlon::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchDevenRide(view: View)
+    {
+        val intent = Intent(view.context, DevenRide::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTarenFerry(view: View)
+    {
+        val intent = Intent(view.context, TarenFerry::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWatchHill(view: View)
+    {
+        val intent = Intent(view.context, WatchHill::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchSandHills(view: View){
+        val intent = Intent(view.context, SandHills::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWaterwood(view: View) {
+        val intent = Intent(view.context, Waterwood::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchGreatBlight(view: View) {
+        val intent = Intent(view.context, GreatBlight::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchMountainsofMist(view: View) {
+        val intent = Intent(view.context, MountainsofMist::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchShayolGhul(view: View) {
+        val intent = Intent(view.context, ShayolGhul::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWinespringWater(view: View) {
+        val intent = Intent(view.context, WinespringWater::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchNorthRoad(view: View) {
+        val intent = Intent(view.context, NorthRoad::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchOldRoad(view: View) {
+        val intent = Intent(view.context, OldRoad::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWagonBridge(view: View) {
+        val intent = Intent(view.context, WagonBridge::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchForsaken(view: View)
+    {
+        val intent = Intent(view.context, Forsaken::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchVillageCouncil(view: View)
+    {
+        val intent = Intent(view.context, VillageCouncil::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWomensCircle(view: View)
+    {
+        val intent = Intent(view.context, WomensCircle::class.java)
         view.context.startActivity(intent)
     }
     fun launchBelTine(view: View)
@@ -195,9 +247,14 @@ class Activity1R: AppCompatActivity() {
         val intent = Intent(view.context, TheBreakingoftheWorld::class.java)
         view.context.startActivity(intent)
     }
-    fun launchDevenRide(view: View)
+    fun launchTheCreator(view: View)
     {
-        val intent = Intent(view.context, DevenRide::class.java)
+        val intent = Intent(view.context, TheCreator::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTheDarkOne(view: View)
+    {
+        val intent = Intent(view.context, TheDarkOne::class.java)
         view.context.startActivity(intent)
     }
     fun launchDragon(view: View)
@@ -205,42 +262,19 @@ class Activity1R: AppCompatActivity() {
         val intent = Intent(view.context, TheDragon::class.java)
         view.context.startActivity(intent)
     }
-    fun launchElamDowtry(view: View){
-        val intent = Intent(view.context, ElamDowtry::class.java)
+    fun launchWheelofTime(view: View)
+    {
+        val intent = Intent(view.context, WheelofTime::class.java)
         view.context.startActivity(intent)
     }
-    fun launchForsaken(view: View)
+    fun launchWisdom(view: View)
     {
-        val intent = Intent(view.context, Forsaken::class.java)
+        val intent = Intent(view.context, Wisdom::class.java)
         view.context.startActivity(intent)
     }
     fun launchGleeman(view: View)
     {
         val intent = Intent(view.context, Gleeman::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchGreatBlight(view: View) {
-        val intent = Intent(view.context, GreatBlight::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchMountainsofMist(view: View) {
-        val intent = Intent(view.context, MountainsofMist::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchNorthRoad(view: View) {
-        val intent = Intent(view.context, NorthRoad::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchOldRoad(view: View) {
-        val intent = Intent(view.context, OldRoad::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchSandHills(view: View){
-        val intent = Intent(view.context, SandHills::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchShayolGhul(view: View) {
-        val intent = Intent(view.context, ShayolGhul::class.java)
         view.context.startActivity(intent)
     }
     fun launchStones(view: View)
@@ -253,55 +287,9 @@ class Activity1R: AppCompatActivity() {
         val intent = Intent(view.context, Sunday::class.java)
         view.context.startActivity(intent)
     }
-    fun launchTarenFerry(view: View)
-    {
-        val intent = Intent(view.context, TarenFerry::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTheTwoRivers(view: View){
-        val intent = Intent(view.context, TheTwoRivers::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchVillageCouncil(view: View)
-    {
-        val intent = Intent(view.context, VillageCouncil::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWagonBridge(view: View) {
-        val intent = Intent(view.context, WagonBridge::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWatchHill(view: View)
-    {
-        val intent = Intent(view.context, WatchHill::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWaterwood(view: View) {
-        val intent = Intent(view.context, Waterwood::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWheelofTime(view: View)
-    {
-        val intent = Intent(view.context, WheelofTime::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWinespringWater(view: View) {
-        val intent = Intent(view.context, WinespringWater::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchWinternight(view: View)
     {
         val intent = Intent(view.context, Winternight::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWisdom(view: View)
-    {
-        val intent = Intent(view.context, Wisdom::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWomensCircle(view: View)
-    {
-        val intent = Intent(view.context, WomensCircle::class.java)
         view.context.startActivity(intent)
     }
 }

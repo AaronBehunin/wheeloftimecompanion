@@ -68,9 +68,6 @@ class Activity3E : AppCompatActivity() {
         var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
         var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WisdomView)
 
-
-
-
         if (progress.book==1 && progress.chapter<10)
         {
             view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainFriendView)
@@ -102,6 +99,30 @@ class Activity3E : AppCompatActivity() {
 
 
     }
+    fun launchRand(view: View) {
+        var intent = Intent(view.context, Rand::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchEwgene(view: View)
+    {
+        var intent = Intent(view.context, Egwene::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchMat(view: View)
+    {
+        var intent = Intent(view.context, Mat::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchPerrin(view: View)
+    {
+        var intent = Intent(view.context, Perrin::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchNynaeve(view: View)
+    {
+        var intent = Intent(view.context, Nynaeve::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchTamAlThor(view: View)
     {
         var intent = Intent(view.context, TamAlThor::class.java)
@@ -132,16 +153,6 @@ class Activity3E : AppCompatActivity() {
         var intent = Intent(view.context, SamelCrawe::class.java)
         view.context.startActivity(intent)
     }
-    fun launchEmondsField(view: View)
-    {
-        var intent = Intent(view.context, EmondsField::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchEwgene(view: View)
-    {
-        var intent = Intent(view.context, Egwene::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchPadanFain(view: View)
     {
         var intent = Intent(view.context, PadanFain::class.java)
@@ -151,48 +162,34 @@ class Activity3E : AppCompatActivity() {
         var intent = Intent(view.context, EwinFinngar::class.java)
         view.context.startActivity(intent)
     }
-    fun launchGreen(view: View) {
-        var intent = Intent(view.context, Green::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchHaralLuhhan(view: View){
         var intent = Intent(view.context, HaralLuhhan::class.java)
         view.context.startActivity(intent)
     }
-    fun launchMat(view: View)
+    fun launchEmondsField(view: View)
     {
-        var intent = Intent(view.context, Mat::class.java)
+        var intent = Intent(view.context, EmondsField::class.java)
         view.context.startActivity(intent)
     }
-    fun launchNynaeve(view: View)
-    {
-        var intent = Intent(view.context, Nynaeve::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchPerrin(view: View)
-    {
-        var intent = Intent(view.context, Perrin::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchRand(view: View) {
-        var intent = Intent(view.context, Rand::class.java)
+    fun launchGreen(view: View) {
+        var intent = Intent(view.context, Green::class.java)
         view.context.startActivity(intent)
     }
     fun launchTheTwoRivers(view: View) {
         var intent = Intent(view.context, TheTwoRivers::class.java)
         view.context.startActivity(intent)
     }
-    fun launchVillageCouncil(view: View)
-    {
-        var intent = Intent(view.context, VillageCouncil::class.java)
+    fun launchWinespringInn(view: View) {
+        var intent = Intent(view.context, WinespringInn::class.java)
         view.context.startActivity(intent)
     }
     fun launchWagonBridge(view: View) {
         var intent = Intent(view.context, WagonBridge::class.java)
         view.context.startActivity(intent)
     }
-    fun launchWinespringInn(view: View) {
-        var intent = Intent(view.context, WinespringInn::class.java)
+    fun launchVillageCouncil(view: View)
+    {
+        var intent = Intent(view.context, VillageCouncil::class.java)
         view.context.startActivity(intent)
     }
     fun launchWisdom(view: View)

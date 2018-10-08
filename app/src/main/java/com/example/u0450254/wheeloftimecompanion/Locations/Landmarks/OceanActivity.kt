@@ -27,11 +27,13 @@ class OceanActivity: AppCompatActivity() {
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArythOceanView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MireView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SeaofStormsView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringWaterView)
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WorldSeaView)
+        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ManetherendrelleView)
+        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MireView)
+        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SeaofStormsView)
+        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
+        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WhiteRiverView)
+        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringWaterView)
+        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WorldSeaView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -41,9 +43,15 @@ class OceanActivity: AppCompatActivity() {
         charview.addView(view4)
         charview.addView(view5)
         charview.addView(view6)
+        charview.addView(view7)
+        charview.addView(view8)
     }
     fun launchArythOcean(view: View) {
         var intent = Intent(view.context, ArythOcean::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchManetherendrelle(view: View) {
+        var intent = Intent(view.context, Manetherendrelle::class.java)
         view.context.startActivity(intent)
     }
     fun launchMire(view: View) {
@@ -66,5 +74,4 @@ class OceanActivity: AppCompatActivity() {
         var intent = Intent(view.context, WorldSea::class.java)
         view.context.startActivity(intent)
     }
-
 }

@@ -37,7 +37,7 @@ class WeaponsActivity: AppCompatActivity() {
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
         var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ColorShiftCloakView)
 
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+        inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         chapview.addView(view1)
         chapview.addView(view2)

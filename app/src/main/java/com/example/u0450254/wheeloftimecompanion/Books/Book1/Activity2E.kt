@@ -87,6 +87,24 @@ class Activity2E : AppCompatActivity() {
         chapview.addView(view22)
         chapview.addView(view23)
     }
+    fun launchRand(view: View) {
+        val intent = Intent(view.context, Rand::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchMat(view: View) {
+        val intent = Intent(view.context, Mat::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchMoiraine(view: View)
+    {
+        val intent = Intent(view.context, Moiraine::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchLan(view: View)
+    {
+        val intent = Intent(view.context, Lan::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchTamAlThor(view: View)
     {
         val intent = Intent(view.context, TamAlThor::class.java)
@@ -104,12 +122,24 @@ class Activity2E : AppCompatActivity() {
         val intent = Intent(view.context, CennBuie::class.java)
         view.context.startActivity(intent)
     }
-    fun launchColorShiftCloak(view: View){
-        val intent = Intent(view.context, ColorShiftCloak::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchSamelCrawe(view: View){
         val intent = Intent(view.context, SamelCrawe::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchEwinFinngar(view: View){
+        val intent = Intent(view.context, EwinFinngar::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchRowanHurn(view: View){
+        val intent = Intent(view.context, RowanHurn::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchHaralLuhhan(view: View){
+        val intent = Intent(view.context, HaralLuhhan::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchJonThane(view: View){
+        val intent = Intent(view.context, JonThane::class.java)
         view.context.startActivity(intent)
     }
     fun launchEmondsField(view: View)
@@ -117,64 +147,12 @@ class Activity2E : AppCompatActivity() {
         val intent = Intent(view.context, EmondsField::class.java)
         view.context.startActivity(intent)
     }
-    fun launchEwinFinngar(view: View){
-        val intent = Intent(view.context, EwinFinngar::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchGreatSerpentRing(view: View){
-        val intent = Intent(view.context, GreatSerpentRing::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchGreen(view: View) {
         val intent = Intent(view.context, Green::class.java)
         view.context.startActivity(intent)
     }
-    fun launchRowanHurn(view: View){
-        val intent = Intent(view.context, RowanHurn::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchLan(view: View)
-    {
-        val intent = Intent(view.context, Lan::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchHaralLuhhan(view: View){
-        val intent = Intent(view.context, HaralLuhhan::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchMat(view: View) {
-        val intent = Intent(view.context, Mat::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchMoiraine(view: View)
-    {
-        val intent = Intent(view.context, Moiraine::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchRand(view: View) {
-        val intent = Intent(view.context, Rand::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchScratch(view: View) {
-        val intent = Intent(view.context, Scratch::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTabac(view: View)
-    {
-        val intent = Intent(view.context, Tabac::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchJonThane(view: View){
-        val intent = Intent(view.context, JonThane::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchTheTwoRivers(view: View) {
         val intent = Intent(view.context, TheTwoRivers::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchVillageCouncil(view: View)
-    {
-        val intent = Intent(view.context, VillageCouncil::class.java)
         view.context.startActivity(intent)
     }
     fun launchWagonBridge(view: View) {
@@ -183,6 +161,28 @@ class Activity2E : AppCompatActivity() {
     }
     fun launchWinespringInn(view: View) {
         val intent = Intent(view.context, WinespringInn::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchColorShiftCloak(view: View){
+        val intent = Intent(view.context, ColorShiftCloak::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchVillageCouncil(view: View)
+    {
+        val intent = Intent(view.context, VillageCouncil::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchGreatSerpentRing(view: View){
+        val intent = Intent(view.context, GreatSerpentRing::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTabac(view: View)
+    {
+        val intent = Intent(view.context, Tabac::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchScratch(view: View) {
+        val intent = Intent(view.context, Scratch::class.java)
         view.context.startActivity(intent)
     }
 }

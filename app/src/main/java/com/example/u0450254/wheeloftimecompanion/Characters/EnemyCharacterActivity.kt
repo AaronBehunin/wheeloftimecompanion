@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Aginor
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Ishamael
+import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Narg
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.PadanFain
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -40,6 +41,7 @@ class EnemyCharacterActivity: AppCompatActivity() {
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AginorView)
         var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ishamaelView)
         var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
+        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.NargView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -50,6 +52,7 @@ class EnemyCharacterActivity: AppCompatActivity() {
         {
             charview.addView(view3)
         }
+        charview.addView(view4)
     }
     fun launchIshamael(view: View)
     {
@@ -64,6 +67,11 @@ class EnemyCharacterActivity: AppCompatActivity() {
     fun launchAginor(view: View)
     {
         var intent = Intent(view.context, Aginor::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchNarg(view: View)
+    {
+        var intent = Intent(view.context, Narg::class.java)
         view.context.startActivity(intent)
     }
 }

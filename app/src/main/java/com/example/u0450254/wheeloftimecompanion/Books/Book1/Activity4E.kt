@@ -2,7 +2,6 @@ package com.example.u0450254.wheeloftimecompanion.Books.Book1
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
@@ -39,39 +38,30 @@ class Activity4E : AppCompatActivity() {
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
-        var chapview = findViewById<LinearLayout>(R.id.chapterlayout)
-
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.randView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.egweneView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.matView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.perrinView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.nynaeveView)
-
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MoiraineView)
-        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.LanView)
-        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ThomView)
-        var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamAlThorView)
-
-        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BranAlVereView)
-
-        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HuBarranView)
-        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TadBarranView)
-        var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CennBuieView)
-        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwinFinngarView)
-        var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HaralLuhhanView)
-
-        var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EmondsFieldView)
-        var view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreenView)
-        var view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheTwoRiversView)
-
-        var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.QuarryRoadView)
-        var view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringInnView)
-
-        var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
-
-        var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GleemanView)
-
-        var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelaView)
+        val chapview = findViewById<LinearLayout>(R.id.chapterlayout)
+        val view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.randView)
+        val view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.egweneView)
+        val view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.matView)
+        val view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.perrinView)
+        val view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.nynaeveView)
+        val view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MoiraineView)
+        val view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.LanView)
+        val view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ThomView)
+        val view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamAlThorView)
+        val view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BranAlVereView)
+        val view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HuBarranView)
+        val view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TadBarranView)
+        val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CennBuieView)
+        val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwinFinngarView)
+        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HaralLuhhanView)
+        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EmondsFieldView)
+        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreenView)
+        val view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheTwoRiversView)
+        val view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.QuarryRoadView)
+        val view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringInnView)
+        val view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
+        val view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GleemanView)
+        val view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelaView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -101,94 +91,94 @@ class Activity4E : AppCompatActivity() {
     }
     fun launchRand(view: View)
     {
-        var intent = Intent(view.context, Rand::class.java)
+        val intent = Intent(view.context, Rand::class.java)
         view.context.startActivity(intent)
     }
     fun launchEwgene(view: View)
     {
-        var intent = Intent(view.context, Egwene::class.java)
+        val intent = Intent(view.context, Egwene::class.java)
         view.context.startActivity(intent)
     }
     fun launchMat(view: View)
     {
-        var intent = Intent(view.context, Mat::class.java)
+        val intent = Intent(view.context, Mat::class.java)
         view.context.startActivity(intent)
     }
     fun launchPerrin(view: View)
     {
-        var intent = Intent(view.context, Perrin::class.java)
+        val intent = Intent(view.context, Perrin::class.java)
         view.context.startActivity(intent)
     }
     fun launchThom(view: View)
     {
-        var intent = Intent(view.context, Thom::class.java)
+        val intent = Intent(view.context, Thom::class.java)
         view.context.startActivity(intent)
     }
     fun launchLan(view: View)
     {
-        var intent = Intent(view.context, Lan::class.java)
+        val intent = Intent(view.context, Lan::class.java)
         view.context.startActivity(intent)
     }
     fun launchMoiraine(view: View)
     {
-        var intent = Intent(view.context, Moiraine::class.java)
+        val intent = Intent(view.context, Moiraine::class.java)
         view.context.startActivity(intent)
     }
     fun launchEwinFinngar(view: View){
-        var intent = Intent(view.context, EwinFinngar::class.java)
+        val intent = Intent(view.context, EwinFinngar::class.java)
         view.context.startActivity(intent)
     }
     fun launchNynaeve(view: View)
     {
-        var intent = Intent(view.context, Nynaeve::class.java)
+        val intent = Intent(view.context, Nynaeve::class.java)
         view.context.startActivity(intent)
     }
     fun launchCennBuie(view: View){
-        var intent = Intent(view.context, CennBuie::class.java)
+        val intent = Intent(view.context, CennBuie::class.java)
         view.context.startActivity(intent)
     }
     fun launchBranAlVere(view: View) {
-        var intent = Intent(view.context, BranAlVere::class.java)
+        val intent = Intent(view.context, BranAlVere::class.java)
         view.context.startActivity(intent)
     }
     fun launchHaralLuhhan(view: View){
-        var intent = Intent(view.context, HaralLuhhan::class.java)
+        val intent = Intent(view.context, HaralLuhhan::class.java)
         view.context.startActivity(intent)
     }
     fun launchTamAlThor(view: View)
     {
-        var intent = Intent(view.context, TamAlThor::class.java)
+        val intent = Intent(view.context, TamAlThor::class.java)
         view.context.startActivity(intent)
     }
     fun launchEmondsField(view: View)
     {
-        var intent = Intent(view.context, EmondsField::class.java)
+        val intent = Intent(view.context, EmondsField::class.java)
         view.context.startActivity(intent)
     }
     fun launchVillageCouncil(view: View)
     {
-        var intent = Intent(view.context, VillageCouncil::class.java)
+        val intent = Intent(view.context, VillageCouncil::class.java)
         view.context.startActivity(intent)
     }
     fun launchGleeman(view: View)
     {
-        var intent = Intent(view.context, Gleeman::class.java)
+        val intent = Intent(view.context, Gleeman::class.java)
         view.context.startActivity(intent)
     }
     fun launchWinespringInn(view: View) {
-        var intent = Intent(view.context, WinespringInn::class.java)
+        val intent = Intent(view.context, WinespringInn::class.java)
         view.context.startActivity(intent)
     }
     fun launchTheTwoRivers(view: View) {
-        var intent = Intent(view.context, TheTwoRivers::class.java)
+        val intent = Intent(view.context, TheTwoRivers::class.java)
         view.context.startActivity(intent)
     }
     fun launchGreen(view: View) {
-        var intent = Intent(view.context, Green::class.java)
+        val intent = Intent(view.context, Green::class.java)
         view.context.startActivity(intent)
     }
     fun launchQuarryRoad(view: View) {
-        var intent = Intent(view.context, QuarryRoad::class.java)
+        val intent = Intent(view.context, QuarryRoad::class.java)
         view.context.startActivity(intent)
     }
 }

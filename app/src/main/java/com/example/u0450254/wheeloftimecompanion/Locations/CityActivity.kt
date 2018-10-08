@@ -31,7 +31,7 @@ class CityActivity: AppCompatActivity() {
         var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CaemlynView)
         var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DevenRideView)
         var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EmondsFieldView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.IllianView)
+        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.LugardView)
         var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PaaranDisenView)
         var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarenFerryView)
         var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WatchHillView)
@@ -63,11 +63,6 @@ class CityActivity: AppCompatActivity() {
         var intent = Intent(view.context, EmondsField::class.java)
         view.context.startActivity(intent)
     }
-    fun launchIllian(view: View)
-    {
-        var intent = Intent(view.context, Illian::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchPaaranDisen(view: View)
     {
         var intent = Intent(view.context, PaaranDisen::class.java)
@@ -85,6 +80,10 @@ class CityActivity: AppCompatActivity() {
     }
     fun launchCaemlyn(view: View) {
         var intent = Intent(view.context, Caemlyn::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchLugard(view: View) {
+        var intent = Intent(view.context, Lugard::class.java)
         view.context.startActivity(intent)
     }
 }

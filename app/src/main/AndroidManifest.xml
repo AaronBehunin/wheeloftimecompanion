@@ -138,6 +138,9 @@
         <activity android:name=".Books.Book1.BookPage4"
             android:parentActivityName=".Books.Book1Activity">
         </activity>
+        <activity android:name=".Books.Book1.BookPage5"
+            android:parentActivityName=".Books.Book1Activity">
+        </activity>
         <activity android:name=".Books.Book1.Activity2E"
             android:parentActivityName=".Books.Book1.BookPage2">
         </activity>
@@ -156,8 +159,11 @@
         <activity android:name=".Books.Book1.Activity4R"
             android:parentActivityName=".Books.Book1.BookPage4">
         </activity>
-        <activity android:name=".Books.Book1.Activity5"
-            android:parentActivityName=".Books.Book1Activity">
+        <activity android:name=".Books.Book1.Activity5E"
+            android:parentActivityName=".Books.Book1.BookPage5">
+        </activity>
+        <activity android:name=".Books.Book1.Activity5R"
+            android:parentActivityName=".Books.Book1.BookPage5">
         </activity>
         <activity android:name=".Books.Book1.Activity6"
             android:parentActivityName=".Books.Book1Activity">
@@ -231,7 +237,9 @@
         <activity android:name=".Characters.Forsaken.Aginor"
             android:parentActivityName=".Characters.EnemyCharacterActivity">
         </activity>
-
+        <activity android:name=".Characters.Forsaken.Narg"
+            android:parentActivityName=".Characters.EnemyCharacterActivity">
+        </activity>
 
         <activity android:name=".Characters.Supporting.TamAlThor"
             android:parentActivityName=".Characters.SupportCharacterActivity">
@@ -324,6 +332,9 @@
         <activity android:name=".Characters.Other.BandryCrawe"
             android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
+        <activity android:name=".Characters.Other.OrenDautry"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
 
 
         <activity android:name=".Locations.Cities.EmondsField"
@@ -345,6 +356,9 @@
             android:parentActivityName=".Locations.CityActivity">
         </activity>
         <activity android:name=".Locations.Cities.Caemlyn"
+            android:parentActivityName=".Locations.CityActivity">
+        </activity>
+        <activity android:name=".Locations.Cities.Lugard"
             android:parentActivityName=".Locations.CityActivity">
         </activity>
 
@@ -403,6 +417,9 @@
             android:parentActivityName=".Locations.Landmarks.OceanActivity">
         </activity>
         <activity android:name=".Locations.Landmarks.Oceans.Mire"
+            android:parentActivityName=".Locations.Landmarks.OceanActivity">
+        </activity>
+        <activity android:name=".Locations.Landmarks.Oceans.Manetherendrelle"
             android:parentActivityName=".Locations.Landmarks.OceanActivity">
         </activity>
 
@@ -510,12 +527,14 @@
         </activity>
 
 
-
+        <activity android:name=".Terminology.EventsActivity"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
 
 
 
         <activity android:name=".Terminology.Events.AgeofLegends"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.EventsActivity">
         </activity>
 
         <activity android:name=".Terminology.Terms.HighSeat"
@@ -535,7 +554,7 @@
             android:parentActivityName=".TerminologyActivity">
         </activity>
         <activity android:name=".Terminology.Events.TheBreakingoftheWorld"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Culture.Wisdom"
             android:parentActivityName=".TerminologyActivity">
@@ -544,10 +563,10 @@
             android:parentActivityName=".TerminologyActivity">
         </activity>
         <activity android:name=".Terminology.Events.TrollocWars"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Events.BelTine"
-        android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Chora"
             android:parentActivityName=".TerminologyActivity">
@@ -571,13 +590,16 @@
             android:parentActivityName=".TerminologyActivity">
         </activity>
         <activity android:name=".Terminology.Events.Sunday"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Events.Winternight"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Events.ThirdAge"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.HundredYearsWar"
+            android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Void"
             android:parentActivityName=".TerminologyActivity">

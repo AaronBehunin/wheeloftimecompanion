@@ -2,19 +2,16 @@ package com.example.u0450254.wheeloftimecompanion.Books.Book1
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Artifacts.OfficeSymbols.RingofTamyrlin
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Ishamael
 import com.example.u0450254.wheeloftimecompanion.Characters.Legends.LewsTherin
 import com.example.u0450254.wheeloftimecompanion.R
 import com.example.u0450254.wheeloftimecompanion.Terminology.Culture.AesSedaiSymbol
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.*
-
 
 class ActivityPE : AppCompatActivity() {
 
@@ -46,7 +43,6 @@ class ActivityPE : AppCompatActivity() {
         chapview.addView(view6)
         chapview.addView(view7)
     }
-
     fun launchLewsTherin(view: View)
     {
         val intent = Intent(view.context, LewsTherin::class.java)
@@ -63,12 +59,11 @@ class ActivityPE : AppCompatActivity() {
         var intent = Intent(view.context, AesSedaiSymbol::class.java)
         view.context.startActivity(intent)
     }
-    fun launchWheelofTime(view: View)
+    fun launchTheOnePower(view: View)
     {
-        var intent = Intent(view.context, WheelofTime::class.java)
+        var intent = Intent(view.context, TheOnePower::class.java)
         view.context.startActivity(intent)
     }
-
     fun launchSaidin(view: View)
     {
         var intent = Intent(view.context, Saidin::class.java)
@@ -79,9 +74,9 @@ class ActivityPE : AppCompatActivity() {
         var intent = Intent(view.context, Taint::class.java)
         view.context.startActivity(intent)
     }
-    fun launchTheOnePower(view: View)
+    fun launchWheelofTime(view: View)
     {
-        var intent = Intent(view.context, TheOnePower::class.java)
+        var intent = Intent(view.context, WheelofTime::class.java)
         view.context.startActivity(intent)
     }
 }
