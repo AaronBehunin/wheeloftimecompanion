@@ -3037,6 +3037,33 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/lionicon" />
                 </RelativeLayout>
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/ShiningWallsBattleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchShiningWallsBattle"
+                    android:paddingEnd="9dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Battle of the Shining Walls"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="108dp"
+                        android:maxWidth="108dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/sunriseicon" />
+                </RelativeLayout>
                 <RelativeLayout
                     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
                     android:layout_height="wrap_content"

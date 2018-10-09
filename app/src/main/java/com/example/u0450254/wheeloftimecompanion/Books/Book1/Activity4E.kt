@@ -8,14 +8,12 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.*
-import com.example.u0450254.wheeloftimecompanion.Characters.Other.BranAlVere
-import com.example.u0450254.wheeloftimecompanion.Characters.Other.CennBuie
-import com.example.u0450254.wheeloftimecompanion.Characters.Other.EwinFinngar
-import com.example.u0450254.wheeloftimecompanion.Characters.Other.HaralLuhhan
+import com.example.u0450254.wheeloftimecompanion.Characters.Other.*
 import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Lan
 import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Moiraine
 import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.TamAlThor
 import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Thom
+import com.example.u0450254.wheeloftimecompanion.Creatures.Animals.Bela
 import com.example.u0450254.wheeloftimecompanion.Locations.Cities.EmondsField
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.Green
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.TheTwoRivers
@@ -24,10 +22,6 @@ import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Roads.Wines
 import com.example.u0450254.wheeloftimecompanion.Organizations.VillageCouncil
 import com.example.u0450254.wheeloftimecompanion.R
 import com.example.u0450254.wheeloftimecompanion.Terminology.Culture.Gleeman
-
-/**
- * Created by u0450254 on 6/5/2018.
- */
 
 class Activity4E : AppCompatActivity() {
 
@@ -109,14 +103,9 @@ class Activity4E : AppCompatActivity() {
         val intent = Intent(view.context, Perrin::class.java)
         view.context.startActivity(intent)
     }
-    fun launchThom(view: View)
+    fun launchNynaeve(view: View)
     {
-        val intent = Intent(view.context, Thom::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchLan(view: View)
-    {
-        val intent = Intent(view.context, Lan::class.java)
+        val intent = Intent(view.context, Nynaeve::class.java)
         view.context.startActivity(intent)
     }
     fun launchMoiraine(view: View)
@@ -124,25 +113,14 @@ class Activity4E : AppCompatActivity() {
         val intent = Intent(view.context, Moiraine::class.java)
         view.context.startActivity(intent)
     }
-    fun launchEwinFinngar(view: View){
-        val intent = Intent(view.context, EwinFinngar::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchNynaeve(view: View)
+    fun launchLan(view: View)
     {
-        val intent = Intent(view.context, Nynaeve::class.java)
+        val intent = Intent(view.context, Lan::class.java)
         view.context.startActivity(intent)
     }
-    fun launchCennBuie(view: View){
-        val intent = Intent(view.context, CennBuie::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchBranAlVere(view: View) {
-        val intent = Intent(view.context, BranAlVere::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchHaralLuhhan(view: View){
-        val intent = Intent(view.context, HaralLuhhan::class.java)
+    fun launchThom(view: View)
+    {
+        val intent = Intent(view.context, Thom::class.java)
         view.context.startActivity(intent)
     }
     fun launchTamAlThor(view: View)
@@ -150,9 +128,49 @@ class Activity4E : AppCompatActivity() {
         val intent = Intent(view.context, TamAlThor::class.java)
         view.context.startActivity(intent)
     }
+    fun launchBranAlVere(view: View) {
+        val intent = Intent(view.context, BranAlVere::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchHuBarran(view: View){
+        val intent = Intent(view.context, HuBarran::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTadBarran(view: View){
+        val intent = Intent(view.context, TadBarran::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchCennBuie(view: View){
+        val intent = Intent(view.context, CennBuie::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchEwinFinngar(view: View){
+        val intent = Intent(view.context, EwinFinngar::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchHaralLuhhan(view: View){
+        val intent = Intent(view.context, HaralLuhhan::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchEmondsField(view: View)
     {
         val intent = Intent(view.context, EmondsField::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchGreen(view: View) {
+        val intent = Intent(view.context, Green::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTheTwoRivers(view: View) {
+        val intent = Intent(view.context, TheTwoRivers::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchQuarryRoad(view: View) {
+        val intent = Intent(view.context, QuarryRoad::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWinespringInn(view: View) {
+        val intent = Intent(view.context, WinespringInn::class.java)
         view.context.startActivity(intent)
     }
     fun launchVillageCouncil(view: View)
@@ -165,20 +183,8 @@ class Activity4E : AppCompatActivity() {
         val intent = Intent(view.context, Gleeman::class.java)
         view.context.startActivity(intent)
     }
-    fun launchWinespringInn(view: View) {
-        val intent = Intent(view.context, WinespringInn::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTheTwoRivers(view: View) {
-        val intent = Intent(view.context, TheTwoRivers::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchGreen(view: View) {
-        val intent = Intent(view.context, Green::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchQuarryRoad(view: View) {
-        val intent = Intent(view.context, QuarryRoad::class.java)
+    fun launchBela(view: View) {
+        val intent = Intent(view.context, Bela::class.java)
         view.context.startActivity(intent)
     }
 }

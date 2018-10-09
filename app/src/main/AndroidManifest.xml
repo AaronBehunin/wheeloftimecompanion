@@ -141,6 +141,9 @@
         <activity android:name=".Books.Book1.BookPage5"
             android:parentActivityName=".Books.Book1Activity">
         </activity>
+        <activity android:name=".Books.Book1.BookPage6"
+            android:parentActivityName=".Books.Book1Activity">
+        </activity>
         <activity android:name=".Books.Book1.Activity2E"
             android:parentActivityName=".Books.Book1.BookPage2">
         </activity>
@@ -165,8 +168,11 @@
         <activity android:name=".Books.Book1.Activity5R"
             android:parentActivityName=".Books.Book1.BookPage5">
         </activity>
-        <activity android:name=".Books.Book1.Activity6"
-            android:parentActivityName=".Books.Book1Activity">
+        <activity android:name=".Books.Book1.Activity6E"
+            android:parentActivityName=".Books.Book1.BookPage6">
+        </activity>
+        <activity android:name=".Books.Book1.Activity6R"
+            android:parentActivityName=".Books.Book1.BookPage6">
         </activity>
         <activity android:name=".Books.Book1.Activity7"
             android:parentActivityName=".Books.Book1Activity">
@@ -599,6 +605,9 @@
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Events.HundredYearsWar"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.ShiningWallsBattle"
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Void"

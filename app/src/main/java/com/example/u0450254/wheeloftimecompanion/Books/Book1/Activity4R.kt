@@ -28,15 +28,12 @@ import com.example.u0450254.wheeloftimecompanion.Locations.Nations.TarValon
 import com.example.u0450254.wheeloftimecompanion.Organizations.AesSedai
 import com.example.u0450254.wheeloftimecompanion.Organizations.Aiel
 import com.example.u0450254.wheeloftimecompanion.Organizations.Tuathaan
+import com.example.u0450254.wheeloftimecompanion.Organizations.Warder
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import com.example.u0450254.wheeloftimecompanion.Terminology.Events.*
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDarkOne
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDragon
-
-/**
- * Created by u0450254 on 6/5/2018.
- */
 
 class Activity4R : AppCompatActivity() {
 
@@ -44,7 +41,7 @@ class Activity4R : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -55,58 +52,46 @@ class Activity4R : AppCompatActivity() {
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
-        var chapview = findViewById<LinearLayout>(R.id.chapterlayout)
+        val chapview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArturHawkwingView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreenManView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JainFarstriderView)
-
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwalCoplinView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BandryCraweView)
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SamelCraweView)
+        val view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArturHawkwingView)
+        val view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreenManView)
+        val view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JainFarstriderView)
+        val view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwalCoplinView)
+        val view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BandryCraweView)
+        val view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SamelCraweView)
         var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
-        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JonThaneView)
-
-
-        var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GhealdanView)
-        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarValonView)
-
-        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BaerlonView)
-        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CaemlynView)
-        var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DevenRideView)
-        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.LugardView)
-        var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarenFerryView)
-        var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WatchHillView)
-
-        var view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielWasteView)
-        var view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ForestofShadowsView)
-        var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WaterwoodView)
-
-        var view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
-
-        var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArythOceanView)
-        var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MireView)
-        var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
-        var view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WhiteRiverView)
-
-        var view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiView)
-        var view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielView)
-        var view27 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TinkerView)
-        var view28 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
-
-        var view29 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
-        var view30 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheDragonView)
-
-        var view31 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ageoflegendsView)
-        var view32 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelTineView)
-        var view33 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TimeofMadnessView)
-        var view34 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocWarsView)
-        var view35 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HundredYearsWarView)
-        var view36 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
-
-        var view37 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
-
-        var view38 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OgierView)
+        val view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JonThaneView)
+        val view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GhealdanView)
+        val view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarValonView)
+        val view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BaerlonView)
+        val view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CaemlynView)
+        val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DevenRideView)
+        val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.LugardView)
+        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarenFerryView)
+        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WatchHillView)
+        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielWasteView)
+        val view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ForestofShadowsView)
+        val view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WaterwoodView)
+        val view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
+        val view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArythOceanView)
+        val view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MireView)
+        val view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
+        val view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WhiteRiverView)
+        val view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiView)
+        val view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielView)
+        val view27 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TinkerView)
+        val view28 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
+        val view29 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
+        val view30 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheDragonView)
+        val view31 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ageoflegendsView)
+        val view32 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelTineView)
+        val view33 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TimeofMadnessView)
+        val view34 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocWarsView)
+        val view35 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HundredYearsWarView)
+        val view36 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
+        val view37 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
+        val view38 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OgierView)
 
 
         if (progress.book==1 && progress.chapter<10)
@@ -154,168 +139,178 @@ class Activity4R : AppCompatActivity() {
         chapview.addView(view37)
         chapview.addView(view38)
     }
-    fun launchEwalCoplin(view: View)
-    {
-        var intent = Intent(view.context, EwalCoplin::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchDragon(view: View)
-    {
-        var intent = Intent(view.context, TheDragon::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchArturHawkwing(view: View)
     {
-        var intent = Intent(view.context, ArturHawkwing::class.java)
+        val intent = Intent(view.context, ArturHawkwing::class.java)
         view.context.startActivity(intent)
     }
     fun launchGreenMan(view: View)
     {
-        var intent = Intent(view.context, GreenMan::class.java)
+        val intent = Intent(view.context, GreenMan::class.java)
         view.context.startActivity(intent)
     }
     fun launchJainFarstrider(view: View)
     {
-        var intent = Intent(view.context, JainFarstrider::class.java)
+        val intent = Intent(view.context, JainFarstrider::class.java)
         view.context.startActivity(intent)
     }
-    fun launchTheDarkOne(view: View)
+    fun launchEwalCoplin(view: View)
     {
-        var intent = Intent(view.context, TheDarkOne::class.java)
+        val intent = Intent(view.context, EwalCoplin::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchBandryCrawe(view: View){
+        val intent = Intent(view.context, BandryCrawe::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchSamelCrawe(view: View){
+        val intent = Intent(view.context, SamelCrawe::class.java)
         view.context.startActivity(intent)
     }
     fun launchPadanFain(view: View)
     {
-        var intent = Intent(view.context, PadanFain::class.java)
+        val intent = Intent(view.context, PadanFain::class.java)
         view.context.startActivity(intent)
     }
     fun launchJonThane(view: View){
-        var intent = Intent(view.context, JonThane::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchBandryCrawe(view: View){
-        var intent = Intent(view.context, BandryCrawe::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchSamelCrawe(view: View){
-        var intent = Intent(view.context, SamelCrawe::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchAesSedai(view: View)
-    {
-        var intent = Intent(view.context, AesSedai::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchAiel(view: View)
-    {
-        var intent = Intent(view.context, Aiel::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchOgier(view: View) {
-        var intent = Intent(view.context, Ogier::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTrolloc(view: View) {
-        var intent = Intent(view.context, Trolloc::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTuathaan(view: View)
-    {
-        var intent = Intent(view.context, Tuathaan::class.java)
+        val intent = Intent(view.context, JonThane::class.java)
         view.context.startActivity(intent)
     }
     fun launchGhealdan(view: View)
     {
-        var intent = Intent(view.context, Ghealdan::class.java)
+        val intent = Intent(view.context, Ghealdan::class.java)
         view.context.startActivity(intent)
     }
     fun launchTarValon(view: View)
     {
-        var intent = Intent(view.context, TarValon::class.java)
+        val intent = Intent(view.context, TarValon::class.java)
         view.context.startActivity(intent)
     }
     fun launchBaerlon(view: View)
     {
-        var intent = Intent(view.context, Baerlon::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWatchHill(view: View)
-    {
-        var intent = Intent(view.context, WatchHill::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchMire(view: View) {
-        var intent = Intent(view.context, Mire::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchMountainsofMist(view: View) {
-        var intent = Intent(view.context, MountainsofMist::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWaterwood(view: View) {
-        var intent = Intent(view.context, Waterwood::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchAielWaste(view: View) {
-        var intent = Intent(view.context, AielWaste::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchArythOcean(view: View) {
-        var intent = Intent(view.context, ArythOcean::class.java)
+        val intent = Intent(view.context, Baerlon::class.java)
         view.context.startActivity(intent)
     }
     fun launchCaemlyn(view: View) {
-        var intent = Intent(view.context, Caemlyn::class.java)
+        val intent = Intent(view.context, Caemlyn::class.java)
         view.context.startActivity(intent)
     }
-    fun launchForestofShadows(view: View) {
-        var intent = Intent(view.context, ForestofShadows::class.java)
+    fun launchDevenRide(view: View)
+    {
+        val intent = Intent(view.context, DevenRide::class.java)
         view.context.startActivity(intent)
     }
-    fun launchManetherendrelle(view: View) {
-        var intent = Intent(view.context, Manetherendrelle::class.java)
+    fun launchLugard(view: View) {
+        val intent = Intent(view.context, Lugard::class.java)
         view.context.startActivity(intent)
     }
     fun launchTarenFerry(view: View)
     {
-        var intent = Intent(view.context, TarenFerry::class.java)
+        val intent = Intent(view.context, TarenFerry::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWatchHill(view: View)
+    {
+        val intent = Intent(view.context, WatchHill::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchAielWaste(view: View) {
+        val intent = Intent(view.context, AielWaste::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchForestofShadows(view: View) {
+        val intent = Intent(view.context, ForestofShadows::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWaterwood(view: View) {
+        val intent = Intent(view.context, Waterwood::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchMountainsofMist(view: View) {
+        val intent = Intent(view.context, MountainsofMist::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchArythOcean(view: View) {
+        val intent = Intent(view.context, ArythOcean::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchMire(view: View) {
+        val intent = Intent(view.context, Mire::class.java)
         view.context.startActivity(intent)
     }
     fun launchTarendrelle(view: View) {
-        var intent = Intent(view.context, Tarendrelle::class.java)
+        val intent = Intent(view.context, Tarendrelle::class.java)
         view.context.startActivity(intent)
     }
-    fun launchLugard(view: View) {
-        var intent = Intent(view.context, Lugard::class.java)
+    fun launchManetherendrelle(view: View) {
+        val intent = Intent(view.context, Manetherendrelle::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchAesSedai(view: View)
+    {
+        val intent = Intent(view.context, AesSedai::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchAiel(view: View)
+    {
+        val intent = Intent(view.context, Aiel::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTuathaan(view: View)
+    {
+        val intent = Intent(view.context, Tuathaan::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWarder(view: View)
+    {
+        val intent = Intent(view.context, Warder::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTheDarkOne(view: View)
+    {
+        val intent = Intent(view.context, TheDarkOne::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchDragon(view: View)
+    {
+        val intent = Intent(view.context, TheDragon::class.java)
         view.context.startActivity(intent)
     }
     fun launchAgeofLegends(view: View)
     {
-        var intent = Intent(view.context, AgeofLegends::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTheBreakingoftheWorld(view: View)
-    {
-        var intent = Intent(view.context, TheBreakingoftheWorld::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTrollocWars(view: View) {
-        var intent = Intent(view.context, TrollocWars::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchHundredYearsWar(view: View)
-    {
-        var intent = Intent(view.context, HundredYearsWar::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchWinternight(view: View)
-    {
-        var intent = Intent(view.context, Winternight::class.java)
+        val intent = Intent(view.context, AgeofLegends::class.java)
         view.context.startActivity(intent)
     }
     fun launchBelTine(view: View)
     {
-        var intent = Intent(view.context, BelTine::class.java)
+        val intent = Intent(view.context, BelTine::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTheBreakingoftheWorld(view: View)
+    {
+        val intent = Intent(view.context, TheBreakingoftheWorld::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTrollocWars(view: View) {
+        val intent = Intent(view.context, TrollocWars::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchHundredYearsWar(view: View)
+    {
+        val intent = Intent(view.context, HundredYearsWar::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWinternight(view: View)
+    {
+        val intent = Intent(view.context, Winternight::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTrolloc(view: View) {
+        val intent = Intent(view.context, Trolloc::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchOgier(view: View) {
+        val intent = Intent(view.context, Ogier::class.java)
         view.context.startActivity(intent)
     }
 }

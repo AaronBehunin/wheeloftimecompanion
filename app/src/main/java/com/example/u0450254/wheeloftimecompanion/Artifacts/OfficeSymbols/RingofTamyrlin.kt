@@ -20,7 +20,7 @@ class RingofTamyrlin: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 

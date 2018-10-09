@@ -39,7 +39,7 @@ class AnimalsActivity: AppCompatActivity() {
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelaView)
         var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ScratchView)
 
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+        inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
         charview.addView(view2)
