@@ -1,23 +1,14 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Forsaken
 
-/**
- * Created by u0450254 on 5/29/2018.
- */
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
-import android.text.TextUtils
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
-import com.example.u0450254.wheeloftimecompanion.Launchers
 
-/**
- * Created by u0450254 on 5/23/2018.
- */
 class Aginor : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +17,6 @@ class Aginor : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val launcher = Launchers(this)
 
         var progressFile = openFileInput("Progress")
 
@@ -70,10 +60,5 @@ class Aginor : AppCompatActivity() {
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
-
-        if ((progress.book==1 && progress.chapter>0)||progress.book>1)
-        {
-            thisInfo.text = TextUtils.concat(string1)
-        }
     }
 }

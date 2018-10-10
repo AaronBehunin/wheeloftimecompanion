@@ -33,14 +33,15 @@ class TermActivity: AppCompatActivity() {
         var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CreatorView)
         var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
         var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheDragonView)
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VoidView)
-        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HighSeatView)
-        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.NineRodsView)
-        var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheOnePowerView)
-        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SaidinView)
-        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TaintView)
-        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WheelofTimeView)
-        var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WisdomView)
+        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonsFangView)
+        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VoidView)
+        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HighSeatView)
+        var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.NineRodsView)
+        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheOnePowerView)
+        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SaidinView)
+        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TaintView)
+        var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WheelofTimeView)
+        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WisdomView)
 
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
@@ -58,6 +59,7 @@ class TermActivity: AppCompatActivity() {
         chapview.addView(view11)
         chapview.addView(view12)
         chapview.addView(view13)
+        chapview.addView(view14)
 
     }
 
@@ -84,6 +86,11 @@ class TermActivity: AppCompatActivity() {
     fun launchDragon(view: View)
     {
         var intent = Intent(view.context, TheDragon::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchDragonsFang(view: View)
+    {
+        var intent = Intent(view.context, DragonsFang::class.java)
         view.context.startActivity(intent)
     }
     fun launchHighSeat(view: View)

@@ -1,18 +1,19 @@
-package com.example.u0450254.wheeloftimecompanion.Characters.Forsaken
+package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-//done
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
+import android.text.SpannedString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
+import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
-import android.widget.*
 
-class Narg : AppCompatActivity() {
+class BerinThane : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,16 +21,13 @@ class Narg : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
         val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
-
         val splits = inputString.split("-")
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
-
 
         val thisTitle = findViewById<TextView>(R.id.Title)
         val thisAge = findViewById<TextView>(R.id.Age)
@@ -41,44 +39,39 @@ class Narg : AppCompatActivity() {
         val thisEye = findViewById<TextView>(R.id.EyeColor)
         val thisRank = findViewById<TextView>(R.id.Rank)
 
-        thisTitle.text = "Narg"
-        thisAffil.text = " Affiliation: Trolloc"
-
+        thisTitle.text = "Berin Thane"
+        thisAffil.text = " Affiliation: Andor-The Two Rivers"
 
         thisAge.text = " Age: ?"
 
-
         thisGender.text = " Gender: Male"
-        thisHeight.text = " Height: 8 feet"
+        thisHeight.text = " Height: ?"
         thisWeight.text = " Weight: ?"
         thisHair.text = " Hair Color: ?"
         thisEye.text = " Eye Color: ?"
-        thisRank.text = " Rank: Footsoldier"
+        thisRank.text = " Rank: Civilian"
 
+        var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        val thisInfo = findViewById<TextView>(R.id.charinfo)
+        var string1 = SpannableString("\n     Berin Thane is a Two Rivers resident. He is the brother of Jon Thane.\n\n")
 
-        val string1 = SpannableString("\n     Narg is an eight foot tall Trolloc that has a wolf's muzzle and goat hooves.\n\n")
-
-        val string2 = SpannableString("Activities\n\n")
+        var string2 = SpannableString("Activities\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        val string3 = SpannableString("     He is one of the Trollocs who attack the al'Thor farm. " +
-                "He hides in Rand and Tam's house pretending to be dead, waiting for someone to return. " +
-                "He then attempts to talk Rand into coming with him to see the Myrddraal. " +
-                "He attacks Rand and is impaled on Tam's sword.\n\n")
+        var string3 = SpannableString("     His house is burnt down during the Trolloc raid in Emond's Field.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
-        thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+        thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        if (progress.book==1 &&progress.chapter<=5)
+        if (progress.book==1&&progress.chapter<=7)
         {
             thisInfo.text = TextUtils.concat(string1)
         }
-        else if (progress.book>1 || (progress.book==1 && progress.chapter>5))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>7))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }
+
     }
 }

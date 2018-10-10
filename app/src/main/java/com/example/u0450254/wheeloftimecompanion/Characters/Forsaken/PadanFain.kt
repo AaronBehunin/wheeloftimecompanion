@@ -1,8 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Forsaken
 
-/**
- * Created by u0450254 on 5/29/2018.
- */
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -13,9 +10,6 @@ import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
 import com.example.u0450254.wheeloftimecompanion.Launchers
 
-/**
- * Created by u0450254 on 5/23/2018.
- */
 class PadanFain : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,6 +62,6 @@ class PadanFain : AppCompatActivity() {
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-            thisInfo.text = string1
+        thisInfo.text = string1
     }
 }

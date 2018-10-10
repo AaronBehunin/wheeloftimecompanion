@@ -56,27 +56,27 @@ class ActivityPE : AppCompatActivity() {
 
     fun launchAesSedaiSymbol(view: View)
     {
-        var intent = Intent(view.context, AesSedaiSymbol::class.java)
+        val intent = Intent(view.context, AesSedaiSymbol::class.java)
         view.context.startActivity(intent)
     }
     fun launchTheOnePower(view: View)
     {
-        var intent = Intent(view.context, TheOnePower::class.java)
+        val intent = Intent(view.context, TheOnePower::class.java)
         view.context.startActivity(intent)
     }
     fun launchSaidin(view: View)
     {
-        var intent = Intent(view.context, Saidin::class.java)
+        val intent = Intent(view.context, Saidin::class.java)
         view.context.startActivity(intent)
     }
     fun launchTaint(view: View)
     {
-        var intent = Intent(view.context, Taint::class.java)
+        val intent = Intent(view.context, Taint::class.java)
         view.context.startActivity(intent)
     }
     fun launchWheelofTime(view: View)
     {
-        var intent = Intent(view.context, WheelofTime::class.java)
+        val intent = Intent(view.context, WheelofTime::class.java)
         view.context.startActivity(intent)
     }
 }

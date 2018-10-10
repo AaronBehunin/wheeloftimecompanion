@@ -64,7 +64,8 @@ class OtherCharacterActivity: AppCompatActivity() {
         var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.RowanHurnView)
         var view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AlsbetLuhhanView)
         var view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HaralLuhhanView)
-        var view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JonThaneView)
+        var view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BerinThaneView)
+        var view27 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JonThaneView)
 
 
 
@@ -96,10 +97,11 @@ class OtherCharacterActivity: AppCompatActivity() {
         charview.addView(view24)
         charview.addView(view25)
         charview.addView(view26)
+        charview.addView(view27)
 
         if (progress.book==1 && progress.chapter<10)
         {
-            charview.removeView(view20)
+            charview.removeView(view21)
         }
     }
     fun launchKarialThor(view: View){
@@ -207,6 +209,10 @@ class OtherCharacterActivity: AppCompatActivity() {
     }
     fun launchHaralLuhhan(view: View){
         var intent = Intent(view.context, HaralLuhhan::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchBerinThane(view: View){
+        var intent = Intent(view.context, BerinThane::class.java)
         view.context.startActivity(intent)
     }
     fun launchJonThane(view: View){

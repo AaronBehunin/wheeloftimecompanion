@@ -64,7 +64,7 @@ class ActivityPR : AppCompatActivity() {
     }
     fun launchPaaranDisen(view: View)
     {
-        var intent = Intent(view.context, PaaranDisen::class.java)
+        val intent = Intent(view.context, PaaranDisen::class.java)
         view.context.startActivity(intent)
     }
     fun launchWorldSea(view: View) {
@@ -72,7 +72,7 @@ class ActivityPR : AppCompatActivity() {
         view.context.startActivity(intent)
     }
     fun launchRingofTamyrlin(view: View){
-        var intent = Intent(view.context, RingofTamyrlin::class.java)
+        val intent = Intent(view.context, RingofTamyrlin::class.java)
         view.context.startActivity(intent)
     }
     fun launchAesSedaiLegends(view: View)
@@ -87,7 +87,7 @@ class ActivityPR : AppCompatActivity() {
     }
     fun launchTheCreator(view: View)
     {
-        var intent = Intent(view.context, TheCreator::class.java)
+        val intent = Intent(view.context, TheCreator::class.java)
         view.context.startActivity(intent)
     }
     fun launchTheDarkOne(view: View)
@@ -97,7 +97,7 @@ class ActivityPR : AppCompatActivity() {
     }
     fun launchNineRods(view: View)
     {
-        var intent = Intent(view.context, NineRods::class.java)
+        val intent = Intent(view.context, NineRods::class.java)
         view.context.startActivity(intent)
     }
 }

@@ -15,10 +15,7 @@ import com.example.u0450254.wheeloftimecompanion.Creatures.Monsters.Trolloc
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.Westwood
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Roads.QuarryRoad
 import com.example.u0450254.wheeloftimecompanion.R
-
-/**
- * Created by u0450254 on 6/5/2018.
- */
+import com.example.u0450254.wheeloftimecompanion.Terminology.Events.Winternight
 
 class Activity6E: AppCompatActivity() {
 
@@ -29,15 +26,15 @@ class Activity6E: AppCompatActivity() {
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
-        var chapview = findViewById<LinearLayout>(R.id.chapterlayout)
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.randView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamAlThorView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WestwoodView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.QuarryRoadView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
-        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MyrddraalView)
-        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
+        val chapview = findViewById<LinearLayout>(R.id.chapterlayout)
+        val view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.randView)
+        val view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamAlThorView)
+        val view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WestwoodView)
+        val view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.QuarryRoadView)
+        val view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
+        val view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
+        val view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MyrddraalView)
+        val view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -52,32 +49,37 @@ class Activity6E: AppCompatActivity() {
     }
     fun launchRand(view: View)
     {
-        var intent = Intent(view.context, Rand::class.java)
+        val intent = Intent(view.context, Rand::class.java)
         view.context.startActivity(intent)
     }
     fun launchTamAlThor(view: View)
     {
-        var intent = Intent(view.context, TamAlThor::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchTrolloc(view: View) {
-        var intent = Intent(view.context, Trolloc::class.java)
-        view.context.startActivity(intent)
-    }
-    fun launchMyrddraal(view: View) {
-        var intent = Intent(view.context, Myrddraal::class.java)
+        val intent = Intent(view.context, TamAlThor::class.java)
         view.context.startActivity(intent)
     }
     fun launchWestwood(view: View) {
-        var intent = Intent(view.context, Westwood::class.java)
+        val intent = Intent(view.context, Westwood::class.java)
         view.context.startActivity(intent)
     }
     fun launchQuarryRoad(view: View) {
-        var intent = Intent(view.context, QuarryRoad::class.java)
+        val intent = Intent(view.context, QuarryRoad::class.java)
         view.context.startActivity(intent)
     }
     fun launchTamsSword(view: View){
-        var intent = Intent(view.context, TamsSword::class.java)
+        val intent = Intent(view.context, TamsSword::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchWinternight(view: View)
+    {
+        val intent = Intent(view.context, Winternight::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchMyrddraal(view: View) {
+        val intent = Intent(view.context, Myrddraal::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTrolloc(view: View) {
+        val intent = Intent(view.context, Trolloc::class.java)
         view.context.startActivity(intent)
     }
 }

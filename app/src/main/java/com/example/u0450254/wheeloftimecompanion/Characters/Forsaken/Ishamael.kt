@@ -1,8 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Forsaken
 
-/**
- * Created by u0450254 on 5/29/2018.
- */
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -13,11 +10,7 @@ import android.text.style.RelativeSizeSpan
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
-import com.example.u0450254.wheeloftimecompanion.Launchers
 
-/**
- * Created by u0450254 on 5/23/2018.
- */
 class Ishamael : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +18,6 @@ class Ishamael : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val launcher = Launchers(this)
-
 
         var progressFile = openFileInput("Progress")
 
@@ -73,19 +63,21 @@ class Ishamael : AppCompatActivity() {
         var string3 = SpannableString("Age of Legends\n\n")
         string3.setSpan(RelativeSizeSpan(1.5f),0,14,0)
 
-        var string8 = SpannableString("     After the seals were placed and saidin was tainted, Ishamael arrived at Lews Therin's home and discovered to his surprise and delight that Lews Therin had murdered his entire family. After having a mostly one-sided conversation with the insane Lews Therin, Ishamael Healed him so that he understood what he had done. This realization caused Lews Therin to commit suicide, leaving a furious Ishamael to wait for him to be reborn.\n\n")
-
+        var string8 = SpannableString("     After the seals were placed and saidin was tainted, Ishamael arrived at Lews Therin's home and discovered to his surprise and delight that Lews Therin had murdered his entire family. " +
+                "After having a mostly one-sided conversation with the insane Lews Therin, Ishamael Healed him so that he understood what he had done. " +
+                "This realization caused Lews Therin to commit suicide, leaving a furious Ishamael to wait for him to be reborn.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-
-        thisInfo.text = string1
-
-        if ((progress.book==1 && progress.chapter>0)||progress.book>1)
+        if (progress.book==1 && progress.chapter<=0)
         {
-            thisInfo.text = TextUtils.concat(string1, string2, string3,string8)
+            thisInfo.text = TextUtils.concat(string1)
+        }
+        else if (progress.book>1 ||(progress.book==1&&progress.chapter>0))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string8)
         }
     }
 }
