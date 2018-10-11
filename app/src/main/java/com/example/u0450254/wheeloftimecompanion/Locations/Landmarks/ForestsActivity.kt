@@ -61,6 +61,10 @@ class ForestsActivity: AppCompatActivity() {
         var intent = Intent(view.context, ForestofShadows::class.java)
         view.context.startActivity(intent)
     }
+    fun launchGreen(view: View) {
+        var intent = Intent(view.context, Green::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchSandHills(view: View) {
         var intent = Intent(view.context, SandHills::class.java)
         view.context.startActivity(intent)
@@ -77,8 +81,5 @@ class ForestsActivity: AppCompatActivity() {
         var intent = Intent(view.context, Westwood::class.java)
         view.context.startActivity(intent)
     }
-    fun launchGreen(view: View) {
-        var intent = Intent(view.context, Green::class.java)
-        view.context.startActivity(intent)
-    }
+
 }

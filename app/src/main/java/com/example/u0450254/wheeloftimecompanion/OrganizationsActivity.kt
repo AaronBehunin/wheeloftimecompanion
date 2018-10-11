@@ -33,15 +33,16 @@ class OrganizationsActivity: AppCompatActivity() {
         var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AielView)
         var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ChildrenoftheLightView)
         var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DarkfriendsView)
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ForsakenView)
-        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HallofServantsView)
-        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HundredCompanionsView)
-        var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ServantsView)
-        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SistersView)
-        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TinkerView)
-        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
-        var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
-        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WomensCircleView)
+        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DreadlordsView)
+        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ForsakenView)
+        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HallofServantsView)
+        var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HundredCompanionsView)
+        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ServantsView)
+        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SistersView)
+        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TinkerView)
+        var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
+        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
+        var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WomensCircleView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
         charview.addView(view1)
@@ -58,6 +59,7 @@ class OrganizationsActivity: AppCompatActivity() {
         charview.addView(view12)
         charview.addView(view13)
         charview.addView(view14)
+        charview.addView(view15)
     }
 
     fun launchAesSedai(view: View)
@@ -75,14 +77,19 @@ class OrganizationsActivity: AppCompatActivity() {
         var intent = Intent(view.context, Aiel::class.java)
         view.context.startActivity(intent)
     }
+    fun launchChildrenoftheLight(view: View)
+    {
+        var intent = Intent(view.context, ChildrenoftheLight::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchDarkfriends(view: View)
     {
         var intent = Intent(view.context, Darkfriends::class.java)
         view.context.startActivity(intent)
     }
-    fun launchChildrenoftheLight(view: View)
+    fun launchDreadlords(view: View)
     {
-        var intent = Intent(view.context, ChildrenoftheLight::class.java)
+        var intent = Intent(view.context, Dreadlords::class.java)
         view.context.startActivity(intent)
     }
     fun launchForsaken(view: View)

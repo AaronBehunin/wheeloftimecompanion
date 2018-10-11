@@ -149,6 +149,9 @@
         <activity android:name=".Books.Book1.BookPage7"
             android:parentActivityName=".Books.Book1Activity">
         </activity>
+        <activity android:name=".Books.Book1.BookPage8"
+            android:parentActivityName=".Books.Book1Activity">
+        </activity>
 
 
 
@@ -199,6 +202,12 @@
         </activity>
         <activity android:name=".Books.Book1.Activity7R"
             android:parentActivityName=".Books.Book1.BookPage7">
+        </activity>
+        <activity android:name=".Books.Book1.Activity8E"
+            android:parentActivityName=".Books.Book1.BookPage8">
+        </activity>
+        <activity android:name=".Books.Book1.Activity8R"
+            android:parentActivityName=".Books.Book1.BookPage8">
         </activity>
 
 
@@ -573,6 +582,9 @@
             android:parentActivityName=".OrganizationsActivity">
         </activity>
         <activity android:name=".Organizations.Darkfriends"
+            android:parentActivityName=".OrganizationsActivity">
+        </activity>
+        <activity android:name=".Organizations.Dreadlords"
             android:parentActivityName=".OrganizationsActivity">
         </activity>
         <activity android:name=".Organizations.Forsaken"

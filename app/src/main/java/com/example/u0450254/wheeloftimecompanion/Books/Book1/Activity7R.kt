@@ -55,33 +55,24 @@ class Activity7R: AppCompatActivity() {
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
         var chapview = findViewById<LinearLayout>(R.id.chapterlayout)
-
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.matView)
-
         var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CennBuieView)
         var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AbellCauthonView)
         var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DarlCoplinView)
         var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
         var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AlsbetLuhhanView)
         var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BerinThaneView)
-
         var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarValonView)
-
         var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DevenRideView)
         var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WatchHillView)
-
         var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
-
         var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
         var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.FalseDragonView)
         var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WheelofTimeView)
-
         var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelTineView)
         var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocWarsView)
         var view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
-
         var view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
-
         var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelaView)
 
         if (progress.book==1 && progress.chapter<10)

@@ -1672,7 +1672,33 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/falconicon" />
                 </RelativeLayout>
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/DreadlordsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchDreadlords"
+                    android:paddingEnd="23dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Dreadlords"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="80dp"
+                        android:maxWidth="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/aessedaiicon" />
+                </RelativeLayout>
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/EmondsFieldView"
                     android:layout_width="match_parent"

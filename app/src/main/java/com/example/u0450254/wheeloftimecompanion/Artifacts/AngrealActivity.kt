@@ -36,7 +36,7 @@ class AngrealActivity: AppCompatActivity() {
 
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheRobedWomanView)
 
-        inflatedLayoutLews.findViewById<ConstraintLayout>(R.id.parent).removeAllViews()
+        inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         chapview.addView(view1)
     }
