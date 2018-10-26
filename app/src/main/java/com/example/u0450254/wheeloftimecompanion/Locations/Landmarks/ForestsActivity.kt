@@ -61,6 +61,10 @@ class ForestsActivity: AppCompatActivity() {
         var intent = Intent(view.context, ForestofShadows::class.java)
         view.context.startActivity(intent)
     }
+    fun launchGreatBlight(view: View) {
+        var intent = Intent(view.context, GreatBlight::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchGreen(view: View) {
         var intent = Intent(view.context, Green::class.java)
         view.context.startActivity(intent)

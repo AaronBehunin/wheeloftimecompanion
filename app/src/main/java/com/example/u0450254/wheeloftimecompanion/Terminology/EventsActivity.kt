@@ -31,12 +31,14 @@ class EventsActivity: AppCompatActivity() {
         var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelTineView)
         var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheBreakingoftheWorldView)
         var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ShiningWallsBattleView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SundayView)
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ThirdAgeView)
-        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TimeofMadnessView)
-        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocWarsView)
-        var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HundredYearsWarView)
-        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
+        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.FieldofBekkarView)
+        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SundayView)
+        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BattleTarendrelleView)
+        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ThirdAgeView)
+        var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TimeofMadnessView)
+        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocWarsView)
+        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HundredYearsWarView)
+        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -50,6 +52,8 @@ class EventsActivity: AppCompatActivity() {
         chapview.addView(view8)
         chapview.addView(view9)
         chapview.addView(view10)
+        chapview.addView(view11)
+        chapview.addView(view12)
     }
 
     fun launchAgeofLegends(view: View)
@@ -72,9 +76,19 @@ class EventsActivity: AppCompatActivity() {
         var intent = Intent(view.context, ShiningWallsBattle::class.java)
         view.context.startActivity(intent)
     }
+    fun launchFieldofBekkar(view: View)
+    {
+        var intent = Intent(view.context, FieldofBekkar::class.java)
+        view.context.startActivity(intent)
+    }
     fun launchSunday(view: View)
     {
         var intent = Intent(view.context, Sunday::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchBattleTarendrelle(view: View)
+    {
+        var intent = Intent(view.context, BattleTarendrelle::class.java)
         view.context.startActivity(intent)
     }
     fun launchThirdAge(view: View)

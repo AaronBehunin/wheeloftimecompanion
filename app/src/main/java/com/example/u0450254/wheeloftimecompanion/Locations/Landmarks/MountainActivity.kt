@@ -8,10 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.GreatBlight
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.MountainsofMist
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.ShayolGhul
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.SpineoftheWorld
+import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.*
 import com.example.u0450254.wheeloftimecompanion.R
 
 /*
@@ -29,11 +26,12 @@ class MountainActivity: AppCompatActivity() {
 
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonwallView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreatBlightView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ShayolGhulView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SpineoftheWorldView)
+        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonmountView)
+        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonwallView)
+        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreatBlightView)
+        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
+        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ShayolGhulView)
+        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SpineoftheWorldView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -42,9 +40,10 @@ class MountainActivity: AppCompatActivity() {
         charview.addView(view3)
         charview.addView(view4)
         charview.addView(view5)
+        charview.addView(view6)
     }
-    fun launchGreatBlight(view: View) {
-        var intent = Intent(view.context, GreatBlight::class.java)
+    fun launchDragonmount(view: View) {
+        var intent = Intent(view.context, Dragonmount::class.java)
         view.context.startActivity(intent)
     }
     fun launchMountainsofMist(view: View) {

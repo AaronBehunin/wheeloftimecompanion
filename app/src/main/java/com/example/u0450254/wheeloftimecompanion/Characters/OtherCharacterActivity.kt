@@ -48,24 +48,25 @@ class OtherCharacterActivity: AppCompatActivity() {
         var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HuBarranView)
         var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TadBarranView)
         var view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CennBuieView)
-        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AbellCauthonView)
-        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BiliCongarView)
-        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DaiseCongarView)
-        var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WitCongarView)
-        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DarlCoplinView)
-        var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwalCoplinView)
-        var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HariCoplinView)
-        var view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BandryCraweView)
-        var view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SamelCraweView)
-        var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OrenDautryView)
-        var view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ElamDowtryView)
-        var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
-        var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwinFinngarView)
-        var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.RowanHurnView)
-        var view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AlsbetLuhhanView)
-        var view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HaralLuhhanView)
-        var view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BerinThaneView)
-        var view27 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JonThaneView)
+        var view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwardCandwinView)
+        var view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AbellCauthonView)
+        var view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BiliCongarView)
+        var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DaiseCongarView)
+        var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WitCongarView)
+        var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DarlCoplinView)
+        var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwalCoplinView)
+        var view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HariCoplinView)
+        var view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BandryCraweView)
+        var view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SamelCraweView)
+        var view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OrenDautryView)
+        var view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ElamDowtryView)
+        var view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.PadanFainView)
+        var view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EwinFinngarView)
+        var view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.RowanHurnView)
+        var view25 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AlsbetLuhhanView)
+        var view26 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HaralLuhhanView)
+        var view27 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BerinThaneView)
+        var view28 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.JonThaneView)
 
 
 
@@ -98,10 +99,11 @@ class OtherCharacterActivity: AppCompatActivity() {
         charview.addView(view25)
         charview.addView(view26)
         charview.addView(view27)
+        charview.addView(view28)
 
         if (progress.book==1 && progress.chapter<10)
         {
-            charview.removeView(view21)
+            charview.removeView(view22)
         }
     }
     fun launchKarialThor(view: View){
@@ -134,6 +136,10 @@ class OtherCharacterActivity: AppCompatActivity() {
     }
     fun launchCennBuie(view: View){
         var intent = Intent(view.context, CennBuie::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchEwardCandwin(view: View){
+        var intent = Intent(view.context, EwardCandwin::class.java)
         view.context.startActivity(intent)
     }
     fun launchPaetalCarr(view: View){

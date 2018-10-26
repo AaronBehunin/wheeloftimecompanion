@@ -1775,7 +1775,7 @@ class Book1Activity: AppCompatActivity() {
         view.context.startActivity(intent)
     }
     fun launch9(view: View){
-        var intent = Intent(view.context, Activity9::class.java)
+        var intent = Intent(view.context, BookPage9::class.java)
         view.context.startActivity(intent)
     }
     fun launch10(view: View){

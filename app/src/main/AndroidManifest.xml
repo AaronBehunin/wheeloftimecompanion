@@ -152,6 +152,9 @@
         <activity android:name=".Books.Book1.BookPage8"
             android:parentActivityName=".Books.Book1Activity">
         </activity>
+        <activity android:name=".Books.Book1.BookPage9"
+            android:parentActivityName=".Books.Book1Activity">
+        </activity>
 
 
 
@@ -208,6 +211,12 @@
         </activity>
         <activity android:name=".Books.Book1.Activity8R"
             android:parentActivityName=".Books.Book1.BookPage8">
+        </activity>
+        <activity android:name=".Books.Book1.Activity9E"
+            android:parentActivityName=".Books.Book1.BookPage9">
+        </activity>
+        <activity android:name=".Books.Book1.Activity9R"
+            android:parentActivityName=".Books.Book1.BookPage9">
         </activity>
 
 
@@ -311,6 +320,9 @@
             android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
         <activity android:name=".Characters.Other.CennBuie"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Other.EwardCandwin"
             android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
         <activity android:name=".Characters.Other.PaetalCarr"
@@ -455,13 +467,15 @@
         <activity android:name=".Locations.Landmarks.Forests.Westwood"
             android:parentActivityName=".Locations.Landmarks.ForestsActivity">
         </activity>
-
-
-
-
-
         <activity android:name=".Locations.Landmarks.Mountains.GreatBlight"
             android:parentActivityName=".Locations.Landmarks.ForestsActivity">
+        </activity>
+
+
+
+
+        <activity android:name=".Locations.Landmarks.Mountains.Dragonmount"
+            android:parentActivityName=".Locations.Landmarks.MountainActivity">
         </activity>
         <activity android:name=".Locations.Landmarks.Mountains.MountainsofMist"
             android:parentActivityName=".Locations.Landmarks.MountainActivity">
@@ -681,6 +695,12 @@
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Events.ShiningWallsBattle"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.FieldofBekkar"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.BattleTarendrelle"
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Void"
