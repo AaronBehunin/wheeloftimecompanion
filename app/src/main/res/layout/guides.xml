@@ -1016,6 +1016,32 @@
                         android:src="@drawable/facesicon" />
                 </RelativeLayout>
 
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp"
+                    android:clickable="true"
+                    android:onClick="launchNattiCauthon"
+                    android:id="@+id/NattiCauthonView">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Natti Cauthon"
+                        android:layout_centerVertical="true"
+                        android:textSize="28sp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="110dp"
+                        android:maxWidth="110dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/bullicon" />
+                </RelativeLayout>
+
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/ChildrenoftheLightView"
                     android:layout_width="match_parent"
@@ -1042,6 +1068,31 @@
                         android:maxWidth="80dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/aessedaiicon" />
+                </RelativeLayout>
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="17dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp"
+                    android:clickable="true"
+                    android:onClick="launchCloud"
+                    android:id="@+id/CloudView">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cloud"
+                        android:layout_centerVertical="true"
+                        android:textSize="28sp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="93dp"
+                        android:maxWidth="93dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/wolficon" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -2190,6 +2241,34 @@
                         android:src="@drawable/wheelicon" />
                 </RelativeLayout>
 
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/HalfMoonAxeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchHalfMoonAxe"
+                    android:paddingEnd="17dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Half-Moon Axe"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="108dp"
+                        android:maxWidth="108dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/hilticon" />
+                </RelativeLayout>
+
                 <RelativeLayout
                     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -2634,6 +2713,33 @@
                         android:src="@drawable/wheelicon" />
                 </RelativeLayout>
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/MoirainesStaffView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchMoirainesStaff"
+                    android:paddingEnd="17dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Moiraine's Staff"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="108dp"
+                        android:maxWidth="108dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/hilticon" />
+                </RelativeLayout>
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/MountainsofMistView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -2818,6 +2924,34 @@
                         android:maxWidth="80dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/horseicon" />
+                </RelativeLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/OldTongueView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="launchOldTongue"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="The Old Tongue"
+                        android:textSize="28sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="95dp"
+                        android:maxWidth="95dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/harpicon" />
                 </RelativeLayout>
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

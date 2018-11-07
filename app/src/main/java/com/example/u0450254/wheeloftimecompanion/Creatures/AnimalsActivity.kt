@@ -16,6 +16,7 @@ import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Moiraine
 import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.TamAlThor
 import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Thom
 import com.example.u0450254.wheeloftimecompanion.Creatures.Animals.Bela
+import com.example.u0450254.wheeloftimecompanion.Creatures.Animals.Cloud
 import com.example.u0450254.wheeloftimecompanion.Creatures.Animals.Scratch
 import com.example.u0450254.wheeloftimecompanion.Creatures.Monsters.Trolloc
 import com.example.u0450254.wheeloftimecompanion.R
@@ -37,16 +38,22 @@ class AnimalsActivity: AppCompatActivity() {
         var charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelaView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ScratchView)
+        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.CloudView)
+        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ScratchView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
         charview.addView(view2)
+        charview.addView(view3)
     }
 
     fun launchBela(view: View) {
         var intent = Intent(view.context, Bela::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchCloud(view: View) {
+        var intent = Intent(view.context, Cloud::class.java)
         view.context.startActivity(intent)
     }
     fun launchScratch(view: View) {

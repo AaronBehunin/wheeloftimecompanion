@@ -30,8 +30,9 @@ class CultureActivity: AppCompatActivity() {
         var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiSymbolView)
         var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BraidView)
         var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GleemanView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.StonesView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TabacView)
+        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OldTongueView)
+        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.StonesView)
+        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TabacView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -40,6 +41,7 @@ class CultureActivity: AppCompatActivity() {
         chapview.addView(view3)
         chapview.addView(view4)
         chapview.addView(view5)
+        chapview.addView(view6)
     }
 
     fun launchAesSedaiSymbol(view: View)
@@ -55,6 +57,11 @@ class CultureActivity: AppCompatActivity() {
     fun launchGleeman(view: View)
     {
         var intent = Intent(view.context, Gleeman::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchOldTongue(view: View)
+    {
+        var intent = Intent(view.context, OldTongue::class.java)
         view.context.startActivity(intent)
     }
     fun launchStones(view: View)

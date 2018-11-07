@@ -2,7 +2,6 @@ package com.example.u0450254.wheeloftimecompanion.Terminology
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
@@ -43,7 +42,6 @@ class TermActivity: AppCompatActivity() {
         var view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WheelofTimeView)
         var view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WisdomView)
 
-
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         chapview.addView(view1)
@@ -60,9 +58,7 @@ class TermActivity: AppCompatActivity() {
         chapview.addView(view12)
         chapview.addView(view13)
         chapview.addView(view14)
-
     }
-
     fun launchAngreal(view: View)
     {
         var intent = Intent(view.context, Angreal::class.java)

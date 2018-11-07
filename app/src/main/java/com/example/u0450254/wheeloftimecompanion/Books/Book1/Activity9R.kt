@@ -24,7 +24,6 @@ import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.S
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Oceans.Tarendrelle
 import com.example.u0450254.wheeloftimecompanion.Locations.Nations.Manetheren
 import com.example.u0450254.wheeloftimecompanion.Locations.Nations.TarValon
-import com.example.u0450254.wheeloftimecompanion.Organizations.AesSedai
 import com.example.u0450254.wheeloftimecompanion.Organizations.Darkfriends
 import com.example.u0450254.wheeloftimecompanion.Organizations.Dreadlords
 import com.example.u0450254.wheeloftimecompanion.Organizations.VillageCouncil
@@ -95,113 +94,113 @@ class Activity9R: AppCompatActivity() {
     }
     fun launchNynaeve(view: View)
     {
-        var intent = Intent(view.context, Nynaeve::class.java)
+        val intent = Intent(view.context, Nynaeve::class.java)
         view.context.startActivity(intent)
     }
     fun launchThom(view: View)
     {
-        var intent = Intent(view.context, Thom::class.java)
+        val intent = Intent(view.context, Thom::class.java)
         view.context.startActivity(intent)
     }
     fun launchAemonalThorin(view: View)
     {
-        var intent = Intent(view.context, AemonalThorin::class.java)
+        val intent = Intent(view.context, AemonalThorin::class.java)
         view.context.startActivity(intent)
     }
     fun launchEldreneayCarlan(view: View)
     {
-        var intent = Intent(view.context, EldreneayCarlan::class.java)
+        val intent = Intent(view.context, EldreneayCarlan::class.java)
         view.context.startActivity(intent)
     }
     fun launchMarinAlVere(view: View){
-        var intent = Intent(view.context, MarinAlVere::class.java)
+        val intent = Intent(view.context, MarinAlVere::class.java)
         view.context.startActivity(intent)
     }
     fun launchAbellCauthon(view: View){
-        var intent = Intent(view.context, AbellCauthon::class.java)
+        val intent = Intent(view.context, AbellCauthon::class.java)
         view.context.startActivity(intent)
     }
     fun launchOrenDautry(view: View){
-        var intent = Intent(view.context, OrenDautry::class.java)
+        val intent = Intent(view.context, OrenDautry::class.java)
         view.context.startActivity(intent)
     }
     fun launchJonThane(view: View){
-        var intent = Intent(view.context, JonThane::class.java)
+        val intent = Intent(view.context, JonThane::class.java)
         view.context.startActivity(intent)
     }
     fun launchManetheren(view: View)
     {
-        var intent = Intent(view.context, Manetheren::class.java)
+        val intent = Intent(view.context, Manetheren::class.java)
         view.context.startActivity(intent)
     }
     fun launchTarValon(view: View)
     {
-        var intent = Intent(view.context, TarValon::class.java)
+        val intent = Intent(view.context, TarValon::class.java)
         view.context.startActivity(intent)
     }
     fun launchDragonmount(view: View) {
-        var intent = Intent(view.context, Dragonmount::class.java)
+        val intent = Intent(view.context, Dragonmount::class.java)
         view.context.startActivity(intent)
     }
     fun launchMountainsofMist(view: View) {
-        var intent = Intent(view.context, MountainsofMist::class.java)
+        val intent = Intent(view.context, MountainsofMist::class.java)
         view.context.startActivity(intent)
     }
     fun launchShayolGhul(view: View) {
-        var intent = Intent(view.context, ShayolGhul::class.java)
+        val intent = Intent(view.context, ShayolGhul::class.java)
         view.context.startActivity(intent)
     }
     fun launchTarendrelle(view: View) {
-        var intent = Intent(view.context, Tarendrelle::class.java)
+        val intent = Intent(view.context, Tarendrelle::class.java)
         view.context.startActivity(intent)
     }
     fun launchDarkfriends(view: View)
     {
-        var intent = Intent(view.context, Darkfriends::class.java)
+        val intent = Intent(view.context, Darkfriends::class.java)
         view.context.startActivity(intent)
     }
 
     fun launchDreadlords(view: View)
     {
-        var intent = Intent(view.context, Dreadlords::class.java)
+        val intent = Intent(view.context, Dreadlords::class.java)
         view.context.startActivity(intent)
     }
     fun launchVillageCouncil(view: View)
     {
-        var intent = Intent(view.context, VillageCouncil::class.java)
+        val intent = Intent(view.context, VillageCouncil::class.java)
         view.context.startActivity(intent)
     }
     fun launchTheDarkOne(view: View)
     {
-        var intent = Intent(view.context, TheDarkOne::class.java)
+        val intent = Intent(view.context, TheDarkOne::class.java)
         view.context.startActivity(intent)
     }
 
     fun launchFieldofBekkar(view: View)
     {
-        var intent = Intent(view.context, FieldofBekkar::class.java)
+        val intent = Intent(view.context, FieldofBekkar::class.java)
         view.context.startActivity(intent)
     }
     fun launchBattleTarendrelle(view: View)
     {
-        var intent = Intent(view.context, BattleTarendrelle::class.java)
+        val intent = Intent(view.context, BattleTarendrelle::class.java)
         view.context.startActivity(intent)
     }
     fun launchTrollocWars(view: View)
     {
-        var intent = Intent(view.context, TrollocWars::class.java)
+        val intent = Intent(view.context, TrollocWars::class.java)
         view.context.startActivity(intent)
     }
     fun launchMyrddraal(view: View) {
-        var intent = Intent(view.context, Myrddraal::class.java)
+        val intent = Intent(view.context, Myrddraal::class.java)
         view.context.startActivity(intent)
     }
     fun launchTrolloc(view: View) {
-        var intent = Intent(view.context, Trolloc::class.java)
+        val intent = Intent(view.context, Trolloc::class.java)
         view.context.startActivity(intent)
     }
     fun launchOgier(view: View) {
-        var intent = Intent(view.context, Ogier::class.java)
+        val intent = Intent(view.context, Ogier::class.java)
         view.context.startActivity(intent)
     }
 }

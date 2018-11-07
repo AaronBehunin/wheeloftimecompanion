@@ -155,6 +155,9 @@
         <activity android:name=".Books.Book1.BookPage9"
             android:parentActivityName=".Books.Book1Activity">
         </activity>
+        <activity android:name=".Books.Book1.BookPage10"
+            android:parentActivityName=".Books.Book1Activity">
+        </activity>
 
 
 
@@ -217,6 +220,12 @@
         </activity>
         <activity android:name=".Books.Book1.Activity9R"
             android:parentActivityName=".Books.Book1.BookPage9">
+        </activity>
+        <activity android:name=".Books.Book1.Activity10E"
+            android:parentActivityName=".Books.Book1.BookPage10">
+        </activity>
+        <activity android:name=".Books.Book1.Activity10R"
+            android:parentActivityName=".Books.Book1.BookPage10">
         </activity>
 
 
@@ -329,6 +338,9 @@
             android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
         <activity android:name=".Characters.Other.AbellCauthon"
+            android:parentActivityName=".Characters.OtherCharacterActivity">
+        </activity>
+        <activity android:name=".Characters.Other.NattiCauthon"
             android:parentActivityName=".Characters.OtherCharacterActivity">
         </activity>
         <activity android:name=".Characters.Other.BiliCongar"
@@ -489,10 +501,6 @@
 
 
 
-
-
-
-
         <activity android:name=".Locations.Landmarks.Oceans.ArythOcean"
             android:parentActivityName=".Locations.Landmarks.OceanActivity">
         </activity>
@@ -553,9 +561,16 @@
         <activity android:name=".Artifacts.Weapons.ColorShiftCloak"
             android:parentActivityName=".Artifacts.WeaponsActivity">
         </activity>
+        <activity android:name=".Artifacts.Weapons.HalfMoonAxe"
+            android:parentActivityName=".Artifacts.WeaponsActivity">
+        </activity>
+        <activity android:name=".Artifacts.Weapons.MoirainesStaff"
+            android:parentActivityName=".Artifacts.WeaponsActivity">
+        </activity>
         <activity android:name=".Artifacts.Weapons.TamsSword"
             android:parentActivityName=".Artifacts.WeaponsActivity">
         </activity>
+
 
 
 
@@ -623,53 +638,74 @@
 
 
 
-        <activity android:name=".Terminology.Events.AgeofLegends"
-            android:parentActivityName=".Terminology.EventsActivity">
-        </activity>
-
-        <activity android:name=".Terminology.Terms.HighSeat"
+        <activity android:name=".Terminology.Terms.Angreal"
             android:parentActivityName=".TerminologyActivity">
         </activity>
-
-
-
-
-        <activity android:name=".Terminology.Terms.TheDarkOne"
+        <activity android:name=".Terminology.Terms.Chora"
             android:parentActivityName=".TerminologyActivity">
         </activity>
         <activity android:name=".Terminology.Terms.TheCreator"
             android:parentActivityName=".TerminologyActivity">
         </activity>
-        <activity android:name=".Terminology.Terms.TheOnePower"
+        <activity android:name=".Terminology.Terms.TheDarkOne"
             android:parentActivityName=".TerminologyActivity">
         </activity>
         <activity android:name=".Terminology.Terms.DragonsFang"
             android:parentActivityName=".Terminology.TermActivity">
         </activity>
-        <activity android:name=".Terminology.Events.TheBreakingoftheWorld"
-            android:parentActivityName=".Terminology.EventsActivity">
-        </activity>
-        <activity android:name=".Terminology.Culture.Wisdom"
+        <activity android:name=".Terminology.Terms.HighSeat"
             android:parentActivityName=".TerminologyActivity">
         </activity>
-        <activity android:name=".Terminology.Culture.Gleeman"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Events.TrollocWars"
-            android:parentActivityName=".Terminology.EventsActivity">
-        </activity>
-        <activity android:name=".Terminology.Events.BelTine"
-            android:parentActivityName=".Terminology.EventsActivity">
-        </activity>
-        <activity android:name=".Terminology.Terms.Chora"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Terms.Angreal"
+        <activity android:name=".Terminology.Terms.TheOnePower"
             android:parentActivityName=".TerminologyActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Saidin"
             android:parentActivityName=".TerminologyActivity">
         </activity>
+
+
+
+
+
+        <activity android:name=".Terminology.Events.AgeofLegends"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.BelTine"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.TheBreakingoftheWorld"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.TrollocWars"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+
+
+
+
+        <activity android:name=".Terminology.Culture.Gleeman"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Culture.OldTongue"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Culture.Wisdom"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <activity android:name=".Terminology.Terms.TheDragon"
             android:parentActivityName=".TerminologyActivity">
         </activity>
@@ -729,13 +765,14 @@
             android:parentActivityName=".Creatures.MonsterActivity">
         </activity>
 
-
         <activity android:name=".Creatures.Races.Ogier"
             android:parentActivityName=".Creatures.RacesActivity">
         </activity>
 
-
         <activity android:name=".Creatures.Animals.Bela"
+            android:parentActivityName=".Creatures.AnimalsActivity">
+        </activity>
+        <activity android:name=".Creatures.Animals.Cloud"
             android:parentActivityName=".Creatures.AnimalsActivity">
         </activity>
         <activity android:name=".Creatures.Animals.Scratch"
