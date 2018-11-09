@@ -18,7 +18,6 @@ import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Thom
 import com.example.u0450254.wheeloftimecompanion.Creatures.Monsters.Myrddraal
 import com.example.u0450254.wheeloftimecompanion.Creatures.Monsters.Trolloc
 import com.example.u0450254.wheeloftimecompanion.Creatures.Races.Ogier
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.Dragonmount
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.MountainsofMist
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.ShayolGhul
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Oceans.Tarendrelle
@@ -55,17 +54,18 @@ class Activity9R: AppCompatActivity() {
         val view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ManetherenView)
         val view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarValonView)
         val view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
-        val view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
-        val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DarkfriendsView)
-        val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DreadlordsView)
-        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
-        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
-        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BattleTarendrelleView)
+        val view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ShayolGhulView)
+        val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
+        val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DarkfriendsView)
+        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DreadlordsView)
+        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.VillageCouncilView)
+        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
         val view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.FieldofBekkarView)
-        val view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocWarsView)
-        val view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MyrddraalView)
-        val view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
-        val view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OgierView)
+        val view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BattleTarendrelleView)
+        val view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocWarsView)
+        val view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MyrddraalView)
+        val view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TrollocView)
+        val view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OgierView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -91,6 +91,7 @@ class Activity9R: AppCompatActivity() {
         chapview.addView(view20)
         chapview.addView(view21)
         chapview.addView(view22)
+        chapview.addView(view23)
     }
     fun launchNynaeve(view: View)
     {
@@ -138,10 +139,6 @@ class Activity9R: AppCompatActivity() {
         val intent = Intent(view.context, TarValon::class.java)
         view.context.startActivity(intent)
     }
-    fun launchDragonmount(view: View) {
-        val intent = Intent(view.context, Dragonmount::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchMountainsofMist(view: View) {
         val intent = Intent(view.context, MountainsofMist::class.java)
         view.context.startActivity(intent)
@@ -159,7 +156,6 @@ class Activity9R: AppCompatActivity() {
         val intent = Intent(view.context, Darkfriends::class.java)
         view.context.startActivity(intent)
     }
-
     fun launchDreadlords(view: View)
     {
         val intent = Intent(view.context, Dreadlords::class.java)
@@ -175,7 +171,6 @@ class Activity9R: AppCompatActivity() {
         val intent = Intent(view.context, TheDarkOne::class.java)
         view.context.startActivity(intent)
     }
-
     fun launchFieldofBekkar(view: View)
     {
         val intent = Intent(view.context, FieldofBekkar::class.java)

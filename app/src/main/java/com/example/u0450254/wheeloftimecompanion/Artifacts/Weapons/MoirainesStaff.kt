@@ -10,9 +10,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/23/2018.
- */
 class MoirainesStaff: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +18,7 @@ class MoirainesStaff: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -29,20 +26,20 @@ class MoirainesStaff: AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
         var thisImage = findViewById<ImageView>(R.id.artifactImage)
-        var thisOwner = findViewById<TextView>(R.id.Owner)
+        val thisOwner = findViewById<TextView>(R.id.Owner)
 
         thisTitle.text = "Moiraines Staff"
         thisOwner.text = "Owner: Moiraine"
 
 
         val artinfo = findViewById<TextView>(R.id.artInfo)
-        var string1  = SpannableString("\n     The vine-carved staff is a staff that belonged to Moiraine Damodred.\n\n")
-        var string1_1 =  SpannableString("\n     The vine-carved staff is a staff that belonged to Moiraine Damodred. " +
+        val string1  = SpannableString("\n     The vine-carved staff is a staff that belonged to Moiraine Damodred.\n\n")
+        val string1_1 =  SpannableString("\n     The vine-carved staff is a staff that belonged to Moiraine Damodred. " +
                 "It is carved in vines and flowers. " +
                 "She uses it as a walking staff.\n\n")
-        var string1_2 = SpannableString("\n     The vine-carved staff is a staff that belonged to Moiraine Damodred. " +
+        val string1_2 = SpannableString("\n     The vine-carved staff is a staff that belonged to Moiraine Damodred. " +
                 "It is carved in vines and flowers. " +
                 "She uses it as a walking staff. " +
                 "She uses it multiple times when fighting or channeling.\n\n")

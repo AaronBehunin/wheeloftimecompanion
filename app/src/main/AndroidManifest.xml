@@ -650,16 +650,31 @@
         <activity android:name=".Terminology.Terms.TheDarkOne"
             android:parentActivityName=".TerminologyActivity">
         </activity>
+        <activity android:name=".Terminology.Terms.TheDragon"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
         <activity android:name=".Terminology.Terms.DragonsFang"
             android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.HighSeat"
             android:parentActivityName=".TerminologyActivity">
         </activity>
+        <activity android:name=".Terminology.Terms.NineRods"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
         <activity android:name=".Terminology.Terms.TheOnePower"
             android:parentActivityName=".TerminologyActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Saidin"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Terms.Taint"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Terms.Void"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Terms.WheelofTime"
             android:parentActivityName=".TerminologyActivity">
         </activity>
 
@@ -676,55 +691,7 @@
         <activity android:name=".Terminology.Events.TheBreakingoftheWorld"
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
-        <activity android:name=".Terminology.Events.TrollocWars"
-            android:parentActivityName=".Terminology.EventsActivity">
-        </activity>
-
-
-
-
-        <activity android:name=".Terminology.Culture.Gleeman"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Culture.OldTongue"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Culture.Wisdom"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <activity android:name=".Terminology.Terms.TheDragon"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Culture.AesSedaiSymbol"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Terms.NineRods"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Terms.WheelofTime"
-            android:parentActivityName=".TerminologyActivity">
-        </activity>
-        <activity android:name=".Terminology.Events.Sunday"
-            android:parentActivityName=".Terminology.EventsActivity">
-        </activity>
-        <activity android:name=".Terminology.Events.Winternight"
-            android:parentActivityName=".Terminology.EventsActivity">
-        </activity>
-        <activity android:name=".Terminology.Events.ThirdAge"
+        <activity android:name=".Terminology.Events.FieldofBekkar"
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Events.HundredYearsWar"
@@ -733,41 +700,63 @@
         <activity android:name=".Terminology.Events.ShiningWallsBattle"
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
-        <activity android:name=".Terminology.Events.FieldofBekkar"
+        <activity android:name=".Terminology.Events.Sunday"
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
         <activity android:name=".Terminology.Events.BattleTarendrelle"
             android:parentActivityName=".Terminology.EventsActivity">
         </activity>
-        <activity android:name=".Terminology.Terms.Void"
+        <activity android:name=".Terminology.Events.ThirdAge"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.TrollocWars"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+        <activity android:name=".Terminology.Events.Winternight"
+            android:parentActivityName=".Terminology.EventsActivity">
+        </activity>
+
+
+
+        <activity android:name=".Terminology.Culture.AesSedaiSymbol"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Culture.Braid"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Culture.Gleeman"
+            android:parentActivityName=".TerminologyActivity">
+        </activity>
+        <activity android:name=".Terminology.Culture.OldTongue"
             android:parentActivityName=".TerminologyActivity">
         </activity>
         <activity android:name=".Terminology.Culture.Stones"
             android:parentActivityName=".TerminologyActivity">
         </activity>
-        <activity android:name=".Terminology.Culture.Braid"
-        android:parentActivityName=".TerminologyActivity">
-        </activity>
         <activity android:name=".Terminology.Culture.Tabac"
             android:parentActivityName=".TerminologyActivity">
         </activity>
-        <activity android:name=".Terminology.Terms.Taint"
+        <activity android:name=".Terminology.Culture.Wisdom"
             android:parentActivityName=".TerminologyActivity">
         </activity>
 
-        <activity android:name=".Creatures.Monsters.Trolloc"
+
+
+        <activity android:name=".Creatures.Monsters.Draghkar"
             android:parentActivityName=".Creatures.MonsterActivity">
         </activity>
         <activity android:name=".Creatures.Monsters.Myrddraal"
             android:parentActivityName=".Creatures.MonsterActivity">
         </activity>
-        <activity android:name=".Creatures.Monsters.Draghkar"
+        <activity android:name=".Creatures.Monsters.Trolloc"
             android:parentActivityName=".Creatures.MonsterActivity">
         </activity>
+
 
         <activity android:name=".Creatures.Races.Ogier"
             android:parentActivityName=".Creatures.RacesActivity">
         </activity>
+
 
         <activity android:name=".Creatures.Animals.Bela"
             android:parentActivityName=".Creatures.AnimalsActivity">
@@ -778,6 +767,5 @@
         <activity android:name=".Creatures.Animals.Scratch"
             android:parentActivityName=".Creatures.AnimalsActivity">
         </activity>
-
     </application>
 </manifest>

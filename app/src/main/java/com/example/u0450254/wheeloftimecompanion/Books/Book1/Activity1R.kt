@@ -85,7 +85,6 @@ class Activity1R: AppCompatActivity() {
         val view35 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SundayView)
         val view36 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinternightView)
 
-
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         chapview.addView(view1)

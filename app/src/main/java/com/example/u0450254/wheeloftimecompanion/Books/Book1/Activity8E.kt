@@ -9,11 +9,8 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Artifacts.Angreal.TheRobedWoman
 import com.example.u0450254.wheeloftimecompanion.Artifacts.Weapons.TamsSword
-import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Egwene
-import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Nynaeve
 import com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters.Rand
 import com.example.u0450254.wheeloftimecompanion.Characters.Other.BranAlVere
-import com.example.u0450254.wheeloftimecompanion.Characters.Other.HaralLuhhan
 import com.example.u0450254.wheeloftimecompanion.Characters.Other.MarinAlVere
 import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Lan
 import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Moiraine
@@ -22,17 +19,12 @@ import com.example.u0450254.wheeloftimecompanion.Characters.Supporting.Thom
 import com.example.u0450254.wheeloftimecompanion.Locations.Cities.EmondsField
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.Green
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.TheTwoRivers
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Roads.QuarryRoad
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Roads.WinespringInn
 import com.example.u0450254.wheeloftimecompanion.Organizations.AesSedai
 import com.example.u0450254.wheeloftimecompanion.Organizations.Warder
 import com.example.u0450254.wheeloftimecompanion.R
-import com.example.u0450254.wheeloftimecompanion.Terminology.Culture.Gleeman
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.DragonsFang
-
-/**
- * Created by u0450254 on 6/5/2018.
- */
+import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheOnePower
 
 class Activity8E: AppCompatActivity() {
 
@@ -57,10 +49,11 @@ class Activity8E: AppCompatActivity() {
         val view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheTwoRiversView)
         val view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringInnView)
         val view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
-        val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiView)
-        val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
-        var view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonsFangView)
-        var view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheOnePowerView)
+        val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheRobedWomanView)
+        val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiView)
+        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
+        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonsFangView)
+        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheOnePowerView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -80,6 +73,7 @@ class Activity8E: AppCompatActivity() {
         chapview.addView(view14)
         chapview.addView(view15)
         chapview.addView(view16)
+        chapview.addView(view17)
     }
     fun launchRand(view: View)
     {
@@ -111,47 +105,52 @@ class Activity8E: AppCompatActivity() {
         view.context.startActivity(intent)
     }
     fun launchMarinAlVere(view: View){
-        var intent = Intent(view.context, MarinAlVere::class.java)
+        val intent = Intent(view.context, MarinAlVere::class.java)
         view.context.startActivity(intent)
     }
     fun launchEmondsField(view: View)
     {
-        var intent = Intent(view.context, EmondsField::class.java)
+        val intent = Intent(view.context, EmondsField::class.java)
         view.context.startActivity(intent)
     }
     fun launchGreen(view: View) {
-        var intent = Intent(view.context, Green::class.java)
+        val intent = Intent(view.context, Green::class.java)
         view.context.startActivity(intent)
     }
     fun launchTheTwoRivers(view: View) {
-        var intent = Intent(view.context, TheTwoRivers::class.java)
+        val intent = Intent(view.context, TheTwoRivers::class.java)
         view.context.startActivity(intent)
     }
     fun launchWinespringInn(view: View) {
-        var intent = Intent(view.context, WinespringInn::class.java)
+        val intent = Intent(view.context, WinespringInn::class.java)
         view.context.startActivity(intent)
     }
     fun launchTamsSword(view: View){
-        var intent = Intent(view.context, TamsSword::class.java)
+        val intent = Intent(view.context, TamsSword::class.java)
         view.context.startActivity(intent)
     }
     fun launchTheRobedWoman(view: View){
-        var intent = Intent(view.context, TheRobedWoman::class.java)
+        val intent = Intent(view.context, TheRobedWoman::class.java)
         view.context.startActivity(intent)
     }
     fun launchAesSedai(view: View)
     {
-        var intent = Intent(view.context, AesSedai::class.java)
+        val intent = Intent(view.context, AesSedai::class.java)
         view.context.startActivity(intent)
     }
     fun launchWarder(view: View)
     {
-        var intent = Intent(view.context, Warder::class.java)
+        val intent = Intent(view.context, Warder::class.java)
         view.context.startActivity(intent)
     }
     fun launchDragonsFang(view: View)
     {
-        var intent = Intent(view.context, DragonsFang::class.java)
+        val intent = Intent(view.context, DragonsFang::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTheOnePower(view: View)
+    {
+        val intent = Intent(view.context, TheOnePower::class.java)
         view.context.startActivity(intent)
     }
 }

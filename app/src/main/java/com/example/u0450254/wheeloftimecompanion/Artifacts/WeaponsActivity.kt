@@ -13,11 +13,6 @@ import com.example.u0450254.wheeloftimecompanion.Artifacts.Weapons.MoirainesStaf
 import com.example.u0450254.wheeloftimecompanion.Artifacts.Weapons.TamsSword
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 6/5/2018.
- */
-
-
 class WeaponsActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,10 +24,10 @@ class WeaponsActivity: AppCompatActivity() {
 
         val chapview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HalfMoonAxeView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MoirainesStaffView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ColorShiftCloakView)
+        val view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ColorShiftCloakView)
+        val view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HalfMoonAxeView)
+        val view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MoirainesStaffView)
+        val view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -41,21 +36,20 @@ class WeaponsActivity: AppCompatActivity() {
         chapview.addView(view3)
         chapview.addView(view4)
     }
-
     fun launchColorShiftCloak(view: View){
-        var intent = Intent(view.context, ColorShiftCloak::class.java)
+        val intent = Intent(view.context, ColorShiftCloak::class.java)
         view.context.startActivity(intent)
     }
     fun launchHalfMoonAxe(view: View){
-        var intent = Intent(view.context, HalfMoonAxe::class.java)
+        val intent = Intent(view.context, HalfMoonAxe::class.java)
         view.context.startActivity(intent)
     }
     fun launchMoirainesStaff(view: View){
-        var intent = Intent(view.context, MoirainesStaff::class.java)
+        val intent = Intent(view.context, MoirainesStaff::class.java)
         view.context.startActivity(intent)
     }
     fun launchTamsSword(view: View){
-        var intent = Intent(view.context, TamsSword::class.java)
+        val intent = Intent(view.context, TamsSword::class.java)
         view.context.startActivity(intent)
     }
 }

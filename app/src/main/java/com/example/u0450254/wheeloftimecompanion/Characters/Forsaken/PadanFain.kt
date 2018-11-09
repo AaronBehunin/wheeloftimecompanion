@@ -21,7 +21,7 @@ class PadanFain : AppCompatActivity() {
         val launcher = Launchers(this)
 
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -31,15 +31,15 @@ class PadanFain : AppCompatActivity() {
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
-        var thisAge = findViewById<TextView>(R.id.Age)
-        var thisAffil = findViewById<TextView>(R.id.Affiliation)
-        var thisGender = findViewById<TextView>(R.id.Gender)
-        var thisHeight = findViewById<TextView>(R.id.Height)
-        var thisWeight = findViewById<TextView>(R.id.Weight)
-        var thisHair = findViewById<TextView>(R.id.HairColor)
-        var thisEye = findViewById<TextView>(R.id.EyeColor)
-        var thisRank = findViewById<TextView>(R.id.Rank)
+        val thisTitle = findViewById<TextView>(R.id.Title)
+        val thisAge = findViewById<TextView>(R.id.Age)
+        val thisAffil = findViewById<TextView>(R.id.Affiliation)
+        val thisGender = findViewById<TextView>(R.id.Gender)
+        val thisHeight = findViewById<TextView>(R.id.Height)
+        val thisWeight = findViewById<TextView>(R.id.Weight)
+        val thisHair = findViewById<TextView>(R.id.HairColor)
+        val thisEye = findViewById<TextView>(R.id.EyeColor)
+        val thisRank = findViewById<TextView>(R.id.Rank)
 
         thisTitle.text = "Padan Fain"
         thisAffil.text = " Affiliation: ?"
@@ -54,9 +54,9 @@ class PadanFain : AppCompatActivity() {
         thisRank.text = " Rank: Peddler"
 
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n      Padan Fain is a peddler who made regular visits to the Two Rivers and Emond's Field.\n\n")
+        val string1 = SpannableString("\n      Padan Fain is a peddler who made regular visits to the Two Rivers and Emond's Field.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 

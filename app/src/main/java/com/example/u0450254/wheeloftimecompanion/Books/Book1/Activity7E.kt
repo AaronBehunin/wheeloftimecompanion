@@ -27,9 +27,6 @@ import com.example.u0450254.wheeloftimecompanion.R
 import com.example.u0450254.wheeloftimecompanion.Terminology.Culture.Gleeman
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.DragonsFang
 
-/**
- * Created by u0450254 on 6/5/2018.
- */
 
 class Activity7E: AppCompatActivity() {
 
@@ -52,14 +49,14 @@ class Activity7E: AppCompatActivity() {
         val view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BranAlVereView)
         val view9 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.HaralLuhhanView)
         val view10 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreenView)
-        val view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.QuarryRoadView)
-        val view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringInnView)
-        val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
-        val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiView)
-        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
-        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonsFangView)
-        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GleemanView)
-
+        val view11 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheTwoRiversView)
+        val view12 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.QuarryRoadView)
+        val view13 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringInnView)
+        val view14 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TamsSwordView)
+        val view15 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.AesSedaiView)
+        val view16 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WarderView)
+        val view17 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonsFangView)
+        val view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GleemanView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -80,6 +77,7 @@ class Activity7E: AppCompatActivity() {
         chapview.addView(view15)
         chapview.addView(view16)
         chapview.addView(view17)
+        chapview.addView(view18)
     }
     fun launchRand(view: View)
     {

@@ -33,12 +33,13 @@ class AesSedaiSymbol: AppCompatActivity() {
 
         var thisTitle = findViewById<TextView>(R.id.Title)
 
-        thisTitle.text = "Age of Legends"
+        thisTitle.text = "Aes Sedai Symbol"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
 
         var string1 = SpannableString("\n     The ancient symbol of the Aes Sedai has long been associated with the Aes Sedai of the Age of Legends.\n\n")
-        var string1_1 = SpannableString("     The ancient symbol of the Aes Sedai has long been associated with the Aes Sedai of the Age of Legends. Lews Therin Telamon has this symbol sewn to his cloak before his death.\n\n")
+        var string1_1 = SpannableString("     The ancient symbol of the Aes Sedai has long been associated with the Aes Sedai of the Age of Legends. " +
+                "Lews Therin Telamon has this symbol sewn to his cloak before his death.\n\n")
         terminfo.setTextColor(Color.WHITE)
 
         terminfo.text = string1

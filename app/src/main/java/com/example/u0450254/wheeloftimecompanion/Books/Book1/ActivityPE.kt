@@ -53,7 +53,6 @@ class ActivityPE : AppCompatActivity() {
         val intent = Intent(view.context, Ishamael::class.java)
         view.context.startActivity(intent)
     }
-
     fun launchAesSedaiSymbol(view: View)
     {
         val intent = Intent(view.context, AesSedaiSymbol::class.java)

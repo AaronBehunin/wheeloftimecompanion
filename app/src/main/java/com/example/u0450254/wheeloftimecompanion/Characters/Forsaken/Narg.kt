@@ -78,6 +78,7 @@ class Narg : AppCompatActivity() {
         }
         else if (progress.book>1 || (progress.book==1 && progress.chapter>5))
         {
+            thisAge.text = " Age: ?(deceased)"
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }
     }

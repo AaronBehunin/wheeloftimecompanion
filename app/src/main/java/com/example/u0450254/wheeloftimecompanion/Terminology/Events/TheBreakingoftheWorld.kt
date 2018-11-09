@@ -32,7 +32,7 @@ class TheBreakingoftheWorld: AppCompatActivity() {
 
         var thisTitle = findViewById<TextView>(R.id.Title)
 
-        thisTitle.text = "The Creator"
+        thisTitle.text = "The Breaking of the World"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
         var string1  = SpannableString("\n     The Breaking of the World, also known as the Time of Madness, was a period when male Aes Sedai destroyed much of the world, ending the Age of Legends, and heralding the beginning of the Third Age.\n\n")

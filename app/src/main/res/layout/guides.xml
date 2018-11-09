@@ -3624,7 +3624,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Battle of the Tarendrelle"
+                        android:text="Battle of the\n Tarendrelle"
                         android:textSize="28sp" />
 
                     <ImageView
@@ -3789,7 +3789,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="The Time of Madness"
+                        android:text="The Time of\n Madness"
                         android:textSize="28sp" />
 
                     <ImageView

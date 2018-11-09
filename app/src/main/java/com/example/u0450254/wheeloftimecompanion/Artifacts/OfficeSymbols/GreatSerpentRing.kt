@@ -10,9 +10,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/23/2018.
- */
 class GreatSerpentRing: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +18,7 @@ class GreatSerpentRing: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -29,17 +26,17 @@ class GreatSerpentRing: AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
-        var thisOwner = findViewById<TextView>(R.id.Owner)
-        var thisImage = findViewById<ImageView>(R.id.artifactImage)
+        val thisTitle = findViewById<TextView>(R.id.Title)
+        val thisOwner = findViewById<TextView>(R.id.Owner)
+        val thisImage = findViewById<ImageView>(R.id.artifactImage)
 
 
-        thisTitle.text = "The Ring of Tamyrlin"
+        thisTitle.text = "Great Serpent Ring"
         thisOwner.text = "Owner: Various"
         thisImage.setImageResource(R.drawable.greatserpentring)
 
         val artinfo = findViewById<TextView>(R.id.artInfo)
-        var string1 = SpannableString("\n      It is a golden ring fashioned into the shape of a serpent biting its own tail, an ancient symbol of eternity and time itself.\n\n")
+        val string1 = SpannableString("\n      It is a golden ring fashioned into the shape of a serpent biting its own tail, an ancient symbol of eternity and time itself.\n\n")
 
         artinfo.setTextColor(Color.WHITE)
 

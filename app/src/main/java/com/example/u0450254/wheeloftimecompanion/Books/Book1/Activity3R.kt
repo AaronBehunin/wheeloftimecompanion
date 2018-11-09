@@ -32,10 +32,6 @@ import com.example.u0450254.wheeloftimecompanion.Terminology.Events.TheBreakingo
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDarkOne
 import com.example.u0450254.wheeloftimecompanion.Terminology.Terms.TheDragon
 
-/*
- * Created by u0450254 on 6/5/2018.
- */
-
 class Activity3R : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,10 +63,10 @@ class Activity3R : AppCompatActivity() {
         val view18 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WomensCircleView)
         val view19 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.darkoneView)
         val view20 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheDragonView)
-        val view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GleemanView)
-        val view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ageoflegendsView)
-        val view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelTineView)
-        val view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheBreakingoftheWorldView)
+        val view21 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ageoflegendsView)
+        val view22 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BelTineView)
+        val view23 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheBreakingoftheWorldView)
+        val view24 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GleemanView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -190,11 +186,6 @@ class Activity3R : AppCompatActivity() {
         val intent = Intent(view.context, TheDragon::class.java)
         view.context.startActivity(intent)
     }
-    fun launchGleeman(view: View)
-    {
-        val intent = Intent(view.context, Gleeman::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchAgeofLegends(view: View)
     {
         val intent = Intent(view.context, AgeofLegends::class.java)
@@ -208,6 +199,11 @@ class Activity3R : AppCompatActivity() {
     fun launchTheBreakingoftheWorld(view: View)
     {
         val intent = Intent(view.context, TheBreakingoftheWorld::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchGleeman(view: View)
+    {
+        val intent = Intent(view.context, Gleeman::class.java)
         view.context.startActivity(intent)
     }
 }

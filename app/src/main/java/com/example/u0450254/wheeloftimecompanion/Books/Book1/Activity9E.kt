@@ -83,11 +83,6 @@ class Activity9E: AppCompatActivity() {
         val intent = Intent(view.context, Mat::class.java)
         view.context.startActivity(intent)
     }
-    fun launchTamAlThor(view: View)
-    {
-        val intent = Intent(view.context, TamAlThor::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchMoiraine(view: View)
     {
         val intent = Intent(view.context, Moiraine::class.java)
@@ -96,6 +91,11 @@ class Activity9E: AppCompatActivity() {
     fun launchLan(view: View)
     {
         val intent = Intent(view.context, Lan::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTamAlThor(view: View)
+    {
+        val intent = Intent(view.context, TamAlThor::class.java)
         view.context.startActivity(intent)
     }
     fun launchPaetalCarr(view: View){
@@ -110,12 +110,12 @@ class Activity9E: AppCompatActivity() {
         val intent = Intent(view.context, BiliCongar::class.java)
         view.context.startActivity(intent)
     }
-    fun launchHariCoplin(view: View){
-        val intent = Intent(view.context, HariCoplin::class.java)
-        view.context.startActivity(intent)
-    }
     fun launchDarlCoplin(view: View) {
         val intent = Intent(view.context, DarlCoplin::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchHariCoplin(view: View){
+        val intent = Intent(view.context, HariCoplin::class.java)
         view.context.startActivity(intent)
     }
     fun launchEmondsField(view: View)

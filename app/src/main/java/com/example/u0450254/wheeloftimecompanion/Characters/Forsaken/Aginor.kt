@@ -17,26 +17,23 @@ class Aginor : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
-
 
         val splits = inputString.split("-")
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-
-        var thisTitle = findViewById<TextView>(R.id.Title)
-        var thisAge = findViewById<TextView>(R.id.Age)
-        var thisAffil = findViewById<TextView>(R.id.Affiliation)
-        var thisGender = findViewById<TextView>(R.id.Gender)
-        var thisHeight = findViewById<TextView>(R.id.Height)
-        var thisWeight = findViewById<TextView>(R.id.Weight)
-        var thisHair = findViewById<TextView>(R.id.HairColor)
-        var thisEye = findViewById<TextView>(R.id.EyeColor)
-        var thisRank = findViewById<TextView>(R.id.Rank)
+        val thisTitle = findViewById<TextView>(R.id.Title)
+        val thisAge = findViewById<TextView>(R.id.Age)
+        val thisAffil = findViewById<TextView>(R.id.Affiliation)
+        val thisGender = findViewById<TextView>(R.id.Gender)
+        val thisHeight = findViewById<TextView>(R.id.Height)
+        val thisWeight = findViewById<TextView>(R.id.Weight)
+        val thisHair = findViewById<TextView>(R.id.HairColor)
+        val thisEye = findViewById<TextView>(R.id.EyeColor)
+        val thisRank = findViewById<TextView>(R.id.Rank)
 
         thisTitle.text = "Aginor"
         thisAffil.text = " Affiliation: Forsaken"
@@ -51,9 +48,9 @@ class Aginor : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Chosen"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n    Aginor, was one of the thirteen Forsaken who was trapped at Shayol Ghul due to the Dragon's sealing.\n\n")
+        val string1 = SpannableString("\n    Aginor, was one of the thirteen Forsaken who was trapped at Shayol Ghul due to the Dragon's sealing.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
