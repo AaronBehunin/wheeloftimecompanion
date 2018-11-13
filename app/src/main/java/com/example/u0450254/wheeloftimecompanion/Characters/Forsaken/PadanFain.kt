@@ -8,7 +8,6 @@ import android.text.method.LinkMovementMethod
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
-import com.example.u0450254.wheeloftimecompanion.Launchers
 
 class PadanFain : AppCompatActivity() {
 
@@ -17,9 +16,6 @@ class PadanFain : AppCompatActivity() {
         setContentView(R.layout.character)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val launcher = Launchers(this)
-
 
         val progressFile = openFileInput("Progress")
 

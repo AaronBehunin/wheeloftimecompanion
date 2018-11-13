@@ -6,12 +6,9 @@ import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
-import android.view.MenuItem
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
-import com.example.u0450254.wheeloftimecompanion.Launchers
 
 class GreenMan : AppCompatActivity() {
 
@@ -19,11 +16,9 @@ class GreenMan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.character)
 
-        val launcher = Launchers(this)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -31,16 +26,16 @@ class GreenMan : AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
-        var thisPortrat = findViewById<ImageView>(R.id.Portrat)
-        var thisAge = findViewById<TextView>(R.id.Age)
-        var thisAffil = findViewById<TextView>(R.id.Affiliation)
-        var thisGender = findViewById<TextView>(R.id.Gender)
-        var thisHeight = findViewById<TextView>(R.id.Height)
-        var thisWeight = findViewById<TextView>(R.id.Weight)
-        var thisHair = findViewById<TextView>(R.id.HairColor)
-        var thisEye = findViewById<TextView>(R.id.EyeColor)
-        var thisRank = findViewById<TextView>(R.id.Rank)
+        val thisTitle = findViewById<TextView>(R.id.Title)
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
+        val thisAge = findViewById<TextView>(R.id.Age)
+        val thisAffil = findViewById<TextView>(R.id.Affiliation)
+        val thisGender = findViewById<TextView>(R.id.Gender)
+        val thisHeight = findViewById<TextView>(R.id.Height)
+        val thisWeight = findViewById<TextView>(R.id.Weight)
+        val thisHair = findViewById<TextView>(R.id.HairColor)
+        val thisEye = findViewById<TextView>(R.id.EyeColor)
+        val thisRank = findViewById<TextView>(R.id.Rank)
 
         thisTitle.text = "Green Man"
         thisAffil.text = " Affiliation: Legend"
@@ -56,9 +51,9 @@ class GreenMan : AppCompatActivity() {
 
 
         thisPortrat.setImageResource(R.drawable.greenman)
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     A forest creature mentioned in many stories and legends.")
+        val string1 = SpannableString("\n     A forest creature mentioned in many stories and legends.")
 
         thisInfo.setTextColor(Color.WHITE)
 
