@@ -7,23 +7,16 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
-
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
-// next entry the dragon reborn 19
 
 class QuarryRoad : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -38,23 +31,32 @@ class QuarryRoad : AppCompatActivity() {
         val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "Quarry Road"
+        val thisImage = findViewById<ImageView>(R.id.locImage);
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     The Quarry Road is a rock-strewn track that lies near Emond's Field in the Two Rivers region.\n\n")
+        val string1 = SpannableString("\n     The Quarry Road is a rock-strewn track that lies near Emond's Field in the Two Rivers region.\n\n")
 
-        var string2 = SpannableString("Geography\n\n")
+        val string2 = SpannableString("Geography\n\n")
         string2.setSpan(RelativeSizeSpan(2f), 0, 9, 0)
 
-        var string3 = SpannableString("     The road proceeds due west from Emond's Field, passes through the Westwood and the Sand Hills, and terminates somewhere near the roots of the Mountains of Mist. The al'Thor family farm is located on the north side of the Quarry Road a few miles west of Emond's Field.\n\n")
+        val string3 = SpannableString("     The road proceeds due west from Emond's Field, passes through the Westwood and the Sand Hills, and terminates somewhere near the roots of the Mountains of Mist. The al'Thor family farm is located on the north side of the Quarry Road a few miles west of Emond's Field.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        thisInfo.text = string1
-
         if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        {
+            thisImage.setImageResource(R.drawable.quarryroad)
+        }
+
+
+        if (progress.book==1&&progress.chapter<=1)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }

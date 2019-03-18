@@ -1,20 +1,15 @@
 package com.example.u0450254.wheeloftimecompanion.Organizations
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
-import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class Darkfriends : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,9 +41,9 @@ class Darkfriends : AppCompatActivity() {
         thisAffil.text = "Affiliation: The Dark One"
 
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n    Darkfriends are are humans who have been tempted with promises of immortality and power by the Dark One into serving the Shadow.\n\n")
+        val string1 = SpannableString("\n    Darkfriends are are humans who have been tempted with promises of immortality and power by the Dark One into serving the Shadow.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 

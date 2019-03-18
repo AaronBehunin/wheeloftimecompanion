@@ -117,6 +117,10 @@
         </activity>
 
 
+        <activity android:name=".IndexActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
         <activity android:name=".Books.Book1Activity"
             android:parentActivityName=".GuideActivity">
         </activity>
@@ -545,11 +549,20 @@
 
 
 
-        <activity android:name=".Locations.Maps.TwoRiversMap"
+
+        <activity android:name=".Locations.Maps.WorldMap"
             android:parentActivityName=".Locations.MapActivity"
             android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".Locations.Maps.WorldMap"
+        <activity android:name=".Locations.Maps.BaerlonMap"
+            android:parentActivityName=".Locations.MapActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".Locations.Maps.EmondsFieldMap"
+            android:parentActivityName=".Locations.MapActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".Locations.Maps.TwoRiversMap"
             android:parentActivityName=".Locations.MapActivity"
             android:screenOrientation="landscape">
         </activity>
@@ -639,43 +652,43 @@
 
 
         <activity android:name=".Terminology.Terms.Angreal"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Chora"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.TheCreator"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.TheDarkOne"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.TheDragon"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.DragonsFang"
             android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.HighSeat"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.NineRods"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.TheOnePower"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Saidin"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Taint"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.Void"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
         <activity android:name=".Terminology.Terms.WheelofTime"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.TermActivity">
         </activity>
 
 
@@ -719,25 +732,25 @@
 
 
         <activity android:name=".Terminology.Culture.AesSedaiSymbol"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.CultureActivity">
         </activity>
         <activity android:name=".Terminology.Culture.Braid"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.CultureActivity">
         </activity>
         <activity android:name=".Terminology.Culture.Gleeman"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.CultureActivity">
         </activity>
         <activity android:name=".Terminology.Culture.OldTongue"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.CultureActivity">
         </activity>
         <activity android:name=".Terminology.Culture.Stones"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.CultureActivity">
         </activity>
         <activity android:name=".Terminology.Culture.Tabac"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.CultureActivity">
         </activity>
         <activity android:name=".Terminology.Culture.Wisdom"
-            android:parentActivityName=".TerminologyActivity">
+            android:parentActivityName=".Terminology.CultureActivity">
         </activity>
 
 

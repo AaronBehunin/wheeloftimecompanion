@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Organizations
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -11,9 +10,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class Aiel : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,17 +43,19 @@ class Aiel : AppCompatActivity() {
         thisAllign.text = "Allignemnt: Neutral"
         thisAffil.text = "Affiliation: Independent"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     The Aiel are a race of people who live in a desert which everyone calls the Aiel Waste.\n\n")
-        var string1_1 = SpannableString("\n     The Aiel are a race of people who live in a desert which everyone calls the Aiel Waste. They have earned a reputation as exceptionally skilled warriors. Aiel can be recognized through their unusual height, as well as their distinctive clothing.\n\n")
+        val string1 = SpannableString("\n     The Aiel are a race of people who live in a desert which everyone calls the Aiel Waste.\n\n")
+        val string1_1 = SpannableString("\n     The Aiel are a race of people who live in a desert which everyone calls the Aiel Waste. They have earned a reputation as exceptionally skilled warriors. Aiel can be recognized through their unusual height, as well as their distinctive clothing.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>4))
+        if (progress.book==1&&progress.chapter<=4)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>4))
         {
             thisInfo.text = string1_1
         }

@@ -2,7 +2,6 @@ package com.example.u0450254.wheeloftimecompanion.Locations.Landmarks
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +10,6 @@ import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Mountains.*
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/30/2018.
- */
 class MountainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +20,14 @@ class MountainActivity: AppCompatActivity() {
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
-        var charview = findViewById<LinearLayout>(R.id.chapterlayout)
+        val charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonmountView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonwallView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreatBlightView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ShayolGhulView)
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SpineoftheWorldView)
+        val view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonmountView)
+        val view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.DragonwallView)
+        val view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.GreatBlightView)
+        val view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MountainsofMistView)
+        val view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ShayolGhulView)
+        val view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SpineoftheWorldView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -43,19 +39,23 @@ class MountainActivity: AppCompatActivity() {
         charview.addView(view6)
     }
     fun launchDragonmount(view: View) {
-        var intent = Intent(view.context, Dragonmount::class.java)
+        val intent = Intent(view.context, Dragonmount::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchGreatBlight(view: View) {
+        val intent = Intent(view.context, GreatBlight::class.java)
         view.context.startActivity(intent)
     }
     fun launchMountainsofMist(view: View) {
-        var intent = Intent(view.context, MountainsofMist::class.java)
+        val intent = Intent(view.context, MountainsofMist::class.java)
         view.context.startActivity(intent)
     }
     fun launchShayolGhul(view: View) {
-        var intent = Intent(view.context, ShayolGhul::class.java)
+        val intent = Intent(view.context, ShayolGhul::class.java)
         view.context.startActivity(intent)
     }
     fun launchSpineoftheWorld(view: View) {
-        var intent = Intent(view.context, SpineoftheWorld::class.java)
+        val intent = Intent(view.context, SpineoftheWorld::class.java)
         view.context.startActivity(intent)
     }
 }

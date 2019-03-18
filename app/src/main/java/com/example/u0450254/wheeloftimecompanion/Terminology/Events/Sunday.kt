@@ -8,10 +8,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/**
- * Created by u0450254 on 5/31/2018.
- */
-
 
 class Sunday : AppCompatActivity() {
 
@@ -21,22 +17,20 @@ class Sunday : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
-
 
         val splits = inputString.split("-")
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "Sunday"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1 = SpannableString("\n     Sunday is a feastday and festival at midsummer, and is celebrated in many parts of the world.\n\n")
+        val string1 = SpannableString("\n     Sunday is a feastday and festival at midsummer, and is celebrated in many parts of the world.\n\n")
 
         terminfo.setTextColor(Color.WHITE)
 

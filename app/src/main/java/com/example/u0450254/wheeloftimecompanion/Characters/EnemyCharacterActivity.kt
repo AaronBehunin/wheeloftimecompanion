@@ -1,5 +1,6 @@
 package com.example.u0450254.wheeloftimecompanion.Characters
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
@@ -14,6 +15,7 @@ import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.Narg
 import com.example.u0450254.wheeloftimecompanion.Characters.Forsaken.PadanFain
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
+import java.io.File
 
 /**
  * Created by u0450254 on 5/30/2018.
@@ -22,6 +24,16 @@ class EnemyCharacterActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chapter)
+
+        var file = File("/data/data/com.example.u0450254.wheeloftimecompanion/files/Progress")
+
+        if (!file.exists()) {
+            val filename = "Progress"
+            val fileContents = "1-0"
+            openFileOutput(filename, Context.MODE_PRIVATE).use {
+                it.write(fileContents.toByteArray())
+            }
+        }
 
         var progressFile = openFileInput("Progress")
 

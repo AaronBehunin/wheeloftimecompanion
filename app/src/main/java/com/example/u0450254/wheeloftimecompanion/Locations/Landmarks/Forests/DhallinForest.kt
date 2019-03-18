@@ -9,17 +9,11 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
-    /*
-     * Created by u0450254 on 5/18/2018.
-     */
-
-
 class DhallinForest : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -36,17 +30,19 @@ class DhallinForest : AppCompatActivity() {
 
         thisTitle.text = "Dhallin Forest"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     Dhallin Forest is a forest in Ghealdan.  The forest's location within Ghealdan is unknown.\n\n")
-        var string1_1 = SpannableString("\n     Dhallin Forest is a forest in Ghealdan. Several battles were fought here between the false Dragon and the forces opposed to him. The forest's location within Ghealdan is unknown.\n\n")
+        val string1 = SpannableString("\n     Dhallin Forest is a forest in Ghealdan.  The forest's location within Ghealdan is unknown.\n\n")
+        val string1_1 = SpannableString("\n     Dhallin Forest is a forest in Ghealdan. Several battles were fought here between the false Dragon and the forces opposed to him. The forest's location within Ghealdan is unknown.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
-
-        if (progress.book > 1 || (progress.book == 1 && progress.chapter > 3))
+        if (progress.book==1&&progress.chapter<=3)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book > 1 || (progress.book == 1 && progress.chapter > 3))
         {
             thisInfo.text = string1_1
         }

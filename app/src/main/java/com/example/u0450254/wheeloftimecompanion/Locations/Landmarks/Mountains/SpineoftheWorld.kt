@@ -12,12 +12,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
 class SpineoftheWorld: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,22 +34,23 @@ class SpineoftheWorld: AppCompatActivity() {
         thisTitle.text = "Spine of the World"
         thisMap.setImageResource(R.drawable.spineoftheworldmap)
 
-        var thisInfo = findViewById<TextView>(R.id.landInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     The Spine of the World is a vast mountain range that stretches from the GreatBlight in the north to the Sea of Storms in the south, forming the eastern border of the Westlands and separating it from the Aiel Waste.\n\n")
+        val string1 = SpannableString("\n     The Spine of the World is a vast mountain range that stretches from the GreatBlight in the north to the Sea of Storms in the south, forming the eastern border of the Westlands and separating it from the Aiel Waste.\n\n")
 
-        var string2 = SpannableString("Other Names:\n\nDragonwall")
+        val string2 = SpannableString("Other Names:\n\nDragonwall")
         string2.setSpan(RelativeSizeSpan(2f),0,12,0)
 
         thisInfo.setTextColor(Color.WHITE)
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>6))
+        if (progress.book==1&&progress.chapter<=6)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>6))
         {
             thisInfo.text = TextUtils.concat(string1,string2)
         }
-
     }
 }

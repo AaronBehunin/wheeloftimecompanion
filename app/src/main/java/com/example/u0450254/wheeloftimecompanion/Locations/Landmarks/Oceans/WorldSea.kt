@@ -11,12 +11,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
 class WorldSea : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,11 +32,11 @@ class WorldSea : AppCompatActivity() {
 
         thisTitle.text = "World Sea"
 
-        var thisInfo = findViewById<TextView>(R.id.landInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     The World Sea is a geographical area of the Age of Legends.\n\n")
+        val string1 = SpannableString("\n     The World Sea is a geographical area of the Age of Legends.\n\n")
 
-        var string2 = SpannableString("     It is possible that it was a large ocean surrounding the continent(s) that the people lived on, like that surrounding Pangaea.\n\n")
+        val string2 = SpannableString("     It is possible that it was a large ocean surrounding the continent(s) that the people lived on, like that surrounding Pangaea.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

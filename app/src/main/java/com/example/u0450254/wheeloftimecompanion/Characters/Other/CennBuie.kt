@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -44,6 +43,8 @@ class CennBuie : AppCompatActivity() {
         val thisEye = findViewById<TextView>(R.id.EyeColor)
         val thisRank = findViewById<TextView>(R.id.Rank)
 
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
+
         thisTitle.text = "Cenn Buie"
         thisAffil.text = " Affiliation: Andor-The Two Rivers"
 
@@ -56,37 +57,47 @@ class CennBuie : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n    Cenn Buie is a thatcher who lives in Emond's Field. He is known for griping about everything, and sometimes neglects his duties to complain. He sits on the Village Council.\n\n")
+        val string1 = SpannableString("\n    Cenn Buie is a thatcher who lives in Emond's Field. He is known for griping about everything, and sometimes neglects his duties to complain. He sits on the Village Council.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     A dark, gnarled, beady-eyed man.\n\n")
+        val string3 = SpannableString("     A dark, gnarled, beady-eyed man.\n\n")
 
-        var string4 = SpannableString("Activities\n\n")
+        val string4 = SpannableString("Activities\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string5 = SpannableString("     He is part of the Village council.\n\n")
-        var string5_2 = SpannableString("    He is part of the Village council, which is in session when Padan Fain arrives.\n\n")
+        val string5 = SpannableString("     He is part of the Village council.\n\n")
+        val string5_2 = SpannableString("    He is part of the Village council, which is in session when Padan Fain arrives.\n\n")
 
-        var string6 = SpannableString("     After the Trollocs first attack Emond's Field, he confronts Moiraine Damodred with a crowd behind him, demanding she leave at once.\n\n")
+        val string6 = SpannableString("     After the Trollocs first attack Emond's Field, he confronts Moiraine Damodred with a crowd behind him, demanding she leave at once.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        thisInfo.text = string1
 
-        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+
+        if (progress.book==1&&progress.chapter>1)
+        {
+            thisPortrat.setImageResource(R.drawable.cenn_buie)
+        }
+
+
+        if (progress.book==1&&progress.chapter<=1)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book==1&&progress.chapter<=3)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>3))
+        else if (progress.book==1&&progress.chapter<=9)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5_2)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>9))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>9))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5_2,string6)
         }

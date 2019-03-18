@@ -8,11 +8,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/**
- * Created by u0450254 on 5/31/2018.
- */
-
-
 class Chora : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +16,7 @@ class Chora : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -31,12 +26,12 @@ class Chora : AppCompatActivity() {
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "Avendesora"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1 = SpannableString("\n     Avendesora, means \"Tree of Life\" in the Old Tongue.\n\n")
+        val string1 = SpannableString("\n     Avendesora, means \"Tree of Life\" in the Old Tongue.\n\n")
 
         terminfo.setTextColor(Color.WHITE)
 

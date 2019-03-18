@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +7,6 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -56,16 +54,16 @@ class TadBarran : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Hu Barran is one of the stablemen at the Winespring Inn. \n\n")
-        var string1_1 = SpannableString("\n     Hu Barran is one of the stablemen at the Winespring Inn. His brother is Hu.\n\n")
+        val string1 = SpannableString("\n     Hu Barran is one of the stablemen at the Winespring Inn. \n\n")
+        val string1_1 = SpannableString("\n     Hu Barran is one of the stablemen at the Winespring Inn. His brother is Hu.\n\n")
 
-        var string4 = SpannableString("Activities\n\n")
+        val string4 = SpannableString("Activities\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string5 = SpannableString("     When Rand and Tamlin al'Thor come to Emond's Field, Tad and Hu take Bela and the wagon to the Whiespring Inn's stable.\n\n")
-        var string5_5 = SpannableString("     When Rand and Tamlin al'Thor come to Emond's Field, Tad and Hu take Bela and the wagon to the Whiespring Inn's stable. " +
+        val string5 = SpannableString("     When Rand and Tamlin al'Thor come to Emond's Field, Tad and Hu take Bela and the wagon to the Whiespring Inn's stable.\n\n")
+        val string5_5 = SpannableString("     When Rand and Tamlin al'Thor come to Emond's Field, Tad and Hu take Bela and the wagon to the Whiespring Inn's stable. " +
                 "As the al'Thors are leaving, Tam briefly speaks with the brothers.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)

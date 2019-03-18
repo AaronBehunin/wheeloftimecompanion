@@ -6,13 +6,8 @@ import com.example.u0450254.wheeloftimecompanion.Locations.MapView
 import com.example.u0450254.wheeloftimecompanion.R
 import android.view.ScaleGestureDetector
 import android.widget.ImageView
-import android.text.method.Touch.onTouchEvent
 import android.view.MotionEvent
-import android.widget.LinearLayout
 
-/*
- * Created by u0450254 on 6/14/2018.
- */
 class TwoRiversMap : AppCompatActivity() {
 
 

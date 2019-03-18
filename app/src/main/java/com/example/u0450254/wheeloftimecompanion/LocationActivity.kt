@@ -18,26 +18,26 @@ class LocationActivity: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var nationView = findViewById<LinearLayout>(R.id.Nations)
-        var cityView = findViewById<LinearLayout>(R.id.TownsandCities)
-        var landmarkView = findViewById<LinearLayout>(R.id.Landmarks)
-        var mapView = findViewById<LinearLayout>(R.id.Maps)
+        val nationView = findViewById<LinearLayout>(R.id.Nations)
+        val cityView = findViewById<LinearLayout>(R.id.TownsandCities)
+        val landmarkView = findViewById<LinearLayout>(R.id.Landmarks)
+        val mapView = findViewById<LinearLayout>(R.id.Maps)
 
 
         nationView.setOnClickListener() {
-            var intent = Intent(this, NationActivity::class.java)
+            val intent = Intent(this, NationActivity::class.java)
             startActivity(intent)
         }
         landmarkView.setOnClickListener() {
-            var intent = Intent(this, LandmarksActivity::class.java)
+            val intent = Intent(this, LandmarksActivity::class.java)
             startActivity(intent)
         }
         cityView.setOnClickListener() {
-            var intent = Intent(this, CityActivity::class.java)
+            val intent = Intent(this, CityActivity::class.java)
             startActivity(intent)
         }
         mapView.setOnClickListener() {
-            var intent = Intent(this, MapActivity::class.java)
+            val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
         }
     }

@@ -9,14 +9,11 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/**
- * Created by u0450254 on 9/21/2018.
- */
 class Caemlyn : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -33,9 +30,9 @@ class Caemlyn : AppCompatActivity() {
 
         thisTitle.text = "Caemlyn"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     Caemlyn is the capital of Andor and one of the most beautiful cities in the land, second only to Tar Valon, though its natives may argue that ranking.\n\n")
+        val string1 = SpannableString("\n     Caemlyn is the capital of Andor and one of the most beautiful cities in the land, second only to Tar Valon, though its natives may argue that ranking.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 

@@ -7,10 +7,11 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
+
+
 
 /**
  * Created by u0450254 on 7/10/2018.
@@ -22,7 +23,7 @@ class Scratch: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -30,17 +31,16 @@ class Scratch: AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "Scratch"
 
         val terminfo = findViewById<TextView>(R.id.creatureInfo)
-        var string1  = SpannableString("\n     Scratch is a yellow cat owned by Brandelwyn al'Vere that lives in the Winespring Inn in Emond's Field.\n\n")
-        var string3 = SpannableString("Activities\n\n")
+        val string1  = SpannableString("\n     Scratch is a yellow cat owned by Brandelwyn al'Vere that lives in the Winespring Inn in Emond's Field.\n\n")
+        val string3 = SpannableString("Activities\n\n")
         string3.setSpan(RelativeSizeSpan(2f), 0,10,0)
 
-        var string4 = SpannableString("     Scratch usually sleeps in the common room of the Winespring Inn.\n\n")
-
+        val string4 = SpannableString("     Scratch usually sleeps in the common room of the Winespring Inn.\n\n")
 
         terminfo.setTextColor(Color.WHITE)
 
@@ -56,6 +56,5 @@ class Scratch: AppCompatActivity() {
         {
             terminfo.text = TextUtils.concat(string1,string3,string4)
         }
-
     }
 }

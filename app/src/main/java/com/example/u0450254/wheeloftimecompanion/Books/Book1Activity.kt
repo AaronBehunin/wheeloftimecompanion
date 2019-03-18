@@ -22,15 +22,14 @@ class Book1Activity: AppCompatActivity() {
     var progress = Progress(-1, -1)
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.book1)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var file = File("/data/data/com.example.u0450254.wheeloftimecompanion/files/Progress")
-
-         var progressFile = openFileInput("Progress")
+         val progressFile = openFileInput("Progress")
 
          val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -38,385 +37,329 @@ class Book1Activity: AppCompatActivity() {
 
         progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-
-            val chapPView = findViewById<RelativeLayout>(R.id.book1chapP)
-            val chap1View = findViewById<RelativeLayout>(R.id.book1chap1)
-            val chap2View = findViewById<RelativeLayout>(R.id.book1chap2)
-            val chap3View = findViewById<RelativeLayout>(R.id.book1chap3)
-            val chap4View = findViewById<RelativeLayout>(R.id.book1chap4)
-            val chap5View = findViewById<RelativeLayout>(R.id.book1chap5)
-            val chap6View = findViewById<RelativeLayout>(R.id.book1chap6)
-            val chap7View = findViewById<RelativeLayout>(R.id.book1chap7)
-            val chap8View = findViewById<RelativeLayout>(R.id.book1chap8)
-            val chap9View = findViewById<RelativeLayout>(R.id.book1chap9)
-            val chap10View = findViewById<RelativeLayout>(R.id.book1chap10)
-            val chap11View = findViewById<RelativeLayout>(R.id.book1chap11)
-            val chap12View = findViewById<RelativeLayout>(R.id.book1chap12)
-            val chap13View = findViewById<RelativeLayout>(R.id.book1chap13)
-            val chap14View = findViewById<RelativeLayout>(R.id.book1chap14)
-            val chap15View = findViewById<RelativeLayout>(R.id.book1chap15)
-            val chap16View = findViewById<RelativeLayout>(R.id.book1chap16)
-            val chap17View = findViewById<RelativeLayout>(R.id.book1chap17)
-            val chap18View = findViewById<RelativeLayout>(R.id.book1chap18)
-            val chap19View = findViewById<RelativeLayout>(R.id.book1chap19)
-            val chap20View = findViewById<RelativeLayout>(R.id.book1chap20)
-            val chap21View = findViewById<RelativeLayout>(R.id.book1chap21)
-            val chap22View = findViewById<RelativeLayout>(R.id.book1chap22)
-            val chap23View = findViewById<RelativeLayout>(R.id.book1chap23)
-            val chap24View = findViewById<RelativeLayout>(R.id.book1chap24)
-            val chap25View = findViewById<RelativeLayout>(R.id.book1chap25)
-            val chap26View = findViewById<RelativeLayout>(R.id.book1chap26)
-            val chap27View = findViewById<RelativeLayout>(R.id.book1chap27)
-            val chap28View = findViewById<RelativeLayout>(R.id.book1chap28)
-            val chap29View = findViewById<RelativeLayout>(R.id.book1chap29)
-            val chap30View = findViewById<RelativeLayout>(R.id.book1chap30)
-            val chap31View = findViewById<RelativeLayout>(R.id.book1chap31)
-            val chap32View = findViewById<RelativeLayout>(R.id.book1chap32)
-            val chap33View = findViewById<RelativeLayout>(R.id.book1chap33)
-            val chap34View = findViewById<RelativeLayout>(R.id.book1chap34)
-            val chap35View = findViewById<RelativeLayout>(R.id.book1chap35)
-            val chap36View = findViewById<RelativeLayout>(R.id.book1chap36)
-            val chap37View = findViewById<RelativeLayout>(R.id.book1chap37)
-            val chap38View = findViewById<RelativeLayout>(R.id.book1chap38)
-            val chap39View = findViewById<RelativeLayout>(R.id.book1chap39)
-            val chap40View = findViewById<RelativeLayout>(R.id.book1chap40)
-            val chap41View = findViewById<RelativeLayout>(R.id.book1chap41)
-            val chap42View = findViewById<RelativeLayout>(R.id.book1chap42)
-            val chap43View = findViewById<RelativeLayout>(R.id.book1chap43)
-            val chap44View = findViewById<RelativeLayout>(R.id.book1chap44)
-            val chap45View = findViewById<RelativeLayout>(R.id.book1chap45)
-            val chap46View = findViewById<RelativeLayout>(R.id.book1chap46)
-            val chap47View = findViewById<RelativeLayout>(R.id.book1chap47)
-            val chap48View = findViewById<RelativeLayout>(R.id.book1chap48)
-            val chap49View = findViewById<RelativeLayout>(R.id.book1chap49)
-            val chap50View = findViewById<RelativeLayout>(R.id.book1chap50)
-            val chap51View = findViewById<RelativeLayout>(R.id.book1chap51)
-            val chap52View = findViewById<RelativeLayout>(R.id.book1chap52)
-            val chap53View = findViewById<RelativeLayout>(R.id.book1chap53)
-
-
-            if (progress.chapter > 0) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chapP)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap1)
+            
+        if (progress.chapter > 0) {  
+                val check = findViewById<CheckBox>(R.id.checkbook1chapP)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap1)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 1) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap1)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap2)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap1)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap2)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 2) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap2)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap3)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap2)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap3)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 3) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap3)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap4)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap3)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap4)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 4) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap4)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap5)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap4)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap5)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 5) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap5)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap6)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap5)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap6)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 6) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap6)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap7)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap6)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap7)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 7) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap7)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap8)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap7)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap8)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 8) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap8)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap9)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap8)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap9)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 9) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap9)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap10)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap9)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap10)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 10) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap10)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap11)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap10)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap11)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 11) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap11)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap12)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap11)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap12)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 12) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap12)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap13)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap12)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap13)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 13) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap13)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap14)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap13)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap14)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 14) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap14)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap15)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap14)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap15)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 15) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap15)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap16)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap15)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap16)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 16) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap16)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap17)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap16)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap17)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 17) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap17)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap18)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap17)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap18)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 18) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap18)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap19)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap18)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap19)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 19) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap19)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap20)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap19)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap20)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 20) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap20)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap21)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap20)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap21)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 21) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap21)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap22)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap21)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap22)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 22) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap22)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap23)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap22)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap23)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 23) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap23)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap24)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap23)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap24)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 24) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap24)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap25)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap24)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap25)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 25) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap25)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap26)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap25)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap26)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 26) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap26)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap27)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap26)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap27)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 27) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap27)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap28)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap27)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap28)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 28) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap28)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap29)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap28)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap29)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 29) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap29)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap30)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap29)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap30)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 30) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap30)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap31)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap30)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap31)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 31) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap31)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap32)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap31)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap32)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 32) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap32)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap33)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap32)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap33)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 33) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap33)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap34)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap33)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap34)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 34) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap34)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap35)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap34)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap35)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 35) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap35)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap36)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap35)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap36)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 36) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap36)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap37)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap36)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap37)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 37) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap37)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap38)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap37)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap38)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 38) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap38)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap39)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap38)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap39)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 39) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap39)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap40)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap39)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap40)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 40) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap40)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap41)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap40)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap41)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 41) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap41)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap42)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap41)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap42)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 42) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap42)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap43)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap42)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap43)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 43) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap43)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap44)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap43)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap44)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 44) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap44)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap45)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap44)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap45)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 45) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap45)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap46)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap45)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap46)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 46) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap46)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap47)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap46)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap47)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 47) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap47)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap48)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap47)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap48)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 48) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap48)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap49)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap48)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap49)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 49) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap49)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap50)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap49)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap50)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 50) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap50)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap51)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap50)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap51)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 51) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap51)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap52)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap51)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap52)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
             if (progress.chapter > 52) {
-                var check = findViewById<CheckBox>(R.id.checkbook1chap52)
-                var rel = findViewById<RelativeLayout>(R.id.book1chap53)
+                val check = findViewById<CheckBox>(R.id.checkbook1chap52)
+                val rel = findViewById<RelativeLayout>(R.id.book1chap53)
                 check.isChecked = true
                 rel.visibility = View.VISIBLE
             }
 
     }
     fun boxClick(boxview: View) {
-        var check = findViewById<CheckBox>(boxview.id)
+        val check = findViewById<CheckBox>(boxview.id)
 
         if (check.isChecked) {
 
@@ -1066,7 +1009,7 @@ class Book1Activity: AppCompatActivity() {
                 progress.chapter = 0
             }
         } else {
-            var chapViews = arrayOf(findViewById<RelativeLayout>(R.id.book1chapP), findViewById<RelativeLayout>(R.id.book1chap1),
+            val chapViews = arrayOf(findViewById(R.id.book1chapP), findViewById(R.id.book1chap1),
                     findViewById<RelativeLayout>(R.id.book1chap2), findViewById<RelativeLayout>(R.id.book1chap3), findViewById<RelativeLayout>(R.id.book1chap4),
                     findViewById<RelativeLayout>(R.id.book1chap5), findViewById<RelativeLayout>(R.id.book1chap6), findViewById<RelativeLayout>(R.id.book1chap7),
                     findViewById<RelativeLayout>(R.id.book1chap8), findViewById<RelativeLayout>(R.id.book1chap9), findViewById<RelativeLayout>(R.id.book1chap10),
@@ -1086,10 +1029,30 @@ class Book1Activity: AppCompatActivity() {
                     findViewById<RelativeLayout>(R.id.book1chap50), findViewById<RelativeLayout>(R.id.book1chap51), findViewById<RelativeLayout>(R.id.book1chap52),
                     findViewById<RelativeLayout>(R.id.book1chap53))
 
+            val checkViews = arrayOf(findViewById<CheckBox>(R.id.checkbook1chapP), findViewById<CheckBox>(R.id.checkbook1chap1),
+                    findViewById<CheckBox>(R.id.checkbook1chap2), findViewById<CheckBox>(R.id.checkbook1chap3), findViewById<CheckBox>(R.id.checkbook1chap4),
+                    findViewById<CheckBox>(R.id.checkbook1chap5), findViewById<CheckBox>(R.id.checkbook1chap6), findViewById<CheckBox>(R.id.checkbook1chap7),
+                    findViewById<CheckBox>(R.id.checkbook1chap8), findViewById<CheckBox>(R.id.checkbook1chap9), findViewById<CheckBox>(R.id.checkbook1chap10),
+                    findViewById<CheckBox>(R.id.checkbook1chap11), findViewById<CheckBox>(R.id.checkbook1chap12), findViewById<CheckBox>(R.id.checkbook1chap13),
+                    findViewById<CheckBox>(R.id.checkbook1chap14), findViewById<CheckBox>(R.id.checkbook1chap15), findViewById<CheckBox>(R.id.checkbook1chap16),
+                    findViewById<CheckBox>(R.id.checkbook1chap17), findViewById<CheckBox>(R.id.checkbook1chap18), findViewById<CheckBox>(R.id.checkbook1chap19),
+                    findViewById<CheckBox>(R.id.checkbook1chap20), findViewById<CheckBox>(R.id.checkbook1chap21), findViewById<CheckBox>(R.id.checkbook1chap22),
+                    findViewById<CheckBox>(R.id.checkbook1chap23), findViewById<CheckBox>(R.id.checkbook1chap24), findViewById<CheckBox>(R.id.checkbook1chap25),
+                    findViewById<CheckBox>(R.id.checkbook1chap26), findViewById<CheckBox>(R.id.checkbook1chap27), findViewById<CheckBox>(R.id.checkbook1chap28),
+                    findViewById<CheckBox>(R.id.checkbook1chap29), findViewById<CheckBox>(R.id.checkbook1chap30), findViewById<CheckBox>(R.id.checkbook1chap31),
+                    findViewById<CheckBox>(R.id.checkbook1chap32), findViewById<CheckBox>(R.id.checkbook1chap33), findViewById<CheckBox>(R.id.checkbook1chap34),
+                    findViewById<CheckBox>(R.id.checkbook1chap35), findViewById<CheckBox>(R.id.checkbook1chap36), findViewById<CheckBox>(R.id.checkbook1chap37),
+                    findViewById<CheckBox>(R.id.checkbook1chap38), findViewById<CheckBox>(R.id.checkbook1chap39), findViewById<CheckBox>(R.id.checkbook1chap40),
+                    findViewById<CheckBox>(R.id.checkbook1chap41), findViewById<CheckBox>(R.id.checkbook1chap42), findViewById<CheckBox>(R.id.checkbook1chap43),
+                    findViewById<CheckBox>(R.id.checkbook1chap44), findViewById<CheckBox>(R.id.checkbook1chap45), findViewById<CheckBox>(R.id.checkbook1chap46),
+                    findViewById<CheckBox>(R.id.checkbook1chap47), findViewById<CheckBox>(R.id.checkbook1chap48), findViewById<CheckBox>(R.id.checkbook1chap49),
+                    findViewById<CheckBox>(R.id.checkbook1chap50), findViewById<CheckBox>(R.id.checkbook1chap51), findViewById<CheckBox>(R.id.checkbook1chap52),
+                    findViewById<CheckBox>(R.id.checkbook1chap53))
+
 
             if (check.id == getResources().getIdentifier("checkbook1chapP", "id", packageName)) {
 
-                makegone(1, chapViews)
+                makegone(1, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-0"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1101,7 +1064,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap1", "id", packageName)) {
 
 
-                makegone(2, chapViews)
+                makegone(2, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-1"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1113,7 +1076,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap2", "id", packageName)) {
 
 
-                makegone(3, chapViews)
+                makegone(3, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-2"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1125,7 +1088,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap3", "id", packageName)) {
 
 
-                makegone(4, chapViews)
+                makegone(4, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-3"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1137,7 +1100,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap4", "id", packageName)) {
 
 
-                makegone(5, chapViews)
+                makegone(5, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-4"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1149,7 +1112,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap5", "id", packageName)) {
 
 
-                makegone(6, chapViews)
+                makegone(6, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-5"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1161,7 +1124,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap6", "id", packageName)) {
 
 
-                makegone(7, chapViews)
+                makegone(7, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-6"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1173,7 +1136,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap7", "id", packageName)) {
 
 
-                makegone(8, chapViews)
+                makegone(8, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-7"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1185,7 +1148,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap8", "id", packageName)) {
 
 
-                makegone(9, chapViews)
+                makegone(9, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-8"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1197,7 +1160,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap9", "id", packageName)) {
 
 
-                makegone(10, chapViews)
+                makegone(10, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-9"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1209,7 +1172,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap10", "id", packageName)) {
 
 
-                makegone(11, chapViews)
+                makegone(11, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-10"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1221,7 +1184,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap11", "id", packageName)) {
 
 
-                makegone(12, chapViews)
+                makegone(12, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-11"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1233,7 +1196,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap12", "id", packageName)) {
 
 
-                makegone(13, chapViews)
+                makegone(13, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-12"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1245,7 +1208,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap13", "id", packageName)) {
 
 
-                makegone(14, chapViews)
+                makegone(14, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-13"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1257,7 +1220,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap14", "id", packageName)) {
 
 
-                makegone(15, chapViews)
+                makegone(15, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-14"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1269,7 +1232,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap15", "id", packageName)) {
 
 
-                makegone(16, chapViews)
+                makegone(16, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-15"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1281,7 +1244,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap16", "id", packageName)) {
 
 
-                makegone(17, chapViews)
+                makegone(17, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-16"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1293,7 +1256,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap17", "id", packageName)) {
 
 
-                makegone(18, chapViews)
+                makegone(18, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-17"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1305,7 +1268,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap18", "id", packageName)) {
 
 
-                makegone(19, chapViews)
+                makegone(19, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-18"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1317,7 +1280,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap19", "id", packageName)) {
 
 
-                makegone(20, chapViews)
+                makegone(20, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-19"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1329,7 +1292,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap20", "id", packageName)) {
 
 
-                makegone(21, chapViews)
+                makegone(21, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-20"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1341,7 +1304,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap21", "id", packageName)) {
 
 
-                makegone(22, chapViews)
+                makegone(22, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-21"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1353,7 +1316,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap22", "id", packageName)) {
 
 
-                makegone(23, chapViews)
+                makegone(23, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-22"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1365,7 +1328,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap23", "id", packageName)) {
 
 
-                makegone(24, chapViews)
+                makegone(24, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-23"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1377,7 +1340,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap24", "id", packageName)) {
 
 
-                makegone(25, chapViews)
+                makegone(25, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-24"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1389,7 +1352,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap25", "id", packageName)) {
 
 
-                makegone(26, chapViews)
+                makegone(26, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-25"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1401,7 +1364,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap26", "id", packageName)) {
 
 
-                makegone(27, chapViews)
+                makegone(27, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-26"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1413,7 +1376,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap27", "id", packageName)) {
 
 
-                makegone(28, chapViews)
+                makegone(28, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-27"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1425,7 +1388,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap28", "id", packageName)) {
 
 
-                makegone(29, chapViews)
+                makegone(29, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-28"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1437,7 +1400,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap29", "id", packageName)) {
 
 
-                makegone(30, chapViews)
+                makegone(30, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-29"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1449,7 +1412,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap30", "id", packageName)) {
 
 
-                makegone(31, chapViews)
+                makegone(31, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-30"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1461,7 +1424,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap31", "id", packageName)) {
 
 
-                makegone(32, chapViews)
+                makegone(32, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-31"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1473,7 +1436,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap32", "id", packageName)) {
 
 
-                makegone(33, chapViews)
+                makegone(33, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-32"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1485,7 +1448,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap33", "id", packageName)) {
 
 
-                makegone(34, chapViews)
+                makegone(34, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-33"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1497,7 +1460,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap34", "id", packageName)) {
 
 
-                makegone(35, chapViews)
+                makegone(35, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-34"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1509,7 +1472,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap35", "id", packageName)) {
 
 
-                makegone(36, chapViews)
+                makegone(36, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-35"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1521,7 +1484,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap36", "id", packageName)) {
 
 
-                makegone(37, chapViews)
+                makegone(37, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-36"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1533,7 +1496,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap37", "id", packageName)) {
 
 
-                makegone(38, chapViews)
+                makegone(38, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-37"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1545,7 +1508,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap38", "id", packageName)) {
 
 
-                makegone(39, chapViews)
+                makegone(39, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-38"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1557,7 +1520,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap39", "id", packageName)) {
 
 
-                makegone(40, chapViews)
+                makegone(40, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-39"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1569,7 +1532,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap40", "id", packageName)) {
 
 
-                makegone(41, chapViews)
+                makegone(41, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-40"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1581,7 +1544,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap41", "id", packageName)) {
 
 
-                makegone(42, chapViews)
+                makegone(42, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-41"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1593,7 +1556,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap42", "id", packageName)) {
 
 
-                makegone(43, chapViews)
+                makegone(43, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-42"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1605,7 +1568,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap43", "id", packageName)) {
 
 
-                makegone(44, chapViews)
+                makegone(44, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-43"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1617,7 +1580,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap44", "id", packageName)) {
 
 
-                makegone(45, chapViews)
+                makegone(45, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-44"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1629,7 +1592,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap45", "id", packageName)) {
 
 
-                makegone(46, chapViews)
+                makegone(46, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-45"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1641,7 +1604,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap46", "id", packageName)) {
 
 
-                makegone(47, chapViews)
+                makegone(47, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-46"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1653,7 +1616,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap47", "id", packageName)) {
 
 
-                makegone(48, chapViews)
+                makegone(48, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-47"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1665,7 +1628,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap48", "id", packageName)) {
 
 
-                makegone(49, chapViews)
+                makegone(49, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-48"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1677,7 +1640,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap49", "id", packageName)) {
 
 
-                makegone(50, chapViews)
+                makegone(50, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-49"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1689,7 +1652,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap50", "id", packageName)) {
 
 
-                makegone(51, chapViews)
+                makegone(51, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-50"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1701,7 +1664,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap51", "id", packageName)) {
 
 
-                makegone(52, chapViews)
+                makegone(52, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-51"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1713,7 +1676,7 @@ class Book1Activity: AppCompatActivity() {
             } else if (check.id == getResources().getIdentifier("checkbook1chap52", "id", packageName)) {
 
 
-                makegone(53, chapViews)
+                makegone(53, chapViews, checkViews)
                 val filename = "Progress"
                 val fileContents = "1-52"
                 openFileOutput(filename, Context.MODE_PRIVATE).use {
@@ -1736,7 +1699,7 @@ class Book1Activity: AppCompatActivity() {
             }
         }
         var guideView = findViewById<LinearLayout>(R.id.Book1layout)
-        guideView.postInvalidate()
+        guideView.invalidate();
     }
     fun launchP(view: View){
         var intent = Intent(view.context, BookPageP::class.java)
@@ -1783,10 +1746,11 @@ class Book1Activity: AppCompatActivity() {
         view.context.startActivity(intent)
     }
 }
-fun makegone(start: Int, views: Array<RelativeLayout>)
+fun makegone(start: Int, views: Array<RelativeLayout>, checks: Array<CheckBox>)
 {
     for (num in start..53)
     {
         views[num].visibility = View.GONE
+        checks[num].isChecked = false
     }
 }

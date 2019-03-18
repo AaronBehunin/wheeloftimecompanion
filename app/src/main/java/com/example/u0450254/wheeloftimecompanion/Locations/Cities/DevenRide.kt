@@ -1,13 +1,10 @@
 package com.example.u0450254.wheeloftimecompanion.Locations.Cities
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -20,7 +17,7 @@ class DevenRide : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -37,9 +34,9 @@ class DevenRide : AppCompatActivity() {
 
         thisTitle.text = "Deven Ride"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     Deven Ride is a community located near the southern boundary of the Two Rivers region.")
+        val string1 = SpannableString("\n     Deven Ride is a community located near the southern boundary of the Two Rivers region.")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

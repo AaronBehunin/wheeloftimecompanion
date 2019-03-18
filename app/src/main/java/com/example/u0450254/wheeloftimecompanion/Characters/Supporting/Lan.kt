@@ -57,49 +57,53 @@ class Lan : AppCompatActivity() {
         thisEye.text = " Eye Color: Blue"
         thisRank.text = " Rank: ?"
 
-        thisPortrat.setImageResource(R.drawable.lan)
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string2 = SpannableString("\n     Lan is Moiraine's bodyguard, though he appears more than that.\n\n")
-        var string2_1 = SpannableString("\n     He is a Warder bonded to Moiraine Damodred\n\n")
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string3 = SpannableString("Appearance\n\n")
+        val string2 = SpannableString("\n     Lan is Moiraine's bodyguard, though he appears more than that.\n\n")
+        val string2_1 = SpannableString("\n     He is a Warder bonded to Moiraine Damodred\n\n")
+
+        val string3 = SpannableString("Appearance\n\n")
         string3.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string4 = SpannableString("     Lan is often described as having a face of stone and chilling blue eyes. He is very tall with shoulder-length hair graying at the temples, held back by a leather headband. He wears the color-shifting cloak, and uses a sword as a weapon.\n\n")
-        var string4_1 = SpannableString("     Lan is often described as having a face of stone and chilling blue eyes. He is very tall with shoulder-length hair graying at the temples, held back by a leather headband. He wears the color-shifting Warder cloak, and uses a sword as a weapon.\n\n")
+        val string4 = SpannableString("     Lan is often described as having a face of stone and chilling blue eyes. He is very tall with shoulder-length hair graying at the temples, held back by a leather headband. He wears the color-shifting cloak, and uses a sword as a weapon.\n\n")
+        val string4_1 = SpannableString("     Lan is often described as having a face of stone and chilling blue eyes. He is very tall with shoulder-length hair graying at the temples, held back by a leather headband. He wears the color-shifting Warder cloak, and uses a sword as a weapon.\n\n")
 
-        var string5 = SpannableString("Personality\n\n")
+        val string5 = SpannableString("Personality\n\n")
         string5.setSpan(RelativeSizeSpan(1.5f),0,11,0)
 
-        var string6 = SpannableString("     His impassive face reveals little of his emotions.\n\n")
+        val string6 = SpannableString("     His impassive face reveals little of his emotions.\n\n")
 
-        var string13 = SpannableString("Activities\n\n")
+        val string13 = SpannableString("Activities\n\n")
         string13.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string15 = SpannableString("     Moiraine and Lan arrive in the Two Rivers.  They find Rand al'Thor, Matrim Cauthon and Perrin Aybara.\n\n")
-        var string15_1 = SpannableString("     Moiraine and Lan are in the Two Rivers. They find Rand al'Thor, Matrim Cauthon and Perrin Aybara. Shortly after their arrival, Trollocs attack the Two Rivers, and the group is forced to flee.\n\n")
+        val string15 = SpannableString("     Moiraine and Lan arrive in the Two Rivers.  They find Rand al'Thor, Matrim Cauthon and Perrin Aybara.\n\n")
+        val string15_1 = SpannableString("     Moiraine and Lan are in the Two Rivers. They find Rand al'Thor, Matrim Cauthon and Perrin Aybara. Shortly after their arrival, Trollocs attack the Two Rivers, and the group is forced to flee.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string2
-
         if (progress.book>1||(progress.book==1&&progress.chapter>2))
+        {
+            thisPortrat.setImageResource(R.drawable.lan)
+        }
+
+        if (progress.book==1&&progress.chapter<=2)
+        {
+            thisInfo.text = string2
+        }
+        else if (progress.book==1&&progress.chapter<=7)
         {
             thisInfo.text = TextUtils.concat(string2,string3,string4,string5,string6,string13,string15)
         }
-
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>7))
+        else if (progress.book==1&&progress.chapter<=10)
         {
             thisRank.text = "Rank: Warder"
             thisInfo.text = TextUtils.concat(string2_1,string3,string4_1,string5,string6,string13,string15)
         }
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>10))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>10))
         {
             thisInfo.text = TextUtils.concat(string2_1,string3,string4_1,string5,string6,string13,string15_1)
         }

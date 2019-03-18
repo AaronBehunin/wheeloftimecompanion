@@ -24,7 +24,12 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:paddingHorizontal="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="18dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/portalicon" />
 
                 <TextView
@@ -50,7 +55,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/sunriseicon"
-                    android:paddingHorizontal="5dp"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_marginRight="1dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="113dp"
+                    android:maxWidth="113dp"
+                    android:scaleType="fitCenter"
                     />
 
                 <TextView
@@ -74,7 +84,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/harpicon"/>
+                    android:src="@drawable/harpicon"
+                    android:layout_marginLeft="-11dp"
+                    android:layout_marginRight="9dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="96dp"
+                    android:maxWidth="96dp"
+                    android:scaleType="fitCenter"/>
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -21,7 +21,7 @@ class Draghkar: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -29,19 +29,18 @@ class Draghkar: AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
         var thisPicture = findViewById<ImageView>(R.id.creaturePic)
 
         thisTitle.text = "Draghkar"
 
         val terminfo = findViewById<TextView>(R.id.creatureInfo)
-        var string1  = SpannableString("\n     The Draghkar are Shadowspawn with leathery wings.\n\n")
+        val string1  = SpannableString("\n     The Draghkar are Shadowspawn with leathery wings.\n\n")
 
         terminfo.setTextColor(Color.WHITE)
 
         terminfo.setMovementMethod(LinkMovementMethod.getInstance())
 
         terminfo.text = string1
-
     }
 }

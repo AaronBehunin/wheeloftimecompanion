@@ -15,29 +15,58 @@
             android:paddingLeft="0dp">
 
 
-            <TextView
-                android:id="@+id/Monsters"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Monsters and Shadowspawn"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"
-                />
+                android:id="@+id/Monsters">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="14dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/snakeicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp"
+                    android:text="Monsters and Shadowspawn"
+                    android:textSize="30sp" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@drawable/line"
                 />
 
-            <TextView
-                android:id="@+id/NonHumanRaces"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Non-Human Races"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:id="@+id/NonHumanRaces">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="14dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/leavesicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp"
+                    android:text="Non-Human Races"
+                    android:textSize="30sp" />
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -45,14 +74,29 @@
                 android:background="@drawable/line"
                 />
 
-            <TextView
-                android:id="@+id/NamedAnimals"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Named Animals"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:id="@+id/NamedAnimals">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="14dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/wolficon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp"
+                    android:text="Named Animals"
+                    android:textSize="30sp" />
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"

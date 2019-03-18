@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +7,6 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -56,47 +54,50 @@ class HaralLuhhan : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n    Haral Luhhan is the Emond's Field blacksmith and also sits on the Village Council. Master Luhhan is married to Alsbet Luhhan.\n\n")
+        val string1 = SpannableString("\n    Haral Luhhan is the Emond's Field blacksmith and also sits on the Village Council. Master Luhhan is married to Alsbet Luhhan.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     His arms are nearly as large as most men's legs and are roped with muscle.\n\n")
-        var string3_1 = SpannableString("     His arms are nearly as large as most men's legs and are roped with muscle. He is strong and brave, but pales at the sight of blood.\n\n")
+        val string3 = SpannableString("     His arms are nearly as large as most men's legs and are roped with muscle.\n\n")
+        val string3_1 = SpannableString("     His arms are nearly as large as most men's legs and are roped with muscle. He is strong and brave, but pales at the sight of blood.\n\n")
 
-        var string4 = SpannableString("Activities\n\n")
+        val string4 = SpannableString("Activities\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string5 = SpannableString("     He is part of the Village council, which is in session when Padan Fain arrives.\n\n")
+        val string5 = SpannableString("     He is part of the Village council, which is in session when Padan Fain arrives.\n\n")
 
-        var string6 = SpannableString("     Perrin Aybara was apprenticed to Master Luhhan in his smithy since his youth.\n\n")
+        val string6 = SpannableString("     Perrin Aybara was apprenticed to Master Luhhan in his smithy since his youth.\n\n")
 
-        var string7 = SpannableString("     Haral crafted the Half-moon axe which Perrin carries through most of the series.\n\n")
-
+        val string7 = SpannableString("     Haral crafted the Half-moon axe which Perrin carries through most of the series.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
 
-        if (progress.book>1||(progress.book==1&&progress.chapter>2))
+
+        if (progress.book==1&&progress.chapter<=2)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book==1&&progress.chapter<=3)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string6)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>3))
+        else if (progress.book==1&&progress.chapter<=4)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5,string6)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>4))
+        else if (progress.book==1&&progress.chapter<=10)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3_1,string4,string5,string6)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>10))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>10))
         {
-            thisInfo.text = TextUtils.concat(thisInfo.text,string7)
+            thisInfo.text = TextUtils.concat(string1,string2,string3_1,string4,string5,string6,string7)
         }
     }
 }

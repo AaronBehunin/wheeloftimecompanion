@@ -10,9 +10,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/23/2018.
- */
 class TheCreator: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +18,7 @@ class TheCreator: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -29,23 +26,25 @@ class TheCreator: AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "The Creator"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1  = SpannableString("\n     The Creator is the name given to the entity who created the universe, the Wheel of Time and reality itself.\n\n")
+        val string1  = SpannableString("\n     The Creator is the name given to the entity who created the universe, the Wheel of Time and reality itself.\n\n")
 
-        var string1_1 = SpannableString("\n     The Creator is the name given to the entity who created the universe, the Wheel of Time and reality itself.  It is suggested that The Creator imprisoned the Dark One, its antithesis, at the moment of Creation.\n\n")
+        val string1_1 = SpannableString("\n     The Creator is the name given to the entity who created the universe, the Wheel of Time and reality itself.  It is suggested that The Creator imprisoned the Dark One, its antithesis, at the moment of Creation.\n\n")
 
-        var string2 = SpannableString("     Virtually nothing is known of The Creator. He is not worshiped as a god in the traditional sense, although his name and the term \"the Light\" appear to be interchangeable.\n\n")
+        val string2 = SpannableString("     Virtually nothing is known of The Creator. He is not worshiped as a god in the traditional sense, although his name and the term \"the Light\" appear to be interchangeable.\n\n")
         terminfo.setTextColor(Color.WHITE)
 
         terminfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        terminfo.text = string1
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        if (progress.book==1&&progress.chapter<=1)
+        {
+            terminfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
             terminfo.text = TextUtils.concat(string1_1,string2)
         }

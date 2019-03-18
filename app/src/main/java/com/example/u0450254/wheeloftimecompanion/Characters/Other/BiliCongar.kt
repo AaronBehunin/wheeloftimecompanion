@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +7,6 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -58,17 +56,17 @@ class BiliCongar : AppCompatActivity() {
 
 
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Bili Congar is a farmer from Emond's Field in the Two Rivers.\n\n")
+        val string1 = SpannableString("\n     Bili Congar is a farmer from Emond's Field in the Two Rivers.\n\n")
 
-        var string2 = SpannableString("Activities\n\n")
+        val string2 = SpannableString("Activities\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     He is a grumpy, troublesome man who looks for the worst in everyone. " +
+        val string3 = SpannableString("     He is a grumpy, troublesome man who looks for the worst in everyone. " +
                 "His family, along with the related Coplins, are known amongst the villagers of the Two Rivers for being sour malcontents who are always involved in trouble and are quick to complain.\n\n")
 
-        var string4 = SpannableString("     After the first Trolloc attack on Emond's Field, he confronts Moiraine Damodred with a crowd behind him, demanding she leave at once. " +
+        val string4 = SpannableString("     After the first Trolloc attack on Emond's Field, he confronts Moiraine Damodred with a crowd behind him, demanding she leave at once. " +
                 "After she tells the crowd about the history of Manetheren he quickly loses his support and the crowd disperses.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)

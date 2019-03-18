@@ -55,13 +55,15 @@ class LamanDamodred : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: King"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Laman Damodred became king of Cairhien in 965 NE. ")
+        val string1 = SpannableString("\n     Laman Damodred became king of Cairhien in 965 NE. ")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+        thisPortrat.setImageResource(R.drawable.laman)
     }
 }

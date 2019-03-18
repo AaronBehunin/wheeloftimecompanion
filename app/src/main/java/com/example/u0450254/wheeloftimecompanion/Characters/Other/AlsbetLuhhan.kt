@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +7,6 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -55,19 +53,19 @@ class AlsbetLuhhan : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Alsbet Luhhan lives in Emond's Field with her husband Haral.\n\n")
+        val string1 = SpannableString("\n     Alsbet Luhhan lives in Emond's Field with her husband Haral.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     Her temper is hotter than her husband's and she is nearly as strong as he is.\n\n")
+        val string3 = SpannableString("     Her temper is hotter than her husband's and she is nearly as strong as he is.\n\n")
 
-        var string4 = SpannableString("Activities\n\n")
+        val string4 = SpannableString("Activities\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string5 = SpannableString("     When the trollocs attack Emond's Field on Winternight, she bravely fights them off with a frying pan and then wanders the village searching for more so she can seek revenge for the destruction to her home.\n\n")
+        val string5 = SpannableString("     When the trollocs attack Emond's Field on Winternight, she bravely fights them off with a frying pan and then wanders the village searching for more so she can seek revenge for the destruction to her home.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 

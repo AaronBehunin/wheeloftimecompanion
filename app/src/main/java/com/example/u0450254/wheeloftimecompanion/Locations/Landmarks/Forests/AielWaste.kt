@@ -5,21 +5,17 @@ package com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests
     import android.support.v7.app.AppCompatActivity
     import android.text.SpannableString
     import android.text.method.LinkMovementMethod
+    import android.widget.ImageView
     import android.widget.TextView
     import com.example.u0450254.wheeloftimecompanion.Progress
     import com.example.u0450254.wheeloftimecompanion.R
-
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
 
 
 class AielWaste : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            setContentView(R.layout.terminology)
+            setContentView(R.layout.landmarks)
 
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -36,9 +32,12 @@ class AielWaste : AppCompatActivity() {
 
             thisTitle.text = "Aiel Waste"
 
-            var thisInfo = findViewById<TextView>(R.id.termInfo)
+            val thisMap = findViewById<ImageView>(R.id.locImage)
+            thisMap.setImageResource(R.drawable.wastemap)
 
-            var string1 = SpannableString("\n      The Aiel Waste is a desert region to the east of the Spine of the World. It is bordered on the east by an expansive and exotic land known as Shara. The Aiel waste is so inhospitable that only the hardy Aiel can survive for extended periods there.\n\n")
+            val thisInfo = findViewById<TextView>(R.id.landInfo)
+
+            val string1 = SpannableString("\n      The Aiel Waste is a desert region to the east of the Spine of the World. It is bordered on the east by an expansive and exotic land known as Shara. The Aiel waste is so inhospitable that only the hardy Aiel can survive for extended periods there.\n\n")
             thisInfo.setTextColor(Color.WHITE)
 
             thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

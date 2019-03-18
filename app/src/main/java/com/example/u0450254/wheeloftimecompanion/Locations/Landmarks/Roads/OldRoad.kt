@@ -12,18 +12,11 @@ import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
-// next entry the dragon reborn 19
-
 class OldRoad : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -39,14 +32,14 @@ class OldRoad : AppCompatActivity() {
 
         thisTitle.text = "Old Road"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n    The Old Road is a road located in the Two Rivers.\n\n")
+        val string1 = SpannableString("\n    The Old Road is a road located in the Two Rivers.\n\n")
 
-        var string2 = SpannableString("Geography\n\n")
+        val string2 = SpannableString("Geography\n\n")
         string2.setSpan(RelativeSizeSpan(2f), 0, 9, 0)
 
-        var string3 = SpannableString("     The Old Road begins in Emond's Field at the Wagon Bridge which spans the Winespring Water next to the village Green. " +
+        val string3 = SpannableString("     The Old Road begins in Emond's Field at the Wagon Bridge which spans the Winespring Water next to the village Green. " +
                 "From there the road passes south out of the community limits and runs adjacent to the Westwood. " +
                 "After several miles the Old Road terminates at the village green in Deven Ride. " +
                 "On the north side of the Wagon Bridge the same route becomes the North Road. " +
@@ -59,7 +52,7 @@ class OldRoad : AppCompatActivity() {
         {
             thisInfo.text = string1
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }

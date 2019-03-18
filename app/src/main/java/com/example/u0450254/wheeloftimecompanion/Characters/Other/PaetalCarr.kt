@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -34,6 +33,7 @@ class PaetalCarr : AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
         val thisTitle = findViewById<TextView>(R.id.Title)
         val thisAge = findViewById<TextView>(R.id.Age)
         val thisAffil = findViewById<TextView>(R.id.Affiliation)
@@ -56,29 +56,39 @@ class PaetalCarr : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Paet al'Caar is a Two Rivers resident.  His son is Wil al'Carr.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
+
+        val string1 = SpannableString("\n     Paet al'Caar is a Two Rivers resident.  His son is Wil al'Carr.\n\n")
+
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     He has a long jaw.\n\n")
+        val string3 = SpannableString("     He has a long jaw.\n\n")
 
-        var string4 = SpannableString("Activities\n\n")
+        val string4 = SpannableString("Activities\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string5 = SpannableString("     After the Trollocs first attack Emond's Field, he is part of the crowd that confronts Moiraine Damodred demanding she leave at once, even though she Healed his son's leg after the attack. He is the first to apologize to her.\n\n")
+        val string5 = SpannableString("     After the Trollocs first attack Emond's Field, he is part of the crowd that confronts Moiraine Damodred demanding she leave at once, even though she Healed his son's leg after the attack. He is the first to apologize to her.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
+
 
         if (progress.book>1||(progress.book==1&&progress.chapter>9))
         {
-            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5)
+            thisPortrat.setImageResource(R.drawable.paet_alcarr)
         }
 
+        if (progress.book==1&&progress.chapter<=9)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>9))
+        {
+            thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5)
+        }
     }
 }

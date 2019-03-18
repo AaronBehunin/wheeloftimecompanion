@@ -23,11 +23,9 @@ class Ishamael : AppCompatActivity() {
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
-
         val splits = inputString.split("-")
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
-
 
         val thisTitle = findViewById<TextView>(R.id.Title)
         val thisAge = findViewById<TextView>(R.id.Age)
@@ -38,6 +36,8 @@ class Ishamael : AppCompatActivity() {
         val thisHair = findViewById<TextView>(R.id.HairColor)
         val thisEye = findViewById<TextView>(R.id.EyeColor)
         val thisRank = findViewById<TextView>(R.id.Rank)
+
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
         thisTitle.text = "Ishamael"
         thisAffil.text = " Affiliation: Forsaken"
@@ -50,6 +50,7 @@ class Ishamael : AppCompatActivity() {
         thisHair.text = " Hair Color: Black"
         thisEye.text = " Eye Color: Red"
         thisRank.text = " Rank: Chosen"
+
 
 
         val thisInfo = findViewById<TextView>(R.id.charinfo)
@@ -69,6 +70,11 @@ class Ishamael : AppCompatActivity() {
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+
+        if (progress.book>1 ||(progress.book==1&&progress.chapter>0))
+        {
+            thisPortrat.setImageResource(R.drawable.elan_morin_tedronai)
+        }
 
         if (progress.book==1 && progress.chapter<=0)
         {

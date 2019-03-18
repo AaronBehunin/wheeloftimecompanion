@@ -11,9 +11,6 @@ import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class TarValon : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,11 +34,11 @@ class TarValon : AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
-        var thisSymbol = findViewById<ImageView>(R.id.Symbol)
-        var thisCapital = findViewById<TextView>(R.id.capital)
-        var thisType = findViewById<TextView>(R.id.typeofgov)
-        var thisHead = findViewById<TextView>(R.id.Head)
+        val thisTitle = findViewById<TextView>(R.id.Title)
+        val thisSymbol = findViewById<ImageView>(R.id.Symbol)
+        val thisCapital = findViewById<TextView>(R.id.capital)
+        val thisType = findViewById<TextView>(R.id.typeofgov)
+        val thisHead = findViewById<TextView>(R.id.Head)
 
 
         thisTitle.text = "Tar Valon"
@@ -49,9 +46,9 @@ class TarValon : AppCompatActivity() {
         thisCapital.text = "Tar Valon"
         thisType.text = "Type: Democracy"
         thisHead.text = "Ruler: Siuan Sanche"
-        var thisInfo = findViewById<TextView>(R.id.locinfo)
+        val thisInfo = findViewById<TextView>(R.id.locinfo)
 
-        var string1 = SpannableString("\n     Tar Valon is a city located on an island on the River Erinin, within sight of Dragonmount. It is the center of Aes Sedai power and is also the second largest, most populous city in the Westlands.\n\n")
+        val string1 = SpannableString("\n     Tar Valon is a city located on an island on the River Erinin, within sight of Dragonmount. It is the center of Aes Sedai power and is also the second largest, most populous city in the Westlands.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

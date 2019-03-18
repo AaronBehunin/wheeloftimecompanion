@@ -11,12 +11,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
 class Mire : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,21 +32,21 @@ class Mire : AppCompatActivity() {
 
         thisTitle.text = "Mire"
 
-        var thisInfo = findViewById<TextView>(R.id.landInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     The Mire is the name given to the lowland marsh located at the junction of the Tarendrelle and Manetherendrelle rivers.\n\n")
+        val string1 = SpannableString("\n     The Mire is the name given to the lowland marsh located at the junction of the Tarendrelle and Manetherendrelle rivers.\n\n")
 
-        var string2 = SpannableString("Geography\n\n")
+        val string2 = SpannableString("Geography\n\n")
         string2.setSpan(RelativeSizeSpan(2.0f),0,9,0)
 
-        var string3 = SpannableString("\n     The Mire is fed by continuous flows from the Winespring Water after they have branched and diverged in the Waterwood. " +
+        val string3 = SpannableString("\n     The Mire is fed by continuous flows from the Winespring Water after they have branched and diverged in the Waterwood. " +
                 "It is a typical swampy fen full of quicksands and bogs which are treacherous to travelers. " +
                 "As a result it is uninhabited. Along with the Mountains of Mist and the Manetherendrelle River, The Mire is an untraversable element of geography that helps to promote the isolation of the Two Rivers region.\n\n")
 
-        var string4 = SpannableString("History\n\n")
+        val string4 = SpannableString("History\n\n")
         string4.setSpan(RelativeSizeSpan(2.0f),0,7,0)
 
-        var string5 = SpannableString("\n     During the Trolloc Wars The Mire was seen as an excellent geographic feature that added value to the defense of Manetheren. " +
+        val string5 = SpannableString("\n     During the Trolloc Wars The Mire was seen as an excellent geographic feature that added value to the defense of Manetheren. " +
                 "King Aemon al Caar al Thorin who used swamplands adjacent to the Tarendrelle to protect the right flanks of his army during the Battle of the Tarendrelle River.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)

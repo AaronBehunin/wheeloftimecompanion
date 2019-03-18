@@ -55,9 +55,9 @@ class JainFarstrider : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Hero"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Jain Farstrider, was an adventurer from the Borderlands. " +
+        val string1 = SpannableString("\n     Jain Farstrider, was an adventurer from the Borderlands. " +
                 "His adventures are well known throughout the Westlands because of the book The Travels of Jain Farstrider. " +
                 "He was a legend throughout the Westlands.\n\n")
 

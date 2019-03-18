@@ -57,27 +57,29 @@ class KarialThor : AppCompatActivity() {
         thisEye.text = " Eye Color: Gray"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     She was married to Tam al'Thor.  She was a good mother and a loving wife.\n\n")
+        val string1 = SpannableString("\n     She was married to Tam al'Thor.  She was a good mother and a loving wife.\n\n")
 
-        var string2 = SpannableString("History\n\n")
+        val string2 = SpannableString("History\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,7,0)
 
-        var string3 = SpannableString("     Tam mentions that she always disapproved of his sword.\n\n")
-        var string3_1 = SpannableString("     The family then went to The Two Rivers. Tam mentions that she always disapproved of his sword. She died when Rand was very young and he scarcely remembers her. She died in 984NE, when Rand was five years old.\n\n")
+        val string3 = SpannableString("     Tam mentions that she always disapproved of his sword.\n\n")
+        val string3_1 = SpannableString("     The family then went to The Two Rivers. Tam mentions that she always disapproved of his sword. She died when Rand was very young and he scarcely remembers her. She died in 984NE, when Rand was five years old.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
-        thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+        thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        thisInfo.text = string1
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>5))
+        if (progress.book==1&&progress.chapter<=5)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book==1&&progress.chapter<=6)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>6))
+        else if (progress.book==1&&progress.chapter>6)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3_1)
         }

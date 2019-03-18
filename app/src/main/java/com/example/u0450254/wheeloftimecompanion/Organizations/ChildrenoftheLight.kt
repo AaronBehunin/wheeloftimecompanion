@@ -1,21 +1,15 @@
 package com.example.u0450254.wheeloftimecompanion.Organizations
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
-import android.text.TextUtils
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class ChildrenoftheLight : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,9 +42,9 @@ class ChildrenoftheLight : AppCompatActivity() {
 
         thisSymbol.setImageResource(R.drawable.sunicon)
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     The Children of the Light are an independent military organization dedicated to finding Darkfriends and rooting out evil and corruption wherever it may be found. " +
+        val string1 = SpannableString("\n     The Children of the Light are an independent military organization dedicated to finding Darkfriends and rooting out evil and corruption wherever it may be found. " +
                 "Their zeal in this endeavor often borders on the insane and makes them dangerous opponents.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 

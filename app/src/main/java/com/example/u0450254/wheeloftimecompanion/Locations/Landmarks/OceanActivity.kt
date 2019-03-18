@@ -2,7 +2,6 @@ package com.example.u0450254.wheeloftimecompanion.Locations.Landmarks
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +10,6 @@ import android.widget.RelativeLayout
 import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Oceans.*
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/30/2018.
- */
 class OceanActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,16 +20,16 @@ class OceanActivity: AppCompatActivity() {
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
-        var charview = findViewById<LinearLayout>(R.id.chapterlayout)
+        val charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArythOceanView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ManetherendrelleView)
-        var view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MireView)
-        var view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SeaofStormsView)
-        var view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
-        var view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WhiteRiverView)
-        var view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringWaterView)
-        var view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WorldSeaView)
+        val view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ArythOceanView)
+        val view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.ManetherendrelleView)
+        val view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.MireView)
+        val view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.SeaofStormsView)
+        val view5 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TarendrelleView)
+        val view6 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WhiteRiverView)
+        val view7 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WinespringWaterView)
+        val view8 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WorldSeaView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
@@ -47,31 +43,31 @@ class OceanActivity: AppCompatActivity() {
         charview.addView(view8)
     }
     fun launchArythOcean(view: View) {
-        var intent = Intent(view.context, ArythOcean::class.java)
+        val intent = Intent(view.context, ArythOcean::class.java)
         view.context.startActivity(intent)
     }
     fun launchManetherendrelle(view: View) {
-        var intent = Intent(view.context, Manetherendrelle::class.java)
+        val intent = Intent(view.context, Manetherendrelle::class.java)
         view.context.startActivity(intent)
     }
     fun launchMire(view: View) {
-        var intent = Intent(view.context, Mire::class.java)
+        val intent = Intent(view.context, Mire::class.java)
         view.context.startActivity(intent)
     }
     fun launchSeaofStorms(view: View) {
-        var intent = Intent(view.context, SeaofStorms::class.java)
+        val intent = Intent(view.context, SeaofStorms::class.java)
         view.context.startActivity(intent)
     }
     fun launchTarendrelle(view: View) {
-        var intent = Intent(view.context, Tarendrelle::class.java)
+        val intent = Intent(view.context, Tarendrelle::class.java)
         view.context.startActivity(intent)
     }
     fun launchWinespringWater(view: View) {
-        var intent = Intent(view.context, WinespringWater::class.java)
+        val intent = Intent(view.context, WinespringWater::class.java)
         view.context.startActivity(intent)
     }
     fun launchWorldSea(view: View) {
-        var intent = Intent(view.context, WorldSea::class.java)
+        val intent = Intent(view.context, WorldSea::class.java)
         view.context.startActivity(intent)
     }
 }

@@ -11,12 +11,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
 class SeaofStorms : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,11 +34,11 @@ class SeaofStorms : AppCompatActivity() {
         thisTitle.text = "Sea of Storms"
         thisMap.setImageResource(R.drawable.sosmap)
 
-        var thisInfo = findViewById<TextView>(R.id.landInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     The Sea of Storms is the large ocean that lies to the south of the Westlands\n\n")
+        val string1 = SpannableString("\n     The Sea of Storms is the large ocean that lies to the south of the Westlands\n\n")
 
-        var string2 = SpannableString("\n     Mayene, Tear, Illian and Ebou Dar are the largest ports on the Sea of Storms.\n\n")
+        val string2 = SpannableString("\n     Mayene, Tear, Illian and Ebou Dar are the largest ports on the Sea of Storms.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

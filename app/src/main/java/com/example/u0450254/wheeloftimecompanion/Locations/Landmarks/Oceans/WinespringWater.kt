@@ -13,11 +13,6 @@ import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
 class WinespringWater: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,14 +34,14 @@ class WinespringWater: AppCompatActivity() {
 
         thisTitle.text = "Winespring Water"
 
-        var thisInfo = findViewById<TextView>(R.id.landInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     The Winespring Water is a creek that originates in the village of Emond's Field.\n\n")
+        val string1 = SpannableString("\n     The Winespring Water is a creek that originates in the village of Emond's Field.\n\n")
 
-        var string2 = SpannableString("Geography\n\n")
+        val string2 = SpannableString("Geography\n\n")
         string2.setSpan(RelativeSizeSpan(2.0f),0,9,0)
 
-        var string3 = SpannableString("     The headwater, called the Winespring, is located near the west end of the village Green and gushes forth with enough force to knock down a grown man. " +
+        val string3 = SpannableString("     The headwater, called the Winespring, is located near the west end of the village Green and gushes forth with enough force to knock down a grown man. " +
                 "From the Green, the stream passes beneath two low railed footbridges, the Wagon Bridge, and then flows adjacent to the Winespring Inn. " +
                 "From there it widens rapidly and willow trees begin to dot its banks as it continues east past the mill owned by Jon Thane. " +
                 "After several more miles it splits into dozens of flows in the Waterwood before draining into The Mire.\n\n")
@@ -63,6 +58,5 @@ class WinespringWater: AppCompatActivity() {
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }
-
     }
 }

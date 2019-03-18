@@ -1,21 +1,16 @@
 package com.example.u0450254.wheeloftimecompanion.Organizations
 
-import android.content.Context
+
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
-import android.text.TextUtils
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class AesSedai : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,9 +43,9 @@ class AesSedai : AppCompatActivity() {
 
         thisSymbol.setImageResource(R.drawable.aessedaisymbol)
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Wielders of the One Power.  Since the Time of Madness, all surviving Aes Sedai are women. " +
+        val string1 = SpannableString("\n     Wielders of the One Power.  Since the Time of Madness, all surviving Aes Sedai are women. " +
                 "Widely distrusted and feared, even hated, they are blamed by many for the Breaking of the World, and are generally thought to meddle in the affairs of other nations.")
 
         thisInfo.setTextColor(Color.WHITE)

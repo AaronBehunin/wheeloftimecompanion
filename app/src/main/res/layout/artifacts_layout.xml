@@ -8,46 +8,89 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="0dp">
-
-            <TextView
+            <LinearLayout
                 android:id="@+id/Weapons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Weapons"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="130dp"
+                    android:maxWidth="130dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/hilticon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="40dp"
+                    android:text="Weapons"
+                    android:textSize="30dp" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@drawable/line"
                 />
-            <TextView
+            <LinearLayout
                 android:id="@+id/Angreal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Angreal"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="85dp"
+                    android:maxWidth="85dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ringicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp"
+                    android:text="Angreal"
+                    android:textSize="30dp" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@drawable/line"
                 />
-            <TextView
+            <LinearLayout
                 android:id="@+id/Symbols"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Symbols of Office"
-                android:textSize="26dp"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="20dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="90dp"
+                    android:maxWidth="90dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="11dp"
+                    android:src="@drawable/staricon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="20dp"
+                    android:text="Symbols of Office"
+                    android:textSize="30dp" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

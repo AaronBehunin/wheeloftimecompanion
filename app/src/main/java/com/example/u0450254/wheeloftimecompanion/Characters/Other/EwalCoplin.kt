@@ -56,22 +56,24 @@ class EwalCoplin : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Ewal Coplin is an Emond's Field resident.\n\n")
+        val string1 = SpannableString("\n     Ewal Coplin is an Emond's Field resident.\n\n")
 
-        var string2 = SpannableString("History\n\n")
+        val string2 = SpannableString("History\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,7,0)
 
-        var string3 = SpannableString("     Rand al'Thor gives Ewal a black eye for teasing Rand about his gray eyes.\n\n")
+        val string3 = SpannableString("     Rand al'Thor gives Ewal a black eye for teasing Rand about his gray eyes.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
-
-        if (progress.book>1 || (progress.book==1&&progress.chapter>4))
+        if (progress.book==1&&progress.chapter<=4)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1 || (progress.book==1&&progress.chapter>4))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }

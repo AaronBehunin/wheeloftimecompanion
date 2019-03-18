@@ -10,9 +10,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/23/2018.
- */
 class Taint: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,9 +40,11 @@ class Taint: AppCompatActivity() {
 
         terminfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        terminfo.text = string1
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>0))
+        if (progress.book==1&&progress.chapter==0)
+        {
+            terminfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>0))
         {
             terminfo.text = TextUtils.concat(string1,string2)
         }

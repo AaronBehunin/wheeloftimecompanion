@@ -56,33 +56,44 @@ class WitCongar : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
-        var string1 = SpannableString("\n    Wit Congar is a Two Rivers resident.\n\n")
+        val string1 = SpannableString("\n    Wit Congar is a Two Rivers resident.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     He is a scrawny man.\n\n")
+        val string3 = SpannableString("     He is a scrawny man.\n\n")
 
-        var string4 = SpannableString("History\n\n")
+        val string4 = SpannableString("History\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,7,0)
 
-        var string5 = SpannableString("     He is married to Daise Congar.\n\n")
+        val string5 = SpannableString("     He is married to Daise Congar.\n\n")
 
-        var string6 = SpannableString("     He is known as a lazy complainer as is most of his Congar kin.\n\n")
+        val string6 = SpannableString("     He is known as a lazy complainer as is most of his Congar kin.\n\n")
 
-        var string7 = SpannableString("Activities\n\n")
+        val string7 = SpannableString("Activities\n\n")
         string7.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string8 = SpannableString("     He catches up with Tam al'Thor as he is heading into town, to complain about Nynaeve al'Meara.\n\n")
+        val string8 = SpannableString("     He catches up with Tam al'Thor as he is heading into town, to complain about Nynaeve al'Meara.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
+
+
         if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        {
+            thisPortrat.setImageResource(R.drawable.wit_congar)
+        }
+
+        if (progress.book==1&&progress.chapter<=1)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5,string6,string7,string8)
         }

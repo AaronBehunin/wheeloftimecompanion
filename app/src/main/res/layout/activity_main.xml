@@ -212,6 +212,29 @@
                     android:text="  Monsters and Creatures"
                     android:textSize="30dp" />
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/index"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="18dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="80dp"
+                    android:maxWidth="80dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/triangleicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:text="  Index"
+                    android:textSize="30dp" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

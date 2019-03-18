@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +7,6 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -56,28 +54,32 @@ class DarlCoplin : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Darl Coplin is a farmer in Emond's Field and brother to Hari Coplin.\n\n")
+        val string1 = SpannableString("\n     Darl Coplin is a farmer in Emond's Field and brother to Hari Coplin.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     He has a narrow, weasel-like face with a tight mouth and is a known troublemaker.\n\n")
+        val string3 = SpannableString("     He has a narrow, weasel-like face with a tight mouth and is a known troublemaker.\n\n")
 
-        var string4 = SpannableString("Activities\n\n")
+        val string4 = SpannableString("Activities\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string5 = SpannableString("     He is suspected of scrawling the Dragon's Fang on Brandelwyn al'Vere's door. He confronts Moiraine Damodred with a crowd behind him, demanding she leaves Emond's Field at once.\n\n")
+        val string5 = SpannableString("     He is suspected of scrawling the Dragon's Fang on Brandelwyn al'Vere's door. He confronts Moiraine Damodred with a crowd behind him, demanding she leaves Emond's Field at once.\n\n")
 
 
         thisInfo.setTextColor(Color.WHITE)
 
-        thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+        thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        thisInfo.text = string1
 
-        if (progress.book>1 || (progress.book==1&&progress.chapter>9))
+
+        if (progress.book==1&&progress.chapter<=9)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1 || (progress.book==1&&progress.chapter>9))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5)
         }

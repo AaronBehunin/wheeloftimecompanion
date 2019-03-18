@@ -11,9 +11,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/23/2018.
- */
 class Void: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +19,7 @@ class Void: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -30,17 +27,17 @@ class Void: AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "The Flame and the Void"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1  = SpannableString("\n     \"The Flame and the Void\" refers to the visualization of a flame in a void; all concerns - emotions, thoughts, even the concerns of life and death - are fed into the flame.\n\n")
+        val string1  = SpannableString("\n     \"The Flame and the Void\" refers to the visualization of a flame in a void; all concerns - emotions, thoughts, even the concerns of life and death - are fed into the flame.\n\n")
 
-        var string3 = SpannableString("Different Ways to the Void\n\n")
+        val string3 = SpannableString("Different Ways to the Void\n\n")
         string3.setSpan(RelativeSizeSpan(2f), 0, 26, 0)
 
-        var string4 = SpannableString("     Rand al'Thor first learned the Flame and the Void from his father, Tam al'Thor. While in the Void, Rand excelled in archery.\n\n")
+        val string4 = SpannableString("     Rand al'Thor first learned the Flame and the Void from his father, Tam al'Thor. While in the Void, Rand excelled in archery.\n\n")
 
         terminfo.setTextColor(Color.WHITE)
 
@@ -50,7 +47,7 @@ class Void: AppCompatActivity() {
         {
             terminfo.text = string1
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
             terminfo.text = TextUtils.concat(string1,string3,string4)
         }

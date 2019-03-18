@@ -55,6 +55,7 @@ class Narg : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Footsoldier"
 
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
         val thisInfo = findViewById<TextView>(R.id.charinfo)
 
@@ -71,6 +72,11 @@ class Narg : AppCompatActivity() {
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+
+        if (progress.book>1 || (progress.book==1 && progress.chapter>5)){
+
+            thisPortrat.setImageResource(R.drawable.narg)
+        }
 
         if (progress.book==1 &&progress.chapter<=5)
         {

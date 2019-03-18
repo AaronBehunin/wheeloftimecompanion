@@ -8,10 +8,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/**
- * Created by u0450254 on 5/31/2018.
- */
-
 
 class ShiningWallsBattle : AppCompatActivity() {
 
@@ -21,7 +17,7 @@ class ShiningWallsBattle : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -31,12 +27,12 @@ class ShiningWallsBattle : AppCompatActivity() {
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "Battle of the Shinging Walls"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1 = SpannableString("\n     The Battle of the Shining Walls was the final and decisive battle of the Aiel War.\n\n")
+        val string1 = SpannableString("\n     The Battle of the Shining Walls was the final and decisive battle of the Aiel War.\n\n")
         terminfo.setTextColor(Color.WHITE)
 
         terminfo.text = string1

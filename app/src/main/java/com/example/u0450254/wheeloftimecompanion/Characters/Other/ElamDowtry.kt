@@ -1,14 +1,10 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
-import android.text.TextUtils
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -56,21 +52,14 @@ class ElamDowtry : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Elam Dowtry is a Two Rivers resident and a friend of Mat Cauthon.\n\n")
+        val string1 = SpannableString("\n     Elam Dowtry is a Two Rivers resident and a friend of Mat Cauthon.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>1))
-        {
-            thisInfo.text = TextUtils.concat(string1)
-        }
-
-
     }
 }

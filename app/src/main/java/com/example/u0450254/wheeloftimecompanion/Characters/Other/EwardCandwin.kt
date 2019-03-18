@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +7,6 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -56,14 +54,14 @@ class EwardCandwin : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Eward Candwin is a Two Rivers resident and the village cooper.\n\n")
+        val string1 = SpannableString("\n     Eward Candwin is a Two Rivers resident and the village cooper.\n\n")
 
-        var string2 = SpannableString("Activities\n\n")
+        val string2 = SpannableString("Activities\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     He is part of the crowd that confronts Moiraine Damodred, demanding she leaves Emond's Field at once, even though she Healed him after being stabbed by a Trolloc in the Trolloc raid.\n\n")
+        val string3 = SpannableString("     He is part of the crowd that confronts Moiraine Damodred, demanding she leaves Emond's Field at once, even though she Healed him after being stabbed by a Trolloc in the Trolloc raid.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 

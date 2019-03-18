@@ -19,6 +19,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val file = File("/data/data/com.example.u0450254.wheeloftimecompanion/files/Progress")
+
+        if (!file.exists()) {
+            val filename = "Progress"
+            val fileContents = "1-0"
+            openFileOutput(filename, Context.MODE_PRIVATE).use {
+                it.write(fileContents.toByteArray())
+            }
+        }
+
+        val progressFile = openFileInput("Progress")
+
         val guideView = findViewById<LinearLayout>(R.id.Guide)
         val charView = findViewById<LinearLayout>(R.id.Characters)
         val orgsView = findViewById<LinearLayout>(R.id.Organizations)
@@ -26,37 +38,42 @@ class MainActivity : AppCompatActivity() {
         val locationView = findViewById<LinearLayout>(R.id.Locations)
         val creatureView = findViewById<LinearLayout>(R.id.creatures)
         val artView = findViewById<LinearLayout>(R.id.Artifacts)
+        val indexView = findViewById<LinearLayout>(R.id.index)
 
         guideView.setOnClickListener() {
-            var intent = Intent(this, GuideActivity::class.java)
+            val intent = Intent(this, GuideActivity::class.java)
             startActivity(intent)
         }
 
         charView.setOnClickListener() {
-            var intent = Intent(this, CharacterActivity::class.java)
+            val intent = Intent(this, CharacterActivity::class.java)
             startActivity(intent)
 
         }
         orgsView.setOnClickListener() {
-            var intent = Intent(this, OrganizationsActivity::class.java)
+            val intent = Intent(this, OrganizationsActivity::class.java)
             startActivity(intent)
 
         }
         termView.setOnClickListener() {
-            var intent = Intent(this, TerminologyActivity::class.java)
+            val intent = Intent(this, TerminologyActivity::class.java)
             startActivity(intent)
 
         }
         locationView.setOnClickListener() {
-            var intent = Intent(this, LocationActivity::class.java)
+            val intent = Intent(this, LocationActivity::class.java)
             startActivity(intent)
         }
         creatureView.setOnClickListener() {
-            var intent = Intent(this, CreatureActivity::class.java)
+            val intent = Intent(this, CreatureActivity::class.java)
             startActivity(intent)
         }
         artView.setOnClickListener() {
-            var intent = Intent(this, ArtifactsActivity::class.java)
+            val intent = Intent(this, ArtifactsActivity::class.java)
+            startActivity(intent)
+        }
+        indexView.setOnClickListener() {
+            val intent = Intent(this, IndexActivity::class.java)
             startActivity(intent)
         }
     }

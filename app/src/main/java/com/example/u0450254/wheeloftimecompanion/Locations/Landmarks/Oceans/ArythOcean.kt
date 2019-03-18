@@ -10,12 +10,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
 class ArythOcean : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,9 +33,9 @@ class ArythOcean : AppCompatActivity() {
         thisTitle.text = "Aryth Ocean"
         thisMap.setImageResource(R.drawable.aomap)
 
-        var thisInfo = findViewById<TextView>(R.id.landInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     The Aryth Ocean is the large body of water located to the west of the Westlands.\n\n")
+        val string1 = SpannableString("\n     The Aryth Ocean is the large body of water located to the west of the Westlands.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

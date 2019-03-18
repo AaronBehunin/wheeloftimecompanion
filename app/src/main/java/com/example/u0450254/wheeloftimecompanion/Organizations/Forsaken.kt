@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Organizations
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -12,9 +11,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class Forsaken : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,18 +44,20 @@ class Forsaken : AppCompatActivity() {
 
         thisSymbol.setImageResource(R.drawable.forsaken)
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n    The Forsaken were channelers who served the side of the Shadow in the War of Power.\n\n")
+        val string1 = SpannableString("\n    The Forsaken were channelers who served the side of the Shadow in the War of Power.\n\n")
 
-        var string2 = SpannableString("     Although during the War of Power there were dozens of Forsaken leading the armies of the Shadow, as time passed, the term \"Forsaken\" came to refer to only the thirteen most powerful among them, who were caught in the sealing and imprisoned with the Dark One. The horrific deeds of each were remembered long after their disappearance. In the Third Age, these thirteen were such infamous symbols of the Shadow that mothers would use stories of their exploits to frighten children.\n\n")
+        val string2 = SpannableString("     Although during the War of Power there were dozens of Forsaken leading the armies of the Shadow, as time passed, the term \"Forsaken\" came to refer to only the thirteen most powerful among them, who were caught in the sealing and imprisoned with the Dark One. The horrific deeds of each were remembered long after their disappearance. In the Third Age, these thirteen were such infamous symbols of the Shadow that mothers would use stories of their exploits to frighten children.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        thisInfo.text = string1
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        if (progress.book==1&&progress.chapter<=1)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
             thisInfo.text = TextUtils.concat(string1,string2)
         }

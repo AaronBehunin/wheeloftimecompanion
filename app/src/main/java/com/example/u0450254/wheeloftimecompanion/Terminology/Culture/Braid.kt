@@ -10,11 +10,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/**
- * Created by u0450254 on 5/31/2018.
- */
-
-
 class Braid : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +18,7 @@ class Braid : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -33,17 +28,17 @@ class Braid : AppCompatActivity() {
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "Braid"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1 = SpannableString("\n     Braided hair is a common occurrence in the Westlands, though in some cultures it holds a special social significance.\n\n")
+        val string1 = SpannableString("\n     Braided hair is a common occurrence in the Westlands, though in some cultures it holds a special social significance.\n\n")
 
-        var string2 = SpannableString("Two Rivers\n\n")
+        val string2 = SpannableString("Two Rivers\n\n")
         string2.setSpan(RelativeSizeSpan(2f), 0, 10, 0)
 
-        var string3 = SpannableString("     In the Two Rivers district of western Andor, women of marriageable age fix their hair into a single braid which often extends down the length of their back. " +
+        val string3 = SpannableString("     In the Two Rivers district of western Andor, women of marriageable age fix their hair into a single braid which often extends down the length of their back. " +
                 "In each village of the region, the local Women's Circle decides when a girl is mature enough to marry and fix her hair accordingly.\n\n")
         terminfo.setTextColor(Color.WHITE)
 

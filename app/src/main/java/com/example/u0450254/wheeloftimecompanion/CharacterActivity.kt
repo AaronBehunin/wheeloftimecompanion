@@ -21,30 +21,30 @@ class CharacterActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var mainChar = findViewById<LinearLayout>(R.id.Mainchars)
-        var suppChar = findViewById<LinearLayout>(R.id.SupportChars)
-        var enemyChar = findViewById<LinearLayout>(R.id.Enemies)
-        var otherChar = findViewById<LinearLayout>(R.id.OtherChars)
-        var legendChar = findViewById<LinearLayout>(R.id.LegendaryChars)
+        val mainChar = findViewById<LinearLayout>(R.id.Mainchars)
+        val suppChar = findViewById<LinearLayout>(R.id.SupportChars)
+        val enemyChar = findViewById<LinearLayout>(R.id.Enemies)
+        val otherChar = findViewById<LinearLayout>(R.id.OtherChars)
+        val legendChar = findViewById<LinearLayout>(R.id.LegendaryChars)
 
         mainChar.setOnClickListener() {
-            var intent = Intent(this, MainCharacterActivity::class.java)
+            val intent = Intent(this, MainCharacterActivity::class.java)
             startActivity(intent)
         }
         suppChar.setOnClickListener() {
-            var intent = Intent(this, SupportCharacterActivity::class.java)
+            val intent = Intent(this, SupportCharacterActivity::class.java)
             startActivity(intent)
         }
         enemyChar.setOnClickListener() {
-            var intent = Intent(this, EnemyCharacterActivity::class.java)
+            val intent = Intent(this, EnemyCharacterActivity::class.java)
             startActivity(intent)
         }
         otherChar.setOnClickListener() {
-            var intent = Intent(this, OtherCharacterActivity::class.java)
+            val intent = Intent(this, OtherCharacterActivity::class.java)
             startActivity(intent)
         }
         legendChar.setOnClickListener() {
-            var intent = Intent(this, LegendCharacterActivity::class.java)
+            val intent = Intent(this, LegendCharacterActivity::class.java)
             startActivity(intent)
         }
     }

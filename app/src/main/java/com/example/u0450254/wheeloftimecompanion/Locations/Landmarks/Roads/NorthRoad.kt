@@ -11,19 +11,11 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
-// next entry the dragon reborn 19
-
 class NorthRoad : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -39,14 +31,14 @@ class NorthRoad : AppCompatActivity() {
 
         thisTitle.text = "North Road"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n    The North Road is a road located in the Two Rivers.\n\n")
+        val string1 = SpannableString("\n    The North Road is a road located in the Two Rivers.\n\n")
 
-        var string2 = SpannableString("Geography\n\n")
+        val string2 = SpannableString("Geography\n\n")
         string2.setSpan(RelativeSizeSpan(2f), 0, 9, 0)
 
-        var string3 = SpannableString("     The North Road begins at the southern banks of the River Tarendrelle in the Taren Ferry community. " +
+        val string3 = SpannableString("     The North Road begins at the southern banks of the River Tarendrelle in the Taren Ferry community. " +
                 "From there it passes south out of the town and runs adjacent to the Westwood. After several miles it passes the village limits of Watch Hill. " +
                 "From there it continues south and terminates at the Wagon Bridge in Emond's Field next to the Winespring Inn and the village Green. " +
                 "On the opposite side of the bridge the traveled-way continues to Deven Ride under a new name: the Old Road. " +
@@ -60,7 +52,7 @@ class NorthRoad : AppCompatActivity() {
         {
             thisInfo.text = string1
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }

@@ -4,6 +4,16 @@
         xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#000000">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/orgScroll">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <TextView
         android:id="@+id/Title"
         android:layout_width="match_parent"
@@ -16,16 +26,20 @@
         android:background="#ffffff"
         android:textAlignment="center"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/orgScroll">
+        <ImageView
+            android:id="@+id/termImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            />
 
     <RelativeLayout
         android:orientation="horizontal"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
 
         <TextView
             android:id="@+id/termInfo"
@@ -34,5 +48,6 @@
             android:paddingHorizontal="20dp"/>
 
     </RelativeLayout>
+</LinearLayout>
     </ScrollView>
 </LinearLayout>

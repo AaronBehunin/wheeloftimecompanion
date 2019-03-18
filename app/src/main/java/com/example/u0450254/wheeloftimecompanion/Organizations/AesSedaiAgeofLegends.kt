@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Organizations
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -13,9 +12,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class AesSedaiAgeofLegends : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,48 +44,50 @@ class AesSedaiAgeofLegends : AppCompatActivity() {
 
         thisSymbol.setImageResource(R.drawable.aessedaisymbol)
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Aes Sedai, in the Old Tongue, means \"servants of all,\" and the Aes Sedai of the Age of Legends lived up to this definition.\n\n")
+        val string1 = SpannableString("\n     Aes Sedai, in the Old Tongue, means \"servants of all,\" and the Aes Sedai of the Age of Legends lived up to this definition.\n\n")
 
-        var string2 = SpannableString("Organization of the Ancient Aes Sedai\n\n")
+        val string2 = SpannableString("Organization of the Ancient Aes Sedai\n\n")
         string2.setSpan(RelativeSizeSpan(2f), 0, 37, 0)
 
-        var string5 = SpannableString("Hall of Servants\n\n")
+        val string5 = SpannableString("Hall of Servants\n\n")
         string5.setSpan(RelativeSizeSpan(1.5f), 0, 16, 0)
 
-        var string6 = SpannableString("     The Aes Sedai were governed by the Hall of Servants, headed by the First among Servants.\n\n")
+        val string6 = SpannableString("     The Aes Sedai were governed by the Hall of Servants, headed by the First among Servants.\n\n")
 
-        var string10 = SpannableString("Talents of the ancient Aes Sedai\n\n")
+        val string10 = SpannableString("Talents of the ancient Aes Sedai\n\n")
         string10.setSpan(RelativeSizeSpan(2f), 0, 32, 0)
 
-        var string11 = SpannableString("     The Talent of Healing was much stronger during the Age of Legends. They could make angreal.\n\n")
+        val string11 = SpannableString("     The Talent of Healing was much stronger during the Age of Legends. They could make angreal.\n\n")
 
-        var string12 = SpannableString("The Collapse\n\n")
+        val string12 = SpannableString("The Collapse\n\n")
         string12.setSpan(RelativeSizeSpan(2f), 0, 12, 0)
 
-        var string13 = SpannableString("     The Dragon, with the help of the Hundred Companions, sealed the Dark One and the Forsaken in his prison at Shayol Ghul, and the Dark One's final counterattack tainted saidin itself, eventually driving all male channelers mad. The female Aes Sedai could not control them, and the men rampaged across the known world, boiling oceans, raising mountains where there were none, killing countless innocents. This was the Breaking of the World.\n\n")
+        val string13 = SpannableString("     The Dragon, with the help of the Hundred Companions, sealed the Dark One and the Forsaken in his prison at Shayol Ghul, and the Dark One's final counterattack tainted saidin itself, eventually driving all male channelers mad. The female Aes Sedai could not control them, and the men rampaged across the known world, boiling oceans, raising mountains where there were none, killing countless innocents. This was the Breaking of the World.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
 
-        if (progress.book==1&&progress.chapter>0)
+        if (progress.book==1&&progress.chapter==0)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book==1&&progress.chapter<=3)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string5,string6)
         }
-        if (progress.book==1&&progress.chapter>3)
+        else if (progress.book==1&&progress.chapter<=8)
         {
             thisInfo.text = TextUtils.concat(string1,string2,string5,string6,
                     string12,string13)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>8))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>8))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string5,string6,string10,
                     string11,string12,string13)
         }
-
     }
 }

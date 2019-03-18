@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +7,6 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -58,21 +56,21 @@ class CorinAyellin : AppCompatActivity() {
 
 
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Corin Ayellin is an Emond's Field resident.\n\n")
+        val string1 = SpannableString("\n     Corin Ayellin is an Emond's Field resident.\n\n")
 
 
-        var string4 = SpannableString("History\n\n")
+        val string4 = SpannableString("History\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,7,0)
 
-        var string5 = SpannableString("     When the men are shearing sheep, she helps bring them food. " +
+        val string5 = SpannableString("     When the men are shearing sheep, she helps bring them food. " +
                 "She is thought of as being one of the best cooks in Emond's Field, her specialty being sweets.\n\n")
 
-        var string6 = SpannableString("Activities\n\n")
+        val string6 = SpannableString("Activities\n\n")
         string6.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string7 = SpannableString("     Mistress Ayellin had a fever that Nynaeve was tending.\n\n")
+        val string7 = SpannableString("     Mistress Ayellin had a fever that Nynaeve was tending.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 

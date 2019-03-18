@@ -1457,7 +1457,7 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:onClick="launchLamanDamodred"
-                    android:paddingEnd="8dp"
+                    android:paddingEnd="18dp"
                     android:paddingStart="15dp"
                     android:paddingVertical="5dp">
 
@@ -1473,12 +1473,11 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentEnd="true"
                         android:adjustViewBounds="true"
-                        android:maxHeight="110dp"
-                        android:maxWidth="110dp"
+                        android:maxHeight="90dp"
+                        android:maxWidth="90dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/bullicon" />
+                        android:src="@drawable/wheelicon" />
                 </RelativeLayout>
-
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/MoiraineView"
                     android:layout_width="match_parent"
@@ -3318,7 +3317,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="Battle of the Shining Walls"
+                        android:text="Battle of the Shining\nWalls"
                         android:textSize="28sp" />
 
                     <ImageView
@@ -3978,7 +3977,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="War of the Hundred Years"
+                        android:text="War of the Hundred\nYears"
                         android:textSize="28sp" />
 
                     <ImageView

@@ -7,8 +7,6 @@ import android.support.v7.widget.AppCompatImageView
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
-import android.graphics.drawable.Drawable
-import com.example.u0450254.wheeloftimecompanion.R
 
 
 class MapView : AppCompatImageView {
@@ -96,10 +94,10 @@ class MapView : AppCompatImageView {
         canvas.save()
         canvas.scale(scaleFactor, scaleFactor)
 
-        var d = resources.getDrawable(map, null)
+        val d = resources.getDrawable(map, null)
 
-        var scaledWidth = d.intrinsicWidth * scaleFactor
-        var scaledHeight = d.intrinsicHeight * scaleFactor
+        val scaledWidth = d.intrinsicWidth * scaleFactor
+        val scaledHeight = d.intrinsicHeight * scaleFactor
 
         //        System.out.println("TX: "+translateX);
         //        System.out.println("TX2: "+scaledWidth);

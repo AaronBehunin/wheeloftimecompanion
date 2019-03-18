@@ -9,14 +9,11 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/**
- * Created by u0450254 on 9/21/2018.
- */
 class Lugard : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -33,9 +30,9 @@ class Lugard : AppCompatActivity() {
 
         thisTitle.text = "Lugard"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     Lugard is the capital city of Murandy.\n\n")
+        val string1 = SpannableString("\n     Lugard is the capital city of Murandy.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 

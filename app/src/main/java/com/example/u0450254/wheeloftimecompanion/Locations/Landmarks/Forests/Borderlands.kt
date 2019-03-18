@@ -9,18 +9,16 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/23/2018.
- */
+
 class Borderlands: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -28,12 +26,12 @@ class Borderlands: AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "Borderlands"
 
-        val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1  = SpannableString("\n     The Borderlands are the Westland nations which lie furthest to the north and directly border the Great GreatBlight, specifically Shienar, Arafel, Kandor and Saldaea.")
+        val terminfo = findViewById<TextView>(R.id.landInfo)
+        val string1  = SpannableString("\n     The Borderlands are the Westland nations which lie furthest to the north and directly border the Great GreatBlight, specifically Shienar, Arafel, Kandor and Saldaea.")
 
         terminfo.setTextColor(Color.WHITE)
 

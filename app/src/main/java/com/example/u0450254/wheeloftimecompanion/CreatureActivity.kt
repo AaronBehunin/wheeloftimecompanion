@@ -4,7 +4,7 @@ package com.example.u0450254.wheeloftimecompanion
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.TextView
+import android.widget.LinearLayout
 import com.example.u0450254.wheeloftimecompanion.Creatures.AnimalsActivity
 import com.example.u0450254.wheeloftimecompanion.Creatures.MonsterActivity
 import com.example.u0450254.wheeloftimecompanion.Creatures.RacesActivity
@@ -16,20 +16,20 @@ class CreatureActivity: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var MonsterView = findViewById<TextView>(R.id.Monsters)
-        var RacesView = findViewById<TextView>(R.id.NonHumanRaces)
-        var AnimalsView = findViewById<TextView>(R.id.NamedAnimals)
+        val MonsterView = findViewById<LinearLayout>(R.id.Monsters)
+        val RacesView = findViewById<LinearLayout>(R.id.NonHumanRaces)
+        val AnimalsView = findViewById<LinearLayout>(R.id.NamedAnimals)
 
         MonsterView.setOnClickListener() {
-            var intent = Intent(this, MonsterActivity::class.java)
+            val intent = Intent(this, MonsterActivity::class.java)
             startActivity(intent)
         }
         RacesView.setOnClickListener() {
-            var intent = Intent(this, RacesActivity::class.java)
+            val intent = Intent(this, RacesActivity::class.java)
             startActivity(intent)
         }
         AnimalsView.setOnClickListener() {
-            var intent = Intent(this, AnimalsActivity::class.java)
+            val intent = Intent(this, AnimalsActivity::class.java)
             startActivity(intent)
         }
     }

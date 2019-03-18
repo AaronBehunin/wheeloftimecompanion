@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -59,50 +58,60 @@ class Rand : AppCompatActivity() {
         thisEye.text = " Eye Color: Gray"
         thisRank.text = " Rank: Civilian"
 
-        thisPortrat.setImageResource(R.drawable.randeotw)
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Rand al'Thor is the main protagonist of the series.\n\n")
+        val string1 = SpannableString("\n     Rand al'Thor is the main protagonist of the series.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f), 0, 10, 0)
 
-        var string3 = SpannableString("    Rand al'Thor is a handsome, very tall and light-skinned. He has blue-gray eyes and dark reddish, unruly hair hanging just past his ears. Rand has a broad shouldered physique, although he is more slender and not as heavily built as his friend Perrin. He is strong and muscular from years of arduous farm work.\n\n")
+        val string3 = SpannableString("    Rand al'Thor is a handsome, very tall and light-skinned. He has blue-gray eyes and dark reddish, unruly hair hanging just past his ears. Rand has a broad shouldered physique, although he is more slender and not as heavily built as his friend Perrin. He is strong and muscular from years of arduous farm work.\n\n")
 
-        var string16 = SpannableString("Activities\n\n")
+        val string16 = SpannableString("Activities\n\n")
         string16.setSpan(RelativeSizeSpan(2f), 0, 10, 0)
 
-        var string17 = SpannableString("From the Two Rivers\n\n")
+        val string17 = SpannableString("From the Two Rivers\n\n")
         string17.setSpan(RelativeSizeSpan(1.5f), 0, 19, 0)
 
-        var string18 = SpannableString("     On Winternight, 998 NE, Trollocs attacked Emond's Field.\n\n")
-        var string18_1 = SpannableString("     On Winternight, 998 NE, Trollocs attacked Emond's Field. Rand, Perrin, Mat, Egwene and Thom Merrilin were led out of Emond's Field by Moiraine Sedai and her Warder, Lan Mandragoran." +
+        val string18 = SpannableString("     On Winternight, 998 NE, Trollocs attacked Emond's Field.\n\n")
+        val string18_1 = SpannableString("     On Winternight, 998 NE, Trollocs attacked Emond's Field. Rand, Perrin, Mat, Egwene and Thom Merrilin were led out of Emond's Field by Moiraine Sedai and her Warder, Lan Mandragoran." +
                 " Thom was not a resident of the village, but a gleeman who happened to be in Emond's Field just then.\n\n")
 
-        var string87 = SpannableString("Significant Possessions\n\n")
+        val string87 = SpannableString("Significant Possessions\n\n")
         string87.setSpan(RelativeSizeSpan(2f), 0, 23, 0)
 
-        var string88 = SpannableString("Tam al'Thor's Sword\n\n")
+        val string88 = SpannableString("Tam al'Thor's Sword\n\n")
         string88.setSpan(RelativeSizeSpan(1.5f), 0, 19, 0)
 
-        var string89 = SpannableString("     The first sword Rand ever owned, given to him by Tam al'Thor on Winternight after the Trollocs attacked Emond's Field. It has herons on the hilt and blade.\n\n")
+        val string89 = SpannableString("     The first sword Rand ever owned, given to him by Tam al'Thor on Winternight after the Trollocs attacked Emond's Field. It has herons on the hilt and blade.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
+
+
 
         if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
+            thisPortrat.setImageResource(R.drawable.randeotw)
+        }
+
+
+        if (progress.book==1&&progress.chapter<=1)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book==1&&progress.chapter<=5)
+        {
             thisInfo.text = TextUtils.concat(string1, string2, string3)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>5))
+        else if (progress.book==1&&progress.chapter<=10)
         {
-            thisInfo.text = TextUtils.concat(thisInfo.text,string16,string18,string87,string88,string89)
+            thisInfo.text = TextUtils.concat(string1, string2, string3,string16,string18,string87,string88,string89)
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>10))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>10))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string16,string17,string18_1,string87,string88,string89)
         }

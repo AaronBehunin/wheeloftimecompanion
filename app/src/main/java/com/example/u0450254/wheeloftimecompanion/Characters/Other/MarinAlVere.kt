@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -57,28 +56,36 @@ class MarinAlVere : AppCompatActivity() {
         thisRank.text = " Rank: Civilian"
 
         val thisPortrat = findViewById<ImageView>(R.id.Portrat)
-        thisPortrat.setImageResource(R.drawable.marinalvere)
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Marin al'Vere lives in Emond's Field with her husband Bran and their younger children. Mistress al'Vere is also the mother of Egwene al'Vere.\n\n")
+        val string1 = SpannableString("\n     Marin al'Vere lives in Emond's Field with her husband Bran and their younger children. Mistress al'Vere is also the mother of Egwene al'Vere.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     Slender and motherly, with a thick gray braid, Marin is a handsome woman.\n\n")
+        val string3 = SpannableString("     Slender and motherly, with a thick gray braid, Marin is a handsome woman.\n\n")
 
-        var string4 = SpannableString("Activities\n\n")
+        val string4 = SpannableString("Activities\n\n")
         string4.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string5 = SpannableString("     As the best cook in the village, she fills that role in helping Bran run the Winespring Inn.\n\n")
+        val string5 = SpannableString("     As the best cook in the village, she fills that role in helping Bran run the Winespring Inn.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
+
 
         if (progress.book>1||(progress.book==1&&progress.chapter>2))
+        {
+            thisPortrat.setImageResource(R.drawable.marinalvere)
+        }
+
+        if (progress.book==1&&progress.chapter<=2)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>2))
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3,string4,string5)
         }

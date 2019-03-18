@@ -49,6 +49,8 @@ class AemonalThorin : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: King"
 
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
+
         val thisInfo = findViewById<TextView>(R.id.charinfo)
 
         val string1 = SpannableString("\n     Aemon al Caar al Thorin was the husband of Eldrene ay Ellan ay Carlan and the last King of lost Manetheren.\n\n")
@@ -96,6 +98,10 @@ class AemonalThorin : AppCompatActivity() {
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
+        if (progress.book>1||(progress.book==1&&progress.chapter>9))
+        {
+            thisPortrat.setImageResource(R.drawable.aemon)
+        }
         if (progress.book==1&&progress.chapter<=9)
         {
             thisInfo.text = string1

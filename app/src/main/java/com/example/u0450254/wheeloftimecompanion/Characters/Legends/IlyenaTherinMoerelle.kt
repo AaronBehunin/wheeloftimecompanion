@@ -60,7 +60,6 @@ class IlyenaTherinMoerelle : AppCompatActivity() {
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = TextUtils.concat(string1)
         if (progress.book==1&&progress.chapter<=0)
         {
             thisInfo.text=string1

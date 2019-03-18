@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Organizations
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -11,9 +10,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class Tuathaan : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,9 +43,9 @@ class Tuathaan : AppCompatActivity() {
         thisAllign.text = "Allignemnt: Neutral"
         thisAffil.text = "Affiliation: Independent"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     The Tuatha'an, also known as \"Traveling People\" or \"Tinkers,\" live by a pacifist philosophy.\n\n")
+        val string1 = SpannableString("\n     The Tuatha'an, also known as \"Traveling People\" or \"Tinkers,\" live by a pacifist philosophy.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 

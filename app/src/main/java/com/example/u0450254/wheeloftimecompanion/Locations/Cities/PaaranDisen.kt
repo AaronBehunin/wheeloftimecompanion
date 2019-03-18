@@ -1,27 +1,20 @@
 package com.example.u0450254.wheeloftimecompanion.Locations.Cities
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class PaaranDisen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -38,18 +31,20 @@ class PaaranDisen : AppCompatActivity() {
 
         thisTitle.text = "Paaran Disen"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     Paaran Disen was the greatest city in the Age of Legends, considered to be the \"crown jewel\" of all the cities, and the location of the Hall of Servants.\n\n")
+        val string1 = SpannableString("\n     Paaran Disen was the greatest city in the Age of Legends, considered to be the \"crown jewel\" of all the cities, and the location of the Hall of Servants.\n\n")
 
-        var string2 = SpannableString("     This beautiful city was presumably destroyed in the Breaking of the World, leaving little to nothing of its one-time grandeur.\n\n")
+        val string2 = SpannableString("     This beautiful city was presumably destroyed in the Breaking of the World, leaving little to nothing of its one-time grandeur.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
 
-        if (progress.book > 1 || (progress.book == 1 && progress.chapter > 3)) {
+        if (progress.book==1&&progress.chapter<=3) {
+            thisInfo.text = string1
+        }
+        else if (progress.book > 1 || (progress.book == 1 && progress.chapter > 3)) {
             thisInfo.text = TextUtils.concat(string1, string2)
         }
     }

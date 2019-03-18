@@ -13,11 +13,6 @@ import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
 class WagonBridge : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

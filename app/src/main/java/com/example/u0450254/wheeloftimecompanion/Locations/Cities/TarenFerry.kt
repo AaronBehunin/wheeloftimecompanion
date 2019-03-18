@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Locations.Cities
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,20 +7,16 @@ import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class TarenFerry : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -38,15 +33,15 @@ class TarenFerry : AppCompatActivity() {
 
         thisTitle.text = "Taren Ferry"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     Taren Ferry is a small town that lies on the northern boundary of the Two Rivers region.\n\n")
+        val string1 = SpannableString("\n     Taren Ferry is a small town that lies on the northern boundary of the Two Rivers region.\n\n")
 
 
-        var string8 = SpannableString("Culture\n\n")
+        val string8 = SpannableString("Culture\n\n")
         string8.setSpan(RelativeSizeSpan(2f), 0,7,0)
 
-        var string9 = SpannableString("      Men from the town are well known as hagglers, tricksters and fast-talkers, leading other Two Rivers folk to distrust them and use pejorative terms like \"sheepstealer\" or \"chickenthief\"\" to describe them.\n\n")
+        val string9 = SpannableString("      Men from the town are well known as hagglers, tricksters and fast-talkers, leading other Two Rivers folk to distrust them and use pejorative terms like \"sheepstealer\" or \"chickenthief\"\" to describe them.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());

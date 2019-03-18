@@ -1,20 +1,15 @@
 package com.example.u0450254.wheeloftimecompanion.Organizations
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
-import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
 class Dreadlords : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,10 +41,10 @@ class Dreadlords : AppCompatActivity() {
         thisAffil.text = "Affiliation: The Dark One"
 
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n    Dreadlords were men and women able to channel the One Power that went to the Shadow during the Trolloc Wars.\n\n")
-        var string1_1 = SpannableString("\n     Dreadlords were men and women able to channel the One Power that went to the Shadow during the Trolloc Wars. " +
+        val string1 = SpannableString("\n    Dreadlords were men and women able to channel the One Power that went to the Shadow during the Trolloc Wars.\n\n")
+        val string1_1 = SpannableString("\n     Dreadlords were men and women able to channel the One Power that went to the Shadow during the Trolloc Wars. " +
                 "They acted as battle commanders, overlords of the Trolloc forces, above the Myrddraal in chain of command.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 

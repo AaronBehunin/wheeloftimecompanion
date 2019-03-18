@@ -1,6 +1,5 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Main_Characters
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -58,44 +57,51 @@ class Mat : AppCompatActivity() {
         thisEye.text = " Eye Color: Brown"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        thisPortrat.setImageResource(R.drawable.mat)
 
-        var string1 = SpannableString("\n     Matrim Cauthon, usually simply called 'Mat', is one of the main characters of the series.\n\n")
 
-        var string2 = SpannableString("Appearance\n\n")
+        val string1 = SpannableString("\n     Matrim Cauthon, usually simply called 'Mat', is one of the main characters of the series.\n\n")
+
+        val string2 = SpannableString("Appearance\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0 ,10,0)
 
-        var string3 = SpannableString("     He is as long-limbed as a stork, with a wiry body and brown eyes.\n\n")
+        val string3 = SpannableString("     He is as long-limbed as a stork, with a wiry body and brown eyes.\n\n")
 
-        var string5 = SpannableString("Personality\n\n")
+        val string5 = SpannableString("Personality\n\n")
         string5.setSpan(RelativeSizeSpan(2f),0 ,11,0)
 
 
-        var string6 = SpannableString("     Mat is often described as lazy, roguish, immature, tactless, and brazen.\n\n")
+        val string6 = SpannableString("     Mat is often described as lazy, roguish, immature, tactless, and brazen.\n\n")
         thisInfo.setTextColor(Color.WHITE)
 
-        var string10 = SpannableString("Activities\n\n")
+        val string10 = SpannableString("Activities\n\n")
         string10.setSpan(RelativeSizeSpan(2f),0 ,10,0)
 
-        var string11 = SpannableString("Meeting Moiraine\n\n")
+        val string11 = SpannableString("Meeting Moiraine\n\n")
         string11.setSpan(RelativeSizeSpan(1.5f),0 ,16,0)
 
-        var string12 = SpannableString("     Mat was something of a black sheep in Emond's Field. Though he, Rand al'Thor, and Perrin Aybara got into trouble quite a bit, Mat was generally the force behind it.\n\n")
+        val string12 = SpannableString("     Mat was something of a black sheep in Emond's Field. Though he, Rand al'Thor, and Perrin Aybara got into trouble quite a bit, Mat was generally the force behind it.\n\n")
 
-        var string13 = SpannableString("     A joker and a prankster.\n\n")
-        var string13_1 = SpannableString("     A joker and a prankster. He was led away on Winternight by Moiraine Damodred with his friends.\n\n")
+        val string13 = SpannableString("     A joker and a prankster.\n\n")
+        val string13_1 = SpannableString("     A joker and a prankster. He was led away on Winternight by Moiraine Damodred with his friends.\n\n")
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        thisInfo.text = string1
 
-        if(progress.book>1||(progress.book==1&&progress.chapter>1))
+        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        {
+            thisPortrat.setImageResource(R.drawable.mat)
+        }
+
+        if (progress.book==1&&progress.chapter<=1){
+            thisInfo.text = string1
+        }
+        else if(progress.book==1&&progress.chapter<=10)
         {
             thisInfo.text= TextUtils.concat(string1,string2,string3,string5,string6,string10,string12,string13)
         }
-        if(progress.book>1||(progress.book==1&&progress.chapter>10))
+        else if(progress.book>1||(progress.book==1&&progress.chapter>10))
         {
             thisInfo.text= TextUtils.concat(string1,string2,string3,string5,string6,string10,string11,string12,string13_1)
         }

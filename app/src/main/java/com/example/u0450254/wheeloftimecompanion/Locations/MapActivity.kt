@@ -2,13 +2,14 @@ package com.example.u0450254.wheeloftimecompanion.Locations
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import com.example.u0450254.wheeloftimecompanion.Locations.Landmarks.Forests.TheTwoRivers
+import com.example.u0450254.wheeloftimecompanion.Locations.Maps.BaerlonMap
+import com.example.u0450254.wheeloftimecompanion.Locations.Maps.EmondsFieldMap
+import com.example.u0450254.wheeloftimecompanion.Locations.Maps.TwoRiversMap
 import com.example.u0450254.wheeloftimecompanion.Locations.Maps.WorldMap
 import com.example.u0450254.wheeloftimecompanion.R
 
@@ -25,22 +26,34 @@ class MapActivity: AppCompatActivity() {
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
-        var charview = findViewById<LinearLayout>(R.id.chapterlayout)
+        val charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WorldMapView)
-        var view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheTwoRiversView)
+        val view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.WorldMapView)
+        val view2 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.BaerlonView)
+        val view3 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.EmondsFieldView)
+        val view4 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.TheTwoRiversView)
+
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
         charview.addView(view1)
         charview.addView(view2)
-    }
-
-    fun launchTheTwoRivers(view: View) {
-        var intent = Intent(view.context, TheTwoRivers::class.java)
-        view.context.startActivity(intent)
+        charview.addView(view3)
+        charview.addView(view4)
     }
     fun launchWorldMap(view: View) {
-        var intent = Intent(view.context, WorldMap::class.java)
+        val intent = Intent(view.context, WorldMap::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchBaerlon(view: View) {
+        val intent = Intent(view.context, BaerlonMap::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchEmondsField(view: View) {
+        val intent = Intent(view.context, EmondsFieldMap::class.java)
+        view.context.startActivity(intent)
+    }
+    fun launchTheTwoRivers(view: View) {
+        val intent = Intent(view.context, TwoRiversMap::class.java)
         view.context.startActivity(intent)
     }
 }

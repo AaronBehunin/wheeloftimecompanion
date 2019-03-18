@@ -49,6 +49,7 @@ class PadanFain : AppCompatActivity() {
         thisEye.text = " Eye Color: Dark"
         thisRank.text = " Rank: Peddler"
 
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
 
         val thisInfo = findViewById<TextView>(R.id.charinfo)
 
@@ -59,5 +60,10 @@ class PadanFain : AppCompatActivity() {
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         thisInfo.text = string1
+
+        if (progress.book>1 || (progress.book==1 && progress.chapter>5)){
+
+            thisPortrat.setImageResource(R.drawable.normal_fain)
+        }
     }
 }

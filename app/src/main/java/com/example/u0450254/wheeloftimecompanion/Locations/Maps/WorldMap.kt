@@ -28,10 +28,10 @@ class WorldMap : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
-        var mImageView = findViewById<MapView>(R.id.mapView)
-        mImageView.setMap(R.drawable.world)
+        val mImageView = findViewById<MapView>(R.id.mapView)
+        mImageView.setMap(R.drawable.world_map)
 
-        mImageView.setImageResource(R.drawable.world)
+        mImageView.setImageResource(R.drawable.world_map)
         var mScaleGestureDetector = ScaleGestureDetector(this, ScaleListener())
         mImageView.setImageResource(R.drawable.aessedaiicon)
 

@@ -9,9 +9,6 @@ import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
-/*
- * Created by u0450254 on 5/23/2018.
- */
 class ThirdAge: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +17,7 @@ class ThirdAge: AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        var progressFile = openFileInput("Progress")
+        val progressFile = openFileInput("Progress")
 
         val inputString = progressFile.bufferedReader().use { it.readText() }
 
@@ -28,13 +25,13 @@ class ThirdAge: AppCompatActivity() {
 
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
-        var thisTitle = findViewById<TextView>(R.id.Title)
+        val thisTitle = findViewById<TextView>(R.id.Title)
 
         thisTitle.text = "Third Age"
 
         val terminfo = findViewById<TextView>(R.id.termInfo)
-        var string1  = SpannableString("\n     The Third Age of the Wheel of Time began with the chaos and destruction of the Breaking of the World that ended the Age of Legends (the Second Age).  \n\n")
-        var string1_1  = SpannableString("\n     The Third Age of the Wheel of Time began with the chaos and destruction of the Breaking of the World that ended the Age of Legends (the Second Age). The Third Age is the Age in which the Wheel of Time novels take place.\n\n")
+        val string1  = SpannableString("\n     The Third Age of the Wheel of Time began with the chaos and destruction of the Breaking of the World that ended the Age of Legends (the Second Age).  \n\n")
+        val string1_1  = SpannableString("\n     The Third Age of the Wheel of Time began with the chaos and destruction of the Breaking of the World that ended the Age of Legends (the Second Age). The Third Age is the Age in which the Wheel of Time novels take place.\n\n")
 
         terminfo.setTextColor(Color.WHITE)
 
@@ -48,7 +45,5 @@ class ThirdAge: AppCompatActivity() {
         {
             terminfo.text = string1_1
         }
-
-
     }
 }

@@ -1,11 +1,9 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
-import android.text.SpannedString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.RelativeSizeSpan
@@ -51,14 +49,14 @@ class BerinThane : AppCompatActivity() {
         thisEye.text = " Eye Color: ?"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Berin Thane is a Two Rivers resident. He is the brother of Jon Thane.\n\n")
+        val string1 = SpannableString("\n     Berin Thane is a Two Rivers resident. He is the brother of Jon Thane.\n\n")
 
-        var string2 = SpannableString("Activities\n\n")
+        val string2 = SpannableString("Activities\n\n")
         string2.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string3 = SpannableString("     His house is burnt down during the Trolloc raid in Emond's Field.\n\n")
+        val string3 = SpannableString("     His house is burnt down during the Trolloc raid in Emond's Field.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
@@ -72,6 +70,5 @@ class BerinThane : AppCompatActivity() {
         {
             thisInfo.text = TextUtils.concat(string1,string2,string3)
         }
-
     }
 }

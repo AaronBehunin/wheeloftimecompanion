@@ -12,18 +12,11 @@ import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 
 
-/*
- * Created by u0450254 on 5/18/2018.
- */
-
-
-// next entry the dragon reborn 19
-
 class ShayolGhul : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.terminology)
+        setContentView(R.layout.landmarks)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -39,26 +32,24 @@ class ShayolGhul : AppCompatActivity() {
 
         thisTitle.text = "Shayol Ghul"
 
-        var thisInfo = findViewById<TextView>(R.id.termInfo)
+        val thisInfo = findViewById<TextView>(R.id.landInfo)
 
-        var string1 = SpannableString("\n     Shayol Ghul is a great black mountain, now the focal point of the Dark One's power.\n\n")
+        val string1 = SpannableString("\n     Shayol Ghul is a great black mountain, now the focal point of the Dark One's power.\n\n")
 
-        var string5 = SpannableString("Thakan'dar\n\n")
+        val string5 = SpannableString("Thakan'dar\n\n")
         string5.setSpan(RelativeSizeSpan(2f),0,10,0)
 
-        var string6 = SpannableString("    Below the mountain is the great valley of Thakan'dar, where the tainted swords are forged.\n\n")
+        val string6 = SpannableString("    Below the mountain is the great valley of Thakan'dar, where the tainted swords are forged.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        thisInfo.text = string1
-
         if (progress.book==1&&progress.chapter<=8)
         {
             thisInfo.text = string1
         }
-        if (progress.book>1||(progress.book==1&&progress.chapter>8))
+        else if (progress.book>1||(progress.book==1&&progress.chapter>8))
         {
             thisInfo.text = TextUtils.concat(string1,string5,string6)
         }

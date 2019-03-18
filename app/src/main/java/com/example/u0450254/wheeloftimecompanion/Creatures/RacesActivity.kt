@@ -5,7 +5,6 @@ package com.example.u0450254.wheeloftimecompanion.Creatures
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
@@ -25,16 +24,16 @@ class RacesActivity: AppCompatActivity() {
         val inflater = LayoutInflater.from(this)
         val inflatedLayoutLews = inflater.inflate(R.layout.guides, null, false)
 
-        var charview = findViewById<LinearLayout>(R.id.chapterlayout)
+        val charview = findViewById<LinearLayout>(R.id.chapterlayout)
 
-        var view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OgierView)
+        val view1 = inflatedLayoutLews.findViewById<RelativeLayout>(R.id.OgierView)
 
         inflatedLayoutLews.findViewById<LinearLayout>(R.id.parent).removeAllViews()
 
         charview.addView(view1)
     }
     fun launchOgier(view: View) {
-        var intent = Intent(view.context, Ogier::class.java)
+        val intent = Intent(view.context, Ogier::class.java)
         view.context.startActivity(intent)
     }
 }

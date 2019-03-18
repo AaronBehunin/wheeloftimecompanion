@@ -10,15 +10,12 @@ import android.text.style.RelativeSizeSpan
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
 import android.widget.*
-import com.example.u0450254.wheeloftimecompanion.Launchers
 
 class EldreneayCarlan : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.character)
-
-        val launcher = Launchers(this)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -31,7 +28,7 @@ class EldreneayCarlan : AppCompatActivity() {
         val progress = Progress(splits[0].toInt(), splits[1].toInt())
 
         val thisTitle = findViewById<TextView>(R.id.Title)
-        var thisPortrat = findViewById<ImageView>(R.id.Portrat)
+        val thisPortrat = findViewById<ImageView>(R.id.Portrat)
         val thisAge = findViewById<TextView>(R.id.Age)
         val thisAffil = findViewById<TextView>(R.id.Affiliation)
         val thisGender = findViewById<TextView>(R.id.Gender)
@@ -84,6 +81,11 @@ class EldreneayCarlan : AppCompatActivity() {
 
         thisInfo.setTextColor(Color.WHITE)
         thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+
+        if (progress.book>1||(progress.book==1&&progress.chapter>9))
+        {
+            thisPortrat.setImageResource(R.drawable.eldrene)
+        }
 
         if (progress.book==1 && progress.chapter<=9)
         {

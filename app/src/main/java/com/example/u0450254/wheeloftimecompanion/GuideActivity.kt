@@ -61,94 +61,90 @@ class GuideActivity : AppCompatActivity() {
         val book14View = findViewById<TextView>(R.id.Book14)
 
         if (progress.book > 1) {
-            var check = findViewById<CheckBox>(R.id.Book1Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel2)
+            val check = findViewById<CheckBox>(R.id.Book1Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel2)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 2) {
-            var check = findViewById<CheckBox>(R.id.Book2Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel3)
+            val check = findViewById<CheckBox>(R.id.Book2Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel3)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 3) {
-            var check = findViewById<CheckBox>(R.id.Book3Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel4)
+            val check = findViewById<CheckBox>(R.id.Book3Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel4)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 4) {
-            var check = findViewById<CheckBox>(R.id.Book4Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel5)
+            val check = findViewById<CheckBox>(R.id.Book4Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel5)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 5) {
-            var check = findViewById<CheckBox>(R.id.Book5Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel6)
+            val check = findViewById<CheckBox>(R.id.Book5Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel6)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 6) {
-            var check = findViewById<CheckBox>(R.id.Book6Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel7)
+            val check = findViewById<CheckBox>(R.id.Book6Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel7)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 7) {
-            var check = findViewById<CheckBox>(R.id.Book7Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel8)
+            val check = findViewById<CheckBox>(R.id.Book7Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel8)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 8) {
-            var check = findViewById<CheckBox>(R.id.Book8Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel9)
+            val check = findViewById<CheckBox>(R.id.Book8Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel9)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 9) {
-            var check = findViewById<CheckBox>(R.id.Book9Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel10)
+            val check = findViewById<CheckBox>(R.id.Book9Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel10)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 10) {
-            var check = findViewById<CheckBox>(R.id.Book10Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel11)
+            val check = findViewById<CheckBox>(R.id.Book10Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel11)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 11) {
-            var check = findViewById<CheckBox>(R.id.Book11Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel12)
+            val check = findViewById<CheckBox>(R.id.Book11Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel12)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 12) {
-            var check = findViewById<CheckBox>(R.id.Book12Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel13)
+            val check = findViewById<CheckBox>(R.id.Book12Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel13)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
         if (progress.book > 13) {
-            var check = findViewById<CheckBox>(R.id.Book13Check)
-            var rel = findViewById<RelativeLayout>(R.id.rel14)
+            val check = findViewById<CheckBox>(R.id.Book13Check)
+            val rel = findViewById<RelativeLayout>(R.id.rel14)
             check.isChecked = true
             rel.visibility = View.VISIBLE
         }
 
         book1View.setOnClickListener() {
-
         }
-
-
-
     }
 
     fun boxClick(boxview: View) {
-        var check = findViewById<CheckBox>(boxview.id)
+        val check = findViewById<CheckBox>(boxview.id)
 
         if (check.isChecked) {
 
@@ -543,11 +539,11 @@ class GuideActivity : AppCompatActivity() {
                 progress.chapter = 0
             }
         }
-        var guideView = findViewById<ConstraintLayout>(R.id.guideView)
+        val guideView = findViewById<ConstraintLayout>(R.id.guideView)
         guideView.postInvalidate()
     }
     fun launchBook1(view: View) {
-        var intent = Intent(view.context, Book1Activity::class.java)
+        val intent = Intent(view.context, Book1Activity::class.java)
         view.context.startActivity(intent)
 
     }

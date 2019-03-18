@@ -1,14 +1,11 @@
 package com.example.u0450254.wheeloftimecompanion.Characters.Other
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.SpannableString
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
-import android.text.style.RelativeSizeSpan
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.u0450254.wheeloftimecompanion.Progress
 import com.example.u0450254.wheeloftimecompanion.R
@@ -56,21 +53,23 @@ class DavAyellin : AppCompatActivity() {
         thisEye.text = " Eye Color: Dark"
         thisRank.text = " Rank: Civilian"
 
-        var thisInfo = findViewById<TextView>(R.id.charinfo)
+        val thisInfo = findViewById<TextView>(R.id.charinfo)
 
-        var string1 = SpannableString("\n     Dav Ayellin is a young man from the Two Rivers.\n\n")
+        val string1 = SpannableString("\n     Dav Ayellin is a young man from the Two Rivers.\n\n")
 
-        var string4 = SpannableString("Activities\n\n")
+        val string4 = SpannableString("Activities\n\n")
 
-        var string5 = SpannableString("     On the day before Bel Tine in 998 NE, Dav partnered with Mat to drag a badger out of its den with plans to release it on the village Green while the Spring Pole was being erected.[3][4] The goal was to startle the young girls who were watching the older women erect the pole. The prank was not completed because Mat became distracted while talking to his friend Rand al'Thor about a mysterious visitor to the village and her male companion.\n\n")
+        val string5 = SpannableString("     On the day before Bel Tine in 998 NE, Dav partnered with Mat to drag a badger out of its den with plans to release it on the village Green while the Spring Pole was being erected.[3][4] The goal was to startle the young girls who were watching the older women erect the pole. The prank was not completed because Mat became distracted while talking to his friend Rand al'Thor about a mysterious visitor to the village and her male companion.\n\n")
 
         thisInfo.setTextColor(Color.WHITE)
 
-        thisInfo.setMovementMethod(LinkMovementMethod.getInstance());
+        thisInfo.setMovementMethod(LinkMovementMethod.getInstance())
 
-        thisInfo.text = string1
-
-        if (progress.book>1||(progress.book==1&&progress.chapter>1))
+        if (progress.book==1&&progress.chapter<=1)
+        {
+            thisInfo.text = string1
+        }
+        else if (progress.book>1||(progress.book==1&&progress.chapter>1))
         {
             thisInfo.text = TextUtils.concat(string1,string4,string5)
         }
